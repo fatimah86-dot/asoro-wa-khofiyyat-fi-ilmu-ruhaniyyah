@@ -26,7 +26,7 @@ RAJAH_24B = str(BASE / "assets/rajah-hal-024-bottom-thilasm.jpg")
 RAJAH_26 = str(BASE / "assets/rajah-hal-026-waraq-7numbers.jpg")
 RAJAH_27 = str(BASE / "assets/rajah-hal-027-thilasm-baidah.jpg")
 RAJAH_28 = str(BASE / "assets/rajah-hal-028-thilasm-ah-hah.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B06.pdf")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B07.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -42,7 +42,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-06)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-07)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -196,7 +196,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–06 (Halaman 001–031) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–07 (Halaman 001–036) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -224,17 +224,18 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–06', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–07', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
-'Batch 01 (Hal. 001–005): Cover, Fasal 1 Mahabbah/Jalb/Tahyij, Mas-alah 1 (Alfah 20 daun), Mas-alah 2 (72x), Mas-alah 3 (Syaqfah Selasa), Rajah Hal.05 Wafaq, Mas-alah 4 (7 lembar)\n'
-'Batch 02 (Hal. 006–011): Lanjutan Mas-alah 4, Khatam 7 Waraq Hal.07, Mas-alah 5 (400x/300x), Al-Humazah lilin, Mas-alah 7 (Maimun Thayyar), Mas-alah 8 (Harut-Marut), Mas-alah 9 (Mahmala, Ahya Syarahya 31x)\n'
-'Batch 03 (Hal. 012–016): Mas-alah 10 (Rajah Hal.12), Mas-alah 12 Susi (Rajah Hal.13), Mas-alah 13 Qallama (Rajah Hal.14), Khatam Sulaiman Hal.15\n'
-'Batch 04 (Hal. 016–021): Khatam Besar 8x8 Hal.16, Da`wah Fatihah Hal.17-19 Rajah 4x4 837x, Tahyij 7 kertas Hal.20-21, faras Hal.21\n'
-'Batch 05 (Hal. 022–026): Faras Hal.22, Mas-alah 17 timah 21x Rajah Hal.23, Mas-alah 18-19 darah kaki 2 Rajah Hal.24, Mas-alah 20-21 Sirr Mashun, Mas-alah 22 daun zaitun 7 waraq Rajah Hal.26\n'
-'Batch 06 (Hal. 027–031): Bait Mahabbah Hal.27 telur lbn-sandar + thilasm 3 sigil Rajah Hal.27, Hal.28 thilasm اخ ح ح لم صر Rajah Hal.28 + Alam Nasyrah 3 hari pertama, Syam`atain Hal.29, Jalb figur Jim 50 luban Hal.30 + sumbu Humazah Hal.30-31 + Wafaq 693 mutsallats Tigani\n'
-'Batch 07–30 (Hal. 032–~150) - menyusul per 5 hal., PDF FULL akan di-append otomatis', new_x="LMARGIN", new_y="NEXT")
+'Batch 01 (Hal. 001–005): Cover, Fasal 1 (Alfah 20 daun), Mahabbah 72x, Tahyij Syaqfah Selasa, Rajah Hal.05\n'
+'Batch 02 (Hal. 006–011): 7 lembar, Khatam 7 Waraq Hal.07, 400x/300x, Humazah lilin, Maimun, Harut-Marut, Mahmala 31x\n'
+'Batch 03 (Hal. 012–016): Mas10 Ahad Rajah12, Susi Rajah13, Qallama Rajah14, Sulaiman Hal.15\n'
+'Batch 04 (Hal. 016–021): Khatam 8x8 Hal.16, Fatihah Hal.17-19 Rajah 4x4, 7 kertas Hal.20-21, faras\n'
+'Batch 05 (Hal. 022–026): Faras, timah 21x Rajah23, darah kaki 2x Rajah24, Sirr Mashun, 7 zaitun Rajah26\n'
+'Batch 06 (Hal. 027–031): Telur Hal.27 Rajah27, Hal.28 Rajah28 AlamNasyrah, Syam`atain, 2 figur Jim 50 luban, Wafaq 693\n'
+'Batch 07 (Hal. 032–036): Wafaq 693 huruf Nur Hal.32, 7 barwat Harq Hayur Rajah teks, Ruju` Zauj Hal.32-33, Irsal Haq Al-`Adiyat 70x pelepah, `Amiyakh Murrah Hal.34, `Aqd Naum 7 sutra paku Hal.34-35 Maimun Thayyar 71x, `Aqd Naum kedua Hal.35-36\n'
+'Batch 08–30 (Hal. 037–~150) - menyusul per 5 hal., PDF FULL akan di-append otomatis', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(2)
 
 # --- HAL 01 COVER already done, now detailed per page ---
@@ -426,16 +427,37 @@ pdf.cell(0, 7, 'HALAMAN 31 — Lanjutan Sumbu + Wafaq 693 Mutsallats Tijani — 
 add_block_box('Teks Arab Asli', "والأرض ) أقسمت عليكم يا خدام هذه الأسماء بالإسم الذى خلق الله به البحر العجاج\\nفهاج وماج وتلاطم بالأمواج وصار كالليل الداج فسبحت حيتانه واضطربت أركانه من\\nهيبة الله ذى الجلال والإكرام بديع السموات والأرض عزمت عليكم بكهيعص وحم عسق\\nوبطه ويس ويسور ن وبص ويسورة ق والقرآن وبطلسم القرآن وبسورة الرحمن\\nوالحواميم والدخان والطور وكتاب مسطور في رق منشور والبيت المعمور والسقف\\nالمرفوع والبحر المسجور ان عذاب ربك لواقع ماله من دافع ) وانه لقسم لو تعلمون\\nعظيم ) أن ( تسرعوا وتهيجوا كذا كذا بحق هذه الأسماء والأقسام وإلا يرسل عليكما\\nشواظ من نار ونحاس فلا تنتصران أو يرسل عليكم صاعقة مثل صاعقة عاد وثمود\\nفتنكو كما أخبر الله في القرآن فانما خر من السماء فتخطفه الطير او تهوى به الرياح\\nفي مكان سحيق \"إلا ما هيجتم كذا كذا بحق هذه الأسماء فإن خالفتم رميتكم بشهاب\\nثاقب وشواظ من نار فتلتهبوا كما تلتهب هذه الفتيلة حتى تأتوا بكذا الى كذا بحق ايها\\nشراهيا ادوناى اصباؤوت ال شداي الواحا2 العجل2الساعة2\\nباب محية وجلب وعطف بين المراة وزوجها\\nوهو سريع الإجابة لكل أمر من جلب خير ودفع كل شر تركب مثلث وهو عدده 693\\nوتوكل بما تريد حول الجدول وهو مدور وقوله أهم سقف حلع يص طرن وعلقه في\\nالسبيية من عيدان الرومان الحلو ويبخر بالكندر والقزبور والجاوي وعنبر وأنت نتلو\\nعليه الإسم الأعظم المذكور عدد 1111 فان الوفق يدور فإذا دار فأعلم بأن الحاجة التى\\nوكلت عليها إنقضت سواء كان خيرا لم شر وهذه من مجربات التجاني الكبير وهو أن\\nنطرح من العدد 12 ونقسمه على 3 وادخل في بيت الواحد بزيادة الى بيت الياء ثم الى", "Lanjutan sumpah sumbu: ‘...wal ardh) uqsimu ‘alaikum bi-Ism alladzi khalaqa bihar ‘ajjaj... tasabbaḥat hittaanuh... bi-Kaf Ha Ya ‘Ain Shad Ha Mim ‘Ain Sin Qaf Thaha Ya Sin... wa tilasm Qur’an Ar-Rahman Hawa-mim Dukhan Thur kitab mastur... inna ‘adzaba Rabbika lawaqi‘... wa innahu la-qasamun... an tusri‘u wa tuhayyiju kaza bih haqq... illa yursil ‘alaikuma syuwaazh... au yursil shaa‘iqah ka-‘Ad wa Tsamud... illa ma hayyajtum kaza... fa-in khalaftum ramaitukum bi-syihab tsaqib... ka ma talta hib hathihil fatilah hatta ta’tu bi-kaza — bi-haqqi Ahya Syarahya Adonai Ashba-ut Al Syaddai — Al-Waha2...’\\nBAB MAHABBAH-JALB-‘ATHF SUAMI ISTRI: Cepat untuk tiap kebaikan & tolak kejahatan. Susun wafaq **mutsallats 693**, wakalkan sekelilingnya yang bundar, ucap ‘Ahammu Saqafa Hala‘ Yash Tharan’ gantung di anyaman ranting delima manis asap kundur+ketumbar+jawi+anbar sambil baca Ism A‘dham 1111x — maka wafaq akan berputar, jika berputar hajat selesai, baik/buruk. Dari mujarrabat Tijani Kabir: kurangi 12 bagi 3 masukkan di bait Alif + ke Ya’... (bersambung Hal.32 Picture 016 wafaq 693).")
 
 # FOOTER FOR PDF
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 32 — Wafaq 693 Huruf Nur + 7 Barwat + Ruju` Zauj — Picture 016 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli - Wafaq 693 lanjut', "الجيم ثم غلى الدال ثم إلى الهاء ثم إلى الواو ثم إلى الزين ثم إلى الحاء ثم الى الص\\nودور حوله الحروف النورانية أهم سقف حلع يص طرن حروف مفرقة\\nباب محبة وجلب حريق على 7 بروات\\nأكتب على سبعة أوراق وتضع في كل ورقة بخور طيب واجرقهم في النار ورقة بعد\\nولا تضع الورقة الثانية إلا بعد إنتهاء الأولى إلى كذا حتى نهاية الورق\\nالورقة الاولى : هيور 3 طرش 3 بطرش 3 أهطم فشز يا روحانية هذه الأسماء بحق\\nعليكم وطاعتها لديكم اجلبوا كذا إلى كذا بالمحبة والمودة القوية الدائمة الشديدة قبل\\nتحرق هذه الأسماء الواحا العجل الساعة\\nالورقة 2: برش 3 مرش 3 وكمالة التوكيل\\nالورقة 3: أيكموش 3 إزرش 3 زربوش 3 وكمالة التوكيل الذي فوق هو هو الورقة\\nفيونش 3 بيوش 3 إلش 3 الورقة 5: طهفش 3 قمش3 الورقة 6: طيوش3 طوش3\\nطونش 3الورقة 7: مهليوش 3 مهطايش 3 ونفس التوكيل على كل ورقة", "Lanjutan Wafaq 693: Jim→Dal→Ha’→Waw→Zai→Ha’→Shad, kelilingi huruf Nur ‘Ahammu Saqafa Hala‘...’ huruf terpisah. BAB 7 BARWAT HARQ: tulis 7 kertas, tiap + bukhur wangi, bakar satu-satu — jangan letak lembar2 sebelum 1 habis. W1: Hayur3 Tharasy3 Bathrasy3 Ahthama... ya ruhaniyyah dengan hak... bawalah si anu dengan kasih kuat kekal sebelum terbakar — Al-Waha... W2: Barasy3 Marasy3 ... W3: Aikumusy3 Izrasy3 Zarbusy3 + tawkil Huwa Huwa ... W5-7: Thahfasy3 Qamasy3 ... Thayusy3 Thusy3... Thunsy3... Mahlayusy3 Mahthayisy3 + tawkil sama.")
+add_block_box('Teks Arab Asli - Ruju` Zauj', "باب رجوع الزوج إلى زوجته\\nبسم الله قبل يدي والله الأمر من قبل ومن بعد اللهم إن السماء سماؤك والأرض أرضك\\nوالسهل سهلك والبر برك والبحر بحرك والجبل جبالك والأودية أوديتك والوعر وعرة\\nوالعباد عبادك أنت لا إله إلا أنت وحدك لا شريك لك أسألك اللهم بنور جلالك وعظمتك\\nسلطانك أن تجعل البلدان والمدن والقرى ضيقة على فلان بن فلانة حتى يرجع إلى\\nزوجته فلانة بنت فلانة اللهم إجعل عليه الدنيا أضيق من حلقة الخاتم على الأصابع\\nيرجع إلى زوجته فلانة بنت فلانة وإلى هذا المكان الذي علق فيه كتابي هذا ونفخ", "BAB RUJU` ZAUJ: ‘Bismillah sebelum tanganku, urusan milik Allah. Ya Allah langit-Mu bumi-Mu... sempitkan negeri kota desa kepada Fulan bin Fulanah sampai kembali kepada istrinya Fulanah ... jadikan dunia sempit seperti cincin di jari... kembali ke tempat kitabku digantung...’ (lanjut Hal.33).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 33 — Lanjutan Ruju` + Irsal Haq — Picture 016 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الصور فجمعناهم جمعا وهو على جمعهم إذ يشاء قدير اللهم حير فلان بن فلانة كما حيرت\\nالجمل في عقلي والطير في وقره والولد على محبة أمه حتى يرجع إليها ومكانها الذى\\nخرج منه ونفخ في الصور فإذا هم من الأجداث إلى ربهم ينسلون قالوا ياويلنا من بعثنا\\nمن مرقدنا هذا ما وعد الرحمن وصدق المرسلون إن كانت إلا صيحة واحدة فإذا هم جميعا\\nلدينا محضرون ولا تحويه الأرض ولا تحويه دار ولا مكان حتى يرجع إلى زوجته فلانة\\nبنت فلانة اللهم كما ردت موسى الى امه وكما ردت يوسف على يعقوب وكما ردت العفية\\nعلى جسد أيوب أرية جال قدرتك بقدرتك وجالك يا قادر يا مقتدر اللهم يا جامع الشتات\\nيا جامع الناس لا ريب فيه إن الله لا يخلف الميعاد رد كذا إلى كذا إلى مكانه الذى خرج\\nمنه واجمع شمله بشملها إنك على كل شىء قدير الواحا العجل الساعة\\nبخوره : لبان ذكر وكزبرة وجاوي ويكتب ويعلق في الهواء والله الذى لا رب غيره لو كان\\nفي عمق البحار يأتي الزوج ويرجع إلى زوجته\\nباب إرسال لجلب الحق\\nإذا كان لك حق عند إنسان من مال وغير المال مثل البناء والأرضى وهو عون شديد إذا\\nأردت العمل به تصوم يوم السبت برياضة كاملة وتفطر عند المغرب ثم تأخذ جريدة\\nخضراء وتكتب عليها سورة والعاديات ضبحا إلى آخرها وبعد العشاء تأخذ مجمرة للفحم\\nجديدة ويخورك الصندل قوي وعلى نار قوية وأنت ماسك الجريدة في يدك", "‘...kumpulkan mereka, Allah Maha Kuasa, Ya Allah bingungkan Fulan seperti bingung unta, burung, anak kepada ibu sampai kembali — ‘wa nufikha fish shur... ya wailana... hadza ma wa‘ada Ar-Rahman... in kanat illa shaihah...’ tidak ditampung bumi/rumah sampai kembali kepada Fulanah — seperti Kembalikan Musa kepada ibu, Yusuf kepada Ya‘qub, kesehatan Ayub — ya Jami‘... rudda kaza... Al-Waha... Bukhur: luban, ketumbar, jawi, gantung di udara — demi Allah andai di dasar laut suami akan kembali.’\\nBAB IRSAL HAQ: jika punya hak harta/bangunan/tanah — puasa Sabtu riyadah, buka maghrib, ambil pelepah hijau tulis Al-‘Adiyat sampai akhir, setelah Isya ambil perapian arang baru bukhur cendana kuat di api menyala sambil pegang pelepah ... (sambung 70x qasam).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 34 — Qasam Murrah + `Aqd Naum — Picture 017 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "عمياخ أجب يا مرة وتوكل بكذا فإني سلطتك عليه نزلت ملائكة الغضب على من\\nفسعى ومن يشرك بالله فكأنما خر من السماء فتخطفه الطير أو تهوى به الرياح فهو\\nفي مكان سحيق الواحا العجل الساعة ) وهذا هوم الإصراف إنصرف بسلام يامرة وإن\\nبكذا وإفعل ما أمرتك به بحق هذه الاسماء قياش2 كياش2 عديوش 2 بخش 2 توكل\\nالسيد مهجيائيل باصرف مرة إلى كذا وكذا اجب يا مرة وافعل ما امرتك به بحق\\nالاسماء ولا تخالف فتحرق بنار السموم هيا الواحا العجل الساعة\\nباب عقد نوم ومحبة واعلم حبيبك لم ينم قط\\nإذا أردت العمل به فتفعل شخص من ورق مثل المطلوب وتكتب على رأسه فلان بن\\nواكتب على جبهته فإذا نفر في النقور وعلى يده اليمنى غلت أيديهم وعلى يده اليسرى\\nقدر الوش وعلى رجله اليمنى ميططرون وعلى الشمال كشطورش كشطاروش وخل\\nصدره الخناس الذى يوسوس في صدور الناس ثم تدق مسمار في صدر الشخص", "Lanjutan qasam Hal.33: ‘Amiyakh ya Murrah... nazalat malaikat ghadab... man yusrik billah fa-kaannama kharra... fi makani sahiq Al-Waha...’ Israf: ‘Insharif bi-salam ya Murrah... Qayasy2 Kayasy2 ‘Adyusy2 Bakhsy2 — wakalkan Mahjayail...’\\nBAB ‘AQD NAUM: buat figur kertas seperti target, tulis kepala nama, dahi ‘fa-idza nuqira fin-naqur’, tangan kanan ‘ghullat aidihim’, kiri ‘Qadar al-Wasys’, kaki kanan ‘Mithathrun’, kiri ‘Ksythurusy’, dada ‘Al-Khannas...’ lalu tancapkan paku di dada ... (sambung Hal.35 7 sutra).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 35 — Tashrif 71x + `Aqd Naum Maimun — Picture 017 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "معالق وضع البخور بجانبيها واقرأ العزيمة الاتية بنفسها 71 مرة ثم علقها للريح فان\\nالمطلوب لا يبطئ الا مسافة الطريق مجرب صحيحكم ليكم العزيمة بسم الله الملك الودود\\nالجامع المعيد مقلب القلوب والابصار علام الغيوب الذي قال وقوله الحق وضاقت عليهم\\nالارض بما رحبت وضاقت عليهم انفسهم وظنوا ان لا ملجأ من الله الا اليه فضرب بينهم\\nبسور له باب فيه الرحمة وظاهره من قبله العذاب توكل ياميمون الطيار ويا ميمون\\nالغواص ويا ميمون الاسود ويا ميمون الازرق ويا ميمون ابا نوخ السحابي السياف\\nوتوكلوا واجلبوا واخطفوا باياديكم القوية فلانة بنت فلانة صاحبة هذه الصورة الى محبة\\nومودة وطاعة وعشق ووصال وجماع ونكاح فلان ابن فلانة وافعلوا ذلك مسر عين في\\nالوقت والساعة هذهفبهرة عزيز فلا عزيز غيره ولا اعز منه وبحق انموه 2 هاتج 2\\nباشمخ شمخ شماخ شامخ شموخ 2 اشخ كمشيخ كاشخ اشخ اجيبو وتوكلوا وعجلوا", "Lanjutan tashrif: taruh bukhur di sisi, baca azimah 71x lalu gantung angin — target tidak lambat kecuali jarak jalan — sahih. Azimah: ‘Bismillah Al-Malik Al-Wadud Al-Jami‘ Al-Mu‘id ... wa dhaqat ‘alaihim arth... an la malja-a... fa-dhuriba bainahum bi-sur...’ wakalkan Maimun Thayyar/Ghawwash/Aswad/Azraq/Aba Nukh As-Sayyaf bawalah Fulanah pemilik gambar ke cinta/nikah Fulan segera — dengan Hatzifbaharah ... Ba Syamakh... Ashakh Kamsyakh...’ (sambung sampai Hal.36).")
+
 pdf.ln(4)
 pdf.set_font('DejaVu', 'I', 7)
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Batch 06: Picture 013 (hal.27), Picture 014 (hal.28-29), Picture 015 (hal.30-31). Rajah Hal.27 + Hal.28 crop presisi HANYA kotak, putih bersih 4x. Untuk Batch 07-30 (hal.32-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Batch 07: Picture 016 (hal.32-33), Picture 017 (hal.34-35), Picture 018 (hal.36 *akan dicek*). Hal.32-35 tidak ada Rajah gambar baru (hanya teks nama waraq). Untuk Batch 08-30 (hal.37-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B06 generated: {PDF_OUT}")
+print(f"PDF B01-B07 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B06) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B07) also at {PDF_FULL}")
