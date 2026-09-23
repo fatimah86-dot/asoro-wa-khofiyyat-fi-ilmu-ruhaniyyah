@@ -104,9 +104,56 @@ body {
   cursor: pointer;
   font-size: .78rem;
 }
+a.btn {
+  display: inline-block;
+  text-decoration: none;
+}
 .btn:hover { background: linear-gradient(#3a2d1a, #1c150e); }
+.cover-actions {
+  display: flex;
+  gap: .8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.dl-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 1.2rem 0 1.6rem;
+}
+.dl-card {
+  border: 1px solid var(--gold);
+  background: rgba(255,255,255,.35);
+  padding: 1.1rem 1.2rem 1.2rem;
+}
+.dl-card h3 {
+  margin: 0 0 .35rem;
+  color: var(--red);
+  font-family: Cinzel, serif;
+  font-size: 1.02rem;
+}
+.dl-card .size {
+  font-family: Cinzel, serif;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  margin: 0 0 .6rem;
+}
+.dl-card ul { margin: .2rem 0 1rem; padding-left: 1.2rem; }
+.dl-card li { margin: .2rem 0; line-height: 1.55; }
+.topbar-actions { display: flex; gap: .5rem; align-items: center; }
 
 body.reading .cover { display: none; }
+
+body.download {
+  background: #1a1410;
+}
+body.download .main {
+  min-height: 100vh;
+}
+body.download .page {
+  padding-top: 1.2rem;
+}
 
 /* ===== APP ===== */
 .app {

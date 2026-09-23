@@ -1,0 +1,19 @@
+ASrar wa Khafiyyat — cara mengkoreksi edisi digital
+====================================================
+
+1. Ekstrak ZIP ini ke sebuah folder.
+2. Klik index.html untuk membaca edisi (terjemah + rajah naskah).
+3. Koreksi teks:
+   - Paling mudah: buka teks-koreksi.md di Word / Google Docs / editor.
+   - Atau sunting index.html langsung.
+4. Yang dicek:
+   - Ejaan Arab dan Latin (jalb, tahyij, tilasm, awfaq, dst.)
+   - Nomor halaman naskah (Picture N kira-kira hlm. 2N | 2N+1)
+   - Judul fasal I–VIII sesuai fihris hlm. 296
+   - Apakah suatu rumus harus tetap DITAHAN (jangan dijadikan petunjuk)
+5. Jangan menambahkan langkah irsal, ta'dhib, ifsad, mandil istinzal,
+   atau menghalangi safar/zawaj.
+6. Kirim berkas yang sudah dikoreksi (teks-koreksi.md dan/atau index.html).
+
+Foto naskah ada di folder naskah/ (paket lengkap) atau hanya halaman
+yang dikutip (paket ringan).

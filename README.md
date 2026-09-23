@@ -29,6 +29,20 @@ python3 -m http.server 8080 --bind 0.0.0.0
 
 Buka `index.html`. Setiap rajah diambil dari halaman naskah yang bersangkutan. Pager 150 lembar (Picture 001, 1.jpg, Picture 002–149).
 
+## Unduh untuk dikoreksi
+
+Halaman pratinjau: `unduh.html`.
+
+```bash
+python3 tools/buat-unduh.py
+```
+
+Menghasilkan (tidak di-commit, berkas besar):
+
+- `unduh/Asrar-wa-Khafiyyat-edisi-lengkap.zip` — HTML + foto naskah 150 lembar
+- `unduh/Asrar-wa-Khafiyyat-teks-koreksi.zip` — HTML + rajah yang dikutip saja
+- `unduh/teks-koreksi.md` — teks polos untuk Word / Google Docs
+
 ## Fihris naskah (hlm. 296)
 
 | Fasal | Isi | Halaman |

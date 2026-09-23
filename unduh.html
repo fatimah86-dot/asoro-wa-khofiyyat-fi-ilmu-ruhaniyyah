@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unduh edisi — Asrār wa Khafiyyāt</title>
+  <link rel="stylesheet" href="css/kitab.css" />
+</head>
+<body class="download">
+  <div class="main">
+    <div class="topbar">
+      <a class="btn" href="index.html">Kembali ke kitab</a>
+      <div class="brand">Pratinjau unduhan</div>
+      <a class="btn" href="index.html#cover">Sampul</a>
+    </div>
+
+    <article class="page">
+      <img class="ornament" src="assets/border.jpg" alt="" />
+      <header class="masthead">
+        <p class="ar-title">أسرار وخفايات في علم الروحانيات</p>
+        <h1>Pratinjau unduhan — untuk dikoreksi</h1>
+        <p class="sub">
+          Unduh paket di bawah, buka di komputer, sunting teksnya, lalu kirim hasil koreksi.
+          Foto naskah ikut dalam paket lengkap agar rajah tetap terlihat offline.
+        </p>
+      </header>
+
+      <section class="bab" id="paket">
+        <h2><span class="num">1</span> Paket ZIP</h2>
+        <div class="dl-grid">
+          <div class="dl-card">
+            <h3>Edisi lengkap (offline)</h3>
+            <p class="size" id="size-lengkap">ZIP · foto naskah 150 lembar</p>
+            <ul>
+              <li><code>index.html</code> — terjemah beranotasi</li>
+              <li><code>css/</code> <code>js/</code> <code>assets/</code> <code>rajah/</code></li>
+              <li><code>naskah/</code> — Picture 001–149 + 1.jpg</li>
+              <li><code>teks-koreksi.md</code> — teks polos untuk Word</li>
+              <li><code>CARA-KOREKSI.txt</code></li>
+            </ul>
+            <p>Buka <code>index.html</code> dengan peramban (klik dua kali). Tidak perlu internet kecuali font Google.</p>
+            <a class="btn" id="dl-lengkap" href="unduh/Asrar-wa-Khafiyyat-edisi-lengkap.zip" download>Unduh ZIP lengkap</a>
+          </div>
+
+          <div class="dl-card">
+            <h3>Paket ringan — teks &amp; rajah terpilih</h3>
+            <p class="size" id="size-ringan">ZIP · tanpa 150 lembar penuh</p>
+            <ul>
+              <li>Sama seperti edisi, tetapi hanya foto halaman yang dipakai di terjemah</li>
+              <li>Cocok jika jaringan lambat; pager 150 lembar tidak lengkap</li>
+            </ul>
+            <a class="btn" id="dl-ringan" href="unduh/Asrar-wa-Khafiyyat-teks-koreksi.zip" download>Unduh ZIP ringan</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bab" id="teks">
+        <h2><span class="num">2</span> Teks untuk dikoreksi di Word</h2>
+        <div class="dl-grid">
+          <div class="dl-card">
+            <h3>Markdown terjemah</h3>
+            <p class="size">teks-koreksi.md · UTF-8</p>
+            <p>
+              Buka di Word: <em>File → Open</em>, atau tempel ke Google Docs.
+              Ini teks judul, terjemah, dan catatan batas — tanpa foto.
+              Koreksi ejaan, harakat, dan nomor halaman di sini, lalu kirim berkasnya kembali.
+            </p>
+            <a class="btn" href="unduh/teks-koreksi.md" download>Unduh teks-koreksi.md</a>
+          </div>
+          <div class="dl-card">
+            <h3>HTML edisi (sumber)</h3>
+            <p class="size">index.html</p>
+            <p>Sunting langsung di editor (VS Code, Notepad++). Rajah memakai path <code>naskah/Picture NNN.jpg</code>.</p>
+            <a class="btn" href="index.html" download="index.html">Unduh index.html</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="bab" id="cara">
+        <h2><span class="num">3</span> Cara mengkoreksi</h2>
+        <ol>
+          <li>Unduh ZIP lengkap, ekstrak ke folder, misalnya <code>Asrar-koreksi/</code>.</li>
+          <li>Klik <code>index.html</code> — baca terjemah dan rajah di bawahnya.</li>
+          <li>Untuk membetulkan kalimat: sunting <code>teks-koreksi.md</code> atau <code>index.html</code>.</li>
+          <li>Yang perlu dicek: ejaan Arab, nomor halaman naskah, nama fasal, dan apakah suatu rumus seharusnya ditahan.</li>
+          <li>Jangan menambahkan petunjuk irsal, taʿdhīb, ifsād, mandil istinzāl, atau manʿ zawāj/safar.</li>
+          <li>Kirim berkas yang sudah dikoreksi (md atau html).</li>
+        </ol>
+        <div class="note">
+          <strong>Cetak ke PDF.</strong>
+          Dari kitab, tombol <em>Cetak</em> → pilih “Simpan sebagai PDF”.
+          Hamparan foto naskah ikut tercetak; berkas bisa besar.
+        </div>
+      </section>
+
+      <footer class="colophon">
+        Edisi digital Syeikh ʿAṭiyyah ʿAbd al-Ḥamīd · pratinjau unduhan untuk koreksi.<br />
+        ZIP tidak masuk git (berkas besar). Dibuat ulang setiap kali paket dijalankan.
+      </footer>
+    </article>
+  </div>
+  <script>
+    (function () {
+      function kb(n) {
+        if (!n) return "";
+        if (n > 1048576) return (n / 1048576).toFixed(1) + " MB";
+        return Math.round(n / 1024) + " KB";
+      }
+      function probe(id, sizeId) {
+        const a = document.getElementById(id);
+        if (!a) return;
+        fetch(a.getAttribute("href"), { method: "HEAD" })
+          .then((r) => {
+            if (!r.ok) throw new Error("missing");
+            const n = Number(r.headers.get("content-length") || 0);
+            const el = document.getElementById(sizeId);
+            if (el && n) el.textContent = el.textContent.replace(/ZIP/, "ZIP " + kb(n) + " ·");
+          })
+          .catch(() => {
+            const el = document.getElementById(sizeId);
+            if (el) el.textContent += " — paket sedang disiapkan, unduh ulang halaman ini sebentar lagi.";
+          });
+      }
+      probe("dl-lengkap", "size-lengkap");
+      probe("dl-ringan", "size-ringan");
+    })();
+  </script>
+</body>
+</html>
