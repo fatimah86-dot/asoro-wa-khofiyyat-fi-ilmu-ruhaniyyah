@@ -11,8 +11,12 @@ import pathlib
 
 # Paths
 BASE = pathlib.Path("/home/user/asoro-wa-khofiyyat-fi-ilmu-ruhaniyyah/terjemahan")
-AMIRI_REG = "/tmp/amiri/fonts/Amiri-Regular.ttf"
-AMIRI_BOLD = "/tmp/amiri/fonts/Amiri-Bold.ttf"
+# Fallback to DejaVu if Amiri missing (tmp cleanup) — DejaVu still renders Arabic (less calligraphic)
+import os
+_amiri_reg = "/tmp/amiri/fonts/Amiri-Regular.ttf"
+_amiri_bold = "/tmp/amiri/fonts/Amiri-Bold.ttf"
+AMIRI_REG = _amiri_reg if os.path.exists(_amiri_reg) else "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
+AMIRI_BOLD = _amiri_bold if os.path.exists(_amiri_bold) else "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 RAJAH_05 = str(BASE / "assets/rajah-hal-005-wafaq-tehij.jpg")
 RAJAH_07 = str(BASE / "assets/rajah-hal-007-khatam-7waraq.jpg")
 RAJAH_12 = str(BASE / "assets/rajah-hal-012-thilasm-final.jpg")
@@ -26,7 +30,8 @@ RAJAH_24B = str(BASE / "assets/rajah-hal-024-bottom-thilasm.jpg")
 RAJAH_26 = str(BASE / "assets/rajah-hal-026-waraq-7numbers.jpg")
 RAJAH_27 = str(BASE / "assets/rajah-hal-027-thilasm-baidah.jpg")
 RAJAH_28 = str(BASE / "assets/rajah-hal-028-thilasm-ah-hah.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B07.pdf")
+RAJAH_41 = str(BASE / "assets/rajah-hal-041-figures-mahabbah.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B08.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -42,7 +47,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-07)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-08)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -196,7 +201,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–07 (Halaman 001–036) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–08 (Halaman 001–041) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -224,18 +229,19 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–07', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–08', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
-'Batch 01 (Hal. 001–005): Cover, Fasal 1 (Alfah 20 daun), Mahabbah 72x, Tahyij Syaqfah Selasa, Rajah Hal.05\n'
-'Batch 02 (Hal. 006–011): 7 lembar, Khatam 7 Waraq Hal.07, 400x/300x, Humazah lilin, Maimun, Harut-Marut, Mahmala 31x\n'
-'Batch 03 (Hal. 012–016): Mas10 Ahad Rajah12, Susi Rajah13, Qallama Rajah14, Sulaiman Hal.15\n'
-'Batch 04 (Hal. 016–021): Khatam 8x8 Hal.16, Fatihah Hal.17-19 Rajah 4x4, 7 kertas Hal.20-21, faras\n'
-'Batch 05 (Hal. 022–026): Faras, timah 21x Rajah23, darah kaki 2x Rajah24, Sirr Mashun, 7 zaitun Rajah26\n'
-'Batch 06 (Hal. 027–031): Telur Hal.27 Rajah27, Hal.28 Rajah28 AlamNasyrah, Syam`atain, 2 figur Jim 50 luban, Wafaq 693\n'
-'Batch 07 (Hal. 032–036): Wafaq 693 huruf Nur Hal.32, 7 barwat Harq Hayur Rajah teks, Ruju` Zauj Hal.32-33, Irsal Haq Al-`Adiyat 70x pelepah, `Amiyakh Murrah Hal.34, `Aqd Naum 7 sutra paku Hal.34-35 Maimun Thayyar 71x, `Aqd Naum kedua Hal.35-36\n'
-'Batch 08–30 (Hal. 037–~150) - menyusul per 5 hal., PDF FULL akan di-append otomatis', new_x="LMARGIN", new_y="NEXT")
+'Batch 01 (001–005): Cover, Fasal 1 Alfah 20 daun + 72x + Syaqfah + Rajah05\n'
+'Batch 02 (006–011): 7 lembar + Khatam7 Hal07 + 400x Humazah + Maimun + Harut + Mahmala\n'
+'Batch 03 (012–016): Susi Rajah13 + Qallama Rajah14 + Sulaiman\n'
+'Batch 04 (016–021): Khatam 8x8-19 + Fatihah + 7 kertas\n'
+'Batch 05 (022–026): Faras + timah21 Rajah23 + darah kaki 2x Rajah24 + 7 zaitun Rajah26\n'
+'Batch 06 (027–031): Telur Rajah27 + Rajah28 + Syam`atain + 2figur Jim + Wafaq693\n'
+'Batch 07 (032–036): Wafaq693 HurufNur + 7 barwat + RujuZauj + Irsal Haq70x + AqdNaum71x\n'
+'Batch 08 (037–041): Ta`qid Naum 7 kerikil Hal36 + Fatihah malaikat Hal37 + Yaqutah Tsaminah Hal38-41 + Ghazal 21x Barhat + Mahabbah 3 rambut 131x Hal41 Rajah41 figures\n'
+'Batch 09–30 (042–~150) - menyusul per 5 hal., PDF FULL auto', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(2)
 
 # --- HAL 01 COVER already done, now detailed per page ---
@@ -448,16 +454,48 @@ pdf.set_text_color(124,45,18)
 pdf.cell(0, 7, 'HALAMAN 35 — Tashrif 71x + `Aqd Naum Maimun — Picture 017 kiri', new_x="LMARGIN", new_y="NEXT")
 add_block_box('Teks Arab Asli', "معالق وضع البخور بجانبيها واقرأ العزيمة الاتية بنفسها 71 مرة ثم علقها للريح فان\\nالمطلوب لا يبطئ الا مسافة الطريق مجرب صحيحكم ليكم العزيمة بسم الله الملك الودود\\nالجامع المعيد مقلب القلوب والابصار علام الغيوب الذي قال وقوله الحق وضاقت عليهم\\nالارض بما رحبت وضاقت عليهم انفسهم وظنوا ان لا ملجأ من الله الا اليه فضرب بينهم\\nبسور له باب فيه الرحمة وظاهره من قبله العذاب توكل ياميمون الطيار ويا ميمون\\nالغواص ويا ميمون الاسود ويا ميمون الازرق ويا ميمون ابا نوخ السحابي السياف\\nوتوكلوا واجلبوا واخطفوا باياديكم القوية فلانة بنت فلانة صاحبة هذه الصورة الى محبة\\nومودة وطاعة وعشق ووصال وجماع ونكاح فلان ابن فلانة وافعلوا ذلك مسر عين في\\nالوقت والساعة هذهفبهرة عزيز فلا عزيز غيره ولا اعز منه وبحق انموه 2 هاتج 2\\nباشمخ شمخ شماخ شامخ شموخ 2 اشخ كمشيخ كاشخ اشخ اجيبو وتوكلوا وعجلوا", "Lanjutan tashrif: taruh bukhur di sisi, baca azimah 71x lalu gantung angin — target tidak lambat kecuali jarak jalan — sahih. Azimah: ‘Bismillah Al-Malik Al-Wadud Al-Jami‘ Al-Mu‘id ... wa dhaqat ‘alaihim arth... an la malja-a... fa-dhuriba bainahum bi-sur...’ wakalkan Maimun Thayyar/Ghawwash/Aswad/Azraq/Aba Nukh As-Sayyaf bawalah Fulanah pemilik gambar ke cinta/nikah Fulan segera — dengan Hatzifbaharah ... Ba Syamakh... Ashakh Kamsyakh...’ (sambung sampai Hal.36).")
 
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 36 — Ta`qid Naum 7 Kerikil + Fatihah Malaikat — Picture 018 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli - Ta`qid', "وهو إذا أردت العمل به أن تجلس لوحدك في مكان خالى من الناس بعد العشاء وتنام\\nالعزيمة الآتية على 7 سبع حصوات لبان ذكر أبيض وعلى كل حصوة من اللبان\\nمرات وترميها في النار وتفعل ذلك الى تمام السبع 7 حصوات لبان وتنام فإن المطلوب\\nينام ولا ينقفل له جفن من شدة المحبة والقلقت حتى يأتيك سريعا وهذا ماتمزم به يشتم\\n2طش2 خط2 طحطيح2 بهكويل2 أجب ياريوش وتوكل بتهييج وجلب وعقد\\nكذا وكذا واعقدوا نومهما بمحبته حتى لاتنام لإتمام لافى ليل ولا فى نهار من شدة القلق", "Duduk sepi setelah Isya, baca azimah pada 7 kerikil luban putih, lempar ke api satu-satu, tidur — target tidak terpejam karena rindu: ‘2-Thasy 2-Khath 2-Thahthah 2-Bihakwil ... Ya Rayusy ... ikat tidurnya ...’")
+add_block_box('Teks Arab Asli - Yaqutah awal', "بمحبته بحق نهرطيح2 نمليح2 ق ليح2 شلشميخ2 أن كانت إلا صيحة واحدة فإذاهم\\nلدينا محضرون الواحا2 العجل2 الساعة2", "‘... Nahrathih2 Namlih2 ... in kanat illa shaihah ... Al-Waha...’")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 37 — Doa Fatihah Malaikat Lengkap — Picture 018 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "المتكبر أجب يا جبرائيل ... هوزح ... ملك يوم الدين يا مقلب القلوب ... سمسائيل ... طيكل ... ميكائيل ... منسع ... صرفيائيل ... فصقر ... عنيائيل ... شنئخ ... ميمون أبانوخ ... دضظغ", "Lanjutan Fatihah tiap ayat dengan malaikat penjaga Arsy (pola sama Hal.19) — Jibra’il Hawzah, Samsa’il Thaykal, Mika’il Munsa‘, Sharfaya’il Fashaqar, ‘Anyā’il Syannakh, Maimun Dhadhazagh — ditutup Arwah Ruhaniyyah ... Al-Waha...")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 38 — Yaqutah Lanjutan + Alam Nasyrah Wanita — Picture 019 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "وأفعلوا كذا بحق السبع وبحق الأسماء العظام ... وألقيت عليك محبة منى ... هذا هو خاتمها ولقد أخرجناها للزوجة الغضبانة ... التيجاني وهى شغله اليومى ... الم تشرح للنساء فقط بسم الله الرحمن الرحيم اختى الزوجة الصالحة انصحك ان تستخدمى هذا العمل لزوجك هذا الزمن الصعب تكتبي سورة الم نشرح 3 مرات بماء الورد والزعفران", "Tawkil ‘hak Saba‘... wa alqaytu ‘alaika mahabbatan minni’ 4x wafaq — dari Tijani wirid harian — suci wudhu 2 rakaat + bukhur luban jawi gaharu — baca 7x — mujarrab. Alam Nasyrah khusus wanita: tulis 3x dengan mawar za‘faran + garam dirham + Asma 99x — campur celak/inai.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 39 — Yaqutah Ats-Tsaminah Doa Panjang — Picture 019 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "اللهم يا واحد فى اسمائه يا الله و يا منفرد ... يا من كلم موسى ... يا من رفع ادريس ... عن ايوب ... رد يوسف ... اللهم اقلّ قلب فلان بمحبة و اجعل فى قلبها الرقاقة و الرحمة ... فاكشفنا عنك غطائك فاقبصرك اليوم حديد يكاد البرق الى قامو 7 مرات توكيل و من الناس من يتخذ من دون الله اندادا", "Doa Yaqutah Tsaminah — tawassul panjang Ya Allah Ya Wahid... Ya Man kallama Musa... sampai Ya Man allafa qulub mu’minina — wa auhaina ila Musa... kath-thaudil ‘azhim — Allahuma aqill qalba Fulan... 7× qamu tawkil — wa minan nasi man yattakhidzu... qala rajulani...")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 40 — Tawassul Huruf + Faedah Ghazal — Picture 020 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "هو الذى ايدك بنصره ... هل اتى على الانسان ... اسالك بالالف المعطوف ... و بصاد الصدق و بضاد الضياء ... دخلت فى كنف الله تشفعت برسول الله ... اللهم انى اسالك بحرمة مضيائك و بحمالة عرشك الى ما سخرت لين قلبها له كما لينت الحديد لداوود ... فائدة تهيج رأس العفريت تكتب فى رق غزال بمسك وزعفران وماء ورد وتبخرة بكندر وميعة سائلة وتعزم بالبرهتية 21 مرة بعد صرف العمار ثم تعلق فى الهواء مع اثر المطلوب", "Tawassul huruf hija’iyah 28 + ‘dakhaltu fi kanafillah...’ + ‘Allahumma inni as’aluka bi-hurmati...’ lunakkan hati seperti besi Dawud + sujud Qur’an — tulis jadwal & putar nama — beri minum taat. Faedah Ghazal: kulit kijang misk za‘faran mawar kundur mi‘ah cair + Barhatiyyah 21x setelah sharf ‘ammar gantung bersama atsar.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 41 — Mahabbah 3 Rambut 131x + Rajah — Picture 020 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "محبة عجيبة إذا أردت ذلك فخذ ثلاث شعرات من رأس المطلوب ثم تكتب سورة الفاتحة بالصفحة الايمنة توكل باسم الطالب والمطلوب وتوضع الشعر فى قلب الورقة بعد البخور وتحمل وهذا ما تكتب بسم الله الرحمن الرحيم الرال كهيعص مالك يوم الدين طسم طسم طسم اياك نستعين الم الم المر اهدنا الصراط المستقيم يس ق ن صراط الذين أنعمت طس طسم عليهم غير المغضوب عليهم والاضالين امين امين امين توكلوا يا خدام هذه السورة الشريفة والاحرف النورانية والقو محبة فلان ابن فلانة فى قلب فلانة بنت فلانة حتى لايستقر لها حال ولا قرار ولا مكان ولا يأخذها هدوء ولا صبر عن محبة وعشق وطاعة فلان ابن فلانة بحق سر الفاتحة وما فيها من الاسماء العظماء الاحرف النورانية ثم تعرم عليها 131 وشمعها وقابل بيها من عملت له تری عجبا", "Mahabbah ‘Ajibah: ambil 3 rambut, tulis Fatihah di halaman kanan, wakukan nama, letak rambut tengah setelah bukhur — yang ditulis Bismillah... Alif Lam Ra Kaf Ha Ya ‘Ain Shad Maliki... Tha Sin Mim 3x Iyyaka nasta‘in... Ya Sin Qaf Nun... Tha Sin Tha Sin Mim... Amin 3x — tawakkalu ya khuddam... jatuhkan cinta Fulan bin Fulanah di hati Fulanah sampai tidak tenteram — dengan sirr Fatihah & Huruf Nur — azimah 131x nyalakan hadapkan — lihat ajaib.")
+add_rajah(RAJAH_41, "Halaman 41 — 2 Figures Top Mahabbah `Ajibah", "2 Rajah atas judul — Atas figur manusia + angka `19 9 111...` + `حـ مو...`, Bawah 2 sigil silang `X` + `77< حجه...` + 5 sigil. Untuk kulit kijang Hal40 + 3 rambut Hal41. HANYA 2 gambar (3092x1708 px, 497KB, 4× putih).")
+
 pdf.ln(4)
 pdf.set_font('DejaVu', 'I', 7)
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Batch 07: Picture 016 (hal.32-33), Picture 017 (hal.34-35), Picture 018 (hal.36 *akan dicek*). Hal.32-35 tidak ada Rajah gambar baru (hanya teks nama waraq). Untuk Batch 08-30 (hal.37-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Batch 08: Picture 018 (hal.36-37), Picture 019 (hal.38-39), Picture 020 (hal.40-41). Rajah Hal.41 2 figures crop presisi HANYA kotak, putih bersih 4x. Untuk Batch 09-30 (hal.42-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B07 generated: {PDF_OUT}")
+print(f"PDF B01-B08 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B07) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B08) also at {PDF_FULL}")
