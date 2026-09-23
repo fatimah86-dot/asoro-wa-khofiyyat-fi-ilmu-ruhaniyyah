@@ -320,6 +320,33 @@ p { line-height: 1.85; margin: 0 0 1rem; font-size: 1.05rem; }
   border: 1px solid var(--gold);
   padding: .9rem .7rem 1.1rem;
 }
+.rajah-crop {
+  margin: 1.3rem auto 1.7rem;
+  text-align: center;
+  background: #fff;
+  border: 1px solid var(--gold);
+  padding: 1rem 1rem 1.2rem;
+}
+.rajah-crop h3 {
+  margin: 0 0 .75rem;
+  color: var(--red);
+  font-size: 1.02rem;
+  font-family: Cinzel, serif;
+}
+.rajah-crop img {
+  max-width: min(100%, 540px);
+  height: auto;
+  background: #fff;
+  display: inline-block;
+}
+.rajah-crop .baca {
+  text-align: start;
+  max-width: 40em;
+  margin: .85rem auto 0;
+  font-size: .98rem;
+  line-height: 1.75;
+  color: var(--ink);
+}
 .rajah-wrap img, .rajah-wrap object, .rajah-wrap svg {
   max-width: 100%;
   height: auto;
