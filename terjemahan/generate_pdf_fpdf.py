@@ -15,7 +15,10 @@ AMIRI_REG = "/tmp/amiri/fonts/Amiri-Regular.ttf"
 AMIRI_BOLD = "/tmp/amiri/fonts/Amiri-Bold.ttf"
 RAJAH_05 = str(BASE / "assets/rajah-hal-005-wafaq-tehij.jpg")
 RAJAH_07 = str(BASE / "assets/rajah-hal-007-khatam-7waraq.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B02.pdf")
+RAJAH_12 = str(BASE / "assets/rajah-hal-012-thilasm-final.jpg")
+RAJAH_13 = str(BASE / "assets/rajah-hal-013-thilasm-final.jpg")
+RAJAH_14 = str(BASE / "assets/rajah-hal-014-tilasm-final.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B03.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -31,7 +34,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-02)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-03)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -291,6 +294,34 @@ add_block_box('Teks Arab Asli - Azimah Mas-alah 9 (1)', "وهذه العزيمة
 
 add_block_box('Teks Arab Asli - Azimah Mas-alah 9 (2) - 31x', "وهذه العزيمة تقول - أقسمت عليكم يا معاشر الجن والشياطين والأبالسة والمردة والزوابع والنوابع واكسيام ملك السفلية وملك العمار وملك القرينة بحق هذه الأسماء العظيمة وهو اسم الله الأعظم المخزون الذي بين الكاف والنون الذي ذلت له رقاب الجبابرة وأطاعت له الملوك الأكاسرة وسجدت له ملوك الأرض مشرقاً ومغرباً قالوا إنا لله طائعين ولعظمته خاضعين ولمز هيبته ساجدين باسم اهيا شراهيا. ادوناي أصباؤوت. ال شداي. أهيا اهيا العزيز المعتز الذي نظر إلى السماء فارتفعت وانجلت وإلى الأرض فاستعدت وما جت وإلى الجبال زلت وخر موسى صعقاً الذي أوحى في كل سماء أمرها أن تلقوا محبة فلان ابن فلانة في قلب فلانة بنت فلانة وتهيجوها وتقلقوها وتزعجوها قلب فلانة لمحبة فلان الوحا العجل الساعة عدد ٢ أجيبوا يا خدام هذه الأسماء بحقها عليكم أجيبوا داعي الله من كل فج عميق وأطيعوا وأسرعوا وهيجوا واجلبوا واحرقوا قلب فلانة بمحبة فلان من قبل ما تحترق هذه الأسماء فتكونوا من النادمين أسرعوا بارك الله فيكم وعليكم عدد ٣١ مرة.", "“Aku bersumpah kepada Jin, Syaitan, Iblis, Maradah, Zawabi’, Nawabi’, Aksiyam Raja Sufliyyah, Raja Ammar, Raja Qarinah, dengan Ismullah Al-A’dham antara Kaf-Nun, yang tunduk leher jababirah, patuh raja Persia, sujud raja timur-barat ‘inna lillahi tha-i’in’ - dengan Ahya Syarahya, Adonai Ashba-ut, Al Syaddai, Ahya Ahya, Yang melihat langit lalu meninggi, bumi lalu terhampar, gunung lalu berguncang & Musa pingsan, yang mewahyukan tiap langit - lemparkan cinta Fulan bin Fulanah ke hati Fulanah, gelisahkan, ganggu - Al-Waha Al-‘Ajal As-Sa’ah 2x - jawablah dاعي Allah dari tiap lembah, taat, cepat, bakar hati Fulanah sebelum asma ini terbakar, kalian menyesal - 31x.”")
 
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 12 — Mas-alah 10 : Bab Mahabbah wa Tahyij — Malam Ahad — Picture 006 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli — Mas-alah 10', "المسألة العاشرة\nباب محبة وتهييج\nتكتب ليلة الأحد بعد نوم الناس في كاغد أبيض اسم الطالب وامه والمطلوب وامه مع هذه الأسماء وأنت تقول هيجوا فلانة وأزعجوا واحرقوا قلبها على محبة فلان ابن فلانة بحق اه. شاه. أهيا شراهيا. ادوناي. اصباؤوت ال شداي.\nوهذا ما تكتب", "MAS-ALAH KE-10 — MAHABBAH DAN TAHYIJ Malam Ahad setelah orang tidur, di kertas putih, tulis nama pencari+ibunya & yang dicari+ibunya bersama asma, sambil berkata: “Gelisahkan, ganggu, bakar hati Fulanah untuk cinta Fulan bin Fulanah, dengan hak Ah, Shah, Ahya Syarahya, Adonai, Ashba-ut Al Syaddai.” Dan inilah yang engkau tulis:")
+add_rajah(RAJAH_12, "Halaman 12 — Thilasm 2 Baris", "2 baris thilasm horizontal — baris atas `ااااطم 2 م 211 اطاا م` + `هيجوا فلان على`, baris bawah `5 111 3 ح ع م . ق 11 ح م م م م محبة فلان` — disalin persis di kertas putih malam Ahad. HANYA 2 baris (186KB, putih 4x, tanpa teks sekitar).")
+add_block_box('Teks Arab Asli — Azimah', "وهذه العزيمة تقول شموشيش. طفيويش. فريش. عبيد. بهيا فلانة إلى محبة فلان بحق هذه الأسماء عليكم الوحا عدد 2 العجل عدد 2 الساعة عدد 2. والبخور لبان وجاوي وكزبرة ناشفة.", "Azimahnya: “Syamusyisy, Thafyuwisy, Farisy, Abid, Bahya Fulanah kepada cinta Fulan, dengan hak asma ini — Al-Waha 2, Al-Ajal 2, As-Saah 2. Bukhur: luban, jawi, ketumbar kering.”")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 13 — Mas-alah 12 : Tahyij Shahih (Susi) — Picture 006 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli — Mas-alah 12', "المسألة الثانية عشرة\nللمحبة والتهييج الصحيح\nقال الشيخ الإمام الفقيه عبدالله أحمد السوسي صار لي أربعين عاماً وأنا في طلبها فوجدتها في بلاد غرناطة عند ملك من الملوك فأعطيته فيها مائة دينار ونقلتها في قرطاس قال الشيخ - خذ شيئاً من شعر الرأس وشيئاً من شعر الباط وشيئاً من شعر الوسط وأظافر اليدين والرجلين واحرقهم وأنت وحدك واجعل منهم مداداً واكتب به هذه الطلاسم واسقيهم لمن شئت ولابد أن تبخر بالفلفل الأسود وتقول عند بخورك.\nأخذت قلبك يا فلان يا ابن فلانة بمحبة فلانة بنت فلانة حتى لا تأكل ولا تشرب ولا تجلس ولا تنام حتى ترى وجه فلانة بنت فلانة.", "MAS-ALAH KE-12 UNTUK MAHABBAH DAN TAHYIJ YANG SHAHIH: Berkata Syaikh Imam Faqih Abdullah Ahmad As-Susi: 40 tahun aku mencarinya, menemukannya di Granada, aku bayar 100 dinar. Ambil sedikit rambut kepala, rambut ketiak, rambut tengah (bulu kemaluan), kuku tangan & kaki, bakar sendirian, jadikan tintanya, tulis thilasm ini dan beri minum kepada siapa kau mau. Wajib asap dengan lada hitam dan ucap: “Aku telah mengambil hatimu wahai Fulan bin Fulanah dengan cinta Fulanah binti Fulanah, sehingga engkau tidak makan, minum, duduk, tidur sampai melihat wajah Fulanah.”")
+add_block_box('Teks Arab Asli — Pengantar Rajah', "وهذا ما تكتب على الشقفة", "Dan inilah yang engkau tulis di atas pecahan tembikar:")
+add_rajah(RAJAH_13, "Halaman 13 — Thilasm Susi 1 Baris", "1 baris horizontal thilasm `هـ 2229 م هـ ... // 99 عع 15 مـ 33 9ـم 511111 هـ` + ekor bawah — disalin dengan tinta abu rambut/kuku di syaqfah, diasapi lada hitam. HANYA garis thilasm (135KB, putih 4x, tanpa teks sekitar).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 14 — Rajah Hal.14 & Mas-alah 13 Qallama — Picture 007 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli — Pengantar Rajah', "وهذه الطلاسم", "Dan inilah thilasm-thilasmnya:")
+add_rajah(RAJAH_14, "Halaman 14 — Thilasm 2 Baris Da'wah Qallama", "2 baris thilasm — atas `كمل ووو 3 ر 82 01 8 ل`, bawah `هو مل رط ل س ك ووو ر 989 ل` + 2 baris lagi `صع و و وريه د عط 7 111 ك ارا لظم حج اش ...` — untuk Da’wah Qallama Ra-aitahu Akbar. HANYA blok thilasm (161KB, putih 4x).")
+add_block_box('Teks Arab Asli — Azimah & Mas-alah 13', "طيوش طيشوا عقلها واخطفوا قلبها بمحبة فلان ابن فلانة\nالمسألة الثالثة عشرة\nفي دعوة قلما رأيته أكبرنه\nوهي تصلح لكل شيء - فإن أردتها للقبول فاجعلها في حرز واجعلها على عضدك الأيمن ويكون عند الزوال - وإن أردتها للتمييل فاكتبها في حرزين واحد اسقيه للمطلوب والآخر تجعله المرأة في حزامها وإن كان للرجل فيحمله على عضده الأيمن وإن أردتها للخطبة فاكتبها مع الدعوة وعلقها بين عينيك يسهل الله لك ما تريد وإن أردتها للمحبة فاكتبها يوم الخميس أو يوم الجمعة قبل طلوع الشمس وعلقها للريح بشعر رأس من تريده أو بخيط أحمر وبالله الذي لا إله إلا هو ما جربتها مراراً ما خابت أبداً وتستجاب في الوقت والحين والكاذب عليه لعنة الله وهذه أمانة الله لا تفعلها إلا في الحلال.", "“Thayusy, Thisyû ‘aqlaha wa-khthafu qalbaha bi-mahabbati Fulan bin Fulanah.”\nMAS-ALAH KE-13 TENTANG DOA QALLAMA RA-AITAHU AKBARNAH — Cocok segala hajat: Qabul: jimat di lengan kanan saat zawal; Tamyiil: 2 jimat, satu diminum, satu di ikat pinggang; Khithbah: gantung di antara mata; Mahabbah: tulis Kamis/Jumat sebelum subuh, gantung diterpa angin dengan rambut/benang merah. “Demi Allah tidak pernah gagal, terkabul seketika. Pendusta dilaknat. Amanah Allah, hanya untuk halal.”")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 15 — Khatam Mahabbah Sulaiman — Picture 007 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli — Khatam', "وهذا ما تكتب مع الخاتم\nبسم الله الرحمن الرحيم الحمد لله الذي جعل الظلمات والنور اللهم نور قلب فلان وفلانة بمحبة لو أنفقت ما في الأرض جميعاً إلى قوله حكيم اللهم ألف بين فلان وفلانة فلبثت سنين في أهل مدين ثم جئت على قدر يا موسى كذلك يجعل الله محبة فلان في قلب فلانة شهد الله أنه لا إله إلا الله هو والملائكة إلى حكيم عسى الله أن يجعل بينكم وبين الذين عاديتم منهم مودة والله قدير والله غفور رحيم اللهم عطف قلب فلان في قلب فلانة اللهم ألف بينهم كما ألفت بين سيدنا محمد وعائشة وكما ألفت بين علي وفاطمة وكما ألفت بين يوسف وزليخا يا الله يا الله يا رحمن يارحمن يارحيم يا رحيم يارحيم يارحيم ياودود ياودود ياودود يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف اللهم عطف قلب فلان إلى محبة فلانة بحق هذه الأسماء عليكم يا الله بحق اسمك الظاهر ياذا الجلال والإكرام عدد ٣ ألم نشرح لك صدرك إلى آخرها اللهم رغب محبة فلانة في قلب فلان ربنا عليك توكلنا وإليك أنبنا وإليك المصير اللهم يارب بحق أسمائك الظاهرة وملائكتك وأنيائك أن تجعل محبة فلانة في قلب فلان بالريح العاصف والبرق الخاطف إنه من سليمان وإنه بسم الله الرحمن الرحيم", "Dan inilah yang engkau tulis bersama Khatam: Bismillah... Segala puji bagi Allah yang menjadikan gelap & cahaya. Ya Allah terangilah hati Fulan & Fulanah... (kutip QS Al-Anfal:63, Thaha, Ali Imran:18, Al-Mumtahanah:7, doa ta’lif antara Muhammad-Aisyah, Ali-Fatimah, Yusuf-Zulaikha, Ya Allah Ya Rahman Ya Rahim Ya Wadud Ya Ra’uf Ya ‘Athuf (diulang), Ya Allah lembutkan hati Fulan kepada Fulanah dengan hak asma ini, dengan Nama-Mu Zahir, Wahai Pemilik Keagungan, 3x Alam nasyrah, Ya Allah jadikan cinta Fulanah di hati Fulan dengan angin topan & kilat — Innahu min Sulaimana wa innahu Bismillahir Rahmanir Rahim.")
+
+
 # FOOTER FOR PDF
 pdf.ln(4)
 pdf.set_font('DejaVu', 'I', 7)
@@ -299,9 +330,9 @@ pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan 
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B02 generated: {PDF_OUT}")
+print(f"PDF B01-B03 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B02) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B03) also at {PDF_FULL}")

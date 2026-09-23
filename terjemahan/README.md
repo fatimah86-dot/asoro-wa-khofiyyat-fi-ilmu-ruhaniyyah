@@ -17,8 +17,9 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | Batch | Halaman | File | Status | Rajah di-crop |
 |-------|---------|------|--------|---------------|
 | **01** | 001–005 | [BATCH-01-Hal-001-005.md](BATCH-01-Hal-001-005.md) | ✅ Selesai | Hal. 05 — 1 Rajah (Wafaq Tahyij) → `assets/rajah-hal-005-wafaq-tehij.jpg` (4×, 2916×1372 px, putih bersih) |
-| **02** | 006–011 | [BATCH-02-Hal-006-011.md](BATCH-02-Hal-006-011.md) | ✅ Selesai | Hal. 07 — 1 Rajah (Khatam 7 Waraq) → `assets/rajah-hal-007-khatam-7waraq.jpg` (4×, 2404×1244 px, putih bersih) |
-| 03 | 012–016 | `BATCH-03-Hal-012-016.md` | ⏳ Sedang diproses | — |
+| **02** | 006–011 | [BATCH-02-Hal-006-011.md](BATCH-02-Hal-006-011.md) | ✅ Selesai | Hal. 07 — 1 Rajah (Khatam 7 Waraq) → `assets/rajah-hal-007-khatam-7waraq.jpg` (4×, 2404×1244 px) |
+| **03** | 012–016 | [BATCH-03-Hal-012-016.md](BATCH-03-Hal-012-016.md) | ✅ Selesai | Hal.12 Thilasm 2 baris, Hal.13 Thilasm 1 baris, Hal.14 Thilasm 2 baris → 3 Rajah final (4×, putih bersih) |
+| 04 | 017–021 | `BATCH-04-Hal-017-021.md` | ⏳ Sedang diproses | — |
 | 03 | 011–015 | `BATCH-03-Hal-011-015.md` | ⏳ Antri | — |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri | — |
