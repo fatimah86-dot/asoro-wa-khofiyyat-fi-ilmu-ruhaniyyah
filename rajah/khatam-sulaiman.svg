@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="620" height="620" viewBox="0 0 620 620">
+  <defs>
+    <linearGradient id="gparch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8eed8"/>
+      <stop offset="100%" stop-color="#ead6ae"/>
+    </linearGradient>
+  </defs>
+  <rect width="620" height="620" fill="url(#gparch)"/>
+  <rect x="16" y="16" width="588" height="588" fill="none" stroke="#c4a35a" stroke-width="4"/>
+  <rect x="24" y="24" width="572" height="572" fill="none" stroke="#7a1f1a" stroke-width="1.1"/>
+<text x="310.0" y="52" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="24" fill="#7a1f1a">خاتم سليمان عليه السلام</text>
+<circle cx="314.0" cy="314.0" r="240" fill="none" stroke="#c4a35a" stroke-width="5"/>
+<circle cx="314.0" cy="314.0" r="226" fill="none" stroke="#7a1f1a" stroke-width="1.2"/>
+<polygon points="314.0,164.0 443.9,389.0 184.1,389.0" fill="none" stroke="#c4a35a" stroke-width="7" stroke-linejoin="round"/>
+<polygon points="314.0,464.0 184.1,239.0 443.9,239.0" fill="none" stroke="#7a1f1a" stroke-width="5" stroke-linejoin="round"/>
+<circle cx="314.0" cy="314.0" r="48" fill="#fbf6e8" stroke="#c4a35a" stroke-width="2.5"/>
+<text x="314.0" y="326.0" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="28" fill="#7a1f1a">الله</text>
+<text x="314.0" y="122.0" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="14" fill="#1a1208">يا مالك</text>
+<text x="485.47302994931886" y="221.0" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="14" fill="#1a1208">يا قهار</text>
+<text x="485.47302994931886" y="419.0" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="14" fill="#1a1208">يا عزيز</text>
+<text x="314.0" y="518.0" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="14" fill="#1a1208">يا جبار</text>
+<text x="142.52697005068114" y="419.0" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="14" fill="#1a1208">يا حكيم</text>
+<text x="142.52697005068117" y="220.99999999999997" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="14" fill="#1a1208">يا لطيف</text>
+<defs><path id="ks" d="M 314.0 104.0 A 210 210 0 1 1 313.9 104.0"/></defs>
+<text font-family="Amiri, Noto Naskh Arabic, serif" font-size="13" fill="#1e3d32">
+  <textPath href="#ks" startOffset="50%" text-anchor="middle" direction="rtl">إِنَّهُ مِن سُلَيْمَانَ وَإِنَّهُ بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ ۞ أَلَّا تَعْلُوا عَلَيَّ وَأْتُونِي مُسْلِمِينَ</textPath>
+</text>
+</svg>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="448" height="558" viewBox="0 0 448 558">
+  <defs>
+    <linearGradient id="gparch" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8eed8"/>
+      <stop offset="50%" stop-color="#f3e4c4"/>
+      <stop offset="100%" stop-color="#ead6ae"/>
+    </linearGradient>
+    <filter id="paper">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" result="n"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.06"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+  </defs>
+  <rect width="448" height="558" fill="url(#gparch)"/>
+<rect x="18" y="18" width="412" height="522" fill="none" stroke="#c4a35a" stroke-width="4"/>
+<rect x="26" y="26" width="396" height="506" fill="none" stroke="#7a1f1a" stroke-width="1.2"/>
+<rect x="32" y="32" width="384" height="494" fill="none" stroke="#c4a35a" stroke-width="1.5"/>
+<text x="224.0" y="58" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="26" fill="#7a1f1a" direction="rtl">الوفق المربّع</text>
+<rect x="80" y="116" width="288" height="288" fill="#fbf6e8" stroke="#1a1208" stroke-width="2.4"/>
+<line x1="80" y1="116" x2="368" y2="116" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="80" y1="116" x2="80" y2="404" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="80" y1="188" x2="368" y2="188" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="152" y1="116" x2="152" y2="404" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="80" y1="260" x2="368" y2="260" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="224" y1="116" x2="224" y2="404" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="80" y1="332" x2="368" y2="332" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="296" y1="116" x2="296" y2="404" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="80" y1="404" x2="368" y2="404" stroke="#1a1208" stroke-width="1.6"/>
+<line x1="368" y1="116" x2="368" y2="404" stroke="#1a1208" stroke-width="1.6"/>
+<text x="116.0" y="160.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">16</text>
+<text x="188.0" y="160.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">3</text>
+<text x="260.0" y="160.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">2</text>
+<text x="332.0" y="160.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">13</text>
+<text x="116.0" y="232.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">5</text>
+<text x="188.0" y="232.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">10</text>
+<text x="260.0" y="232.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">11</text>
+<text x="332.0" y="232.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">8</text>
+<text x="116.0" y="304.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">9</text>
+<text x="188.0" y="304.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">6</text>
+<text x="260.0" y="304.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">7</text>
+<text x="332.0" y="304.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">12</text>
+<text x="116.0" y="376.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">4</text>
+<text x="188.0" y="376.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">15</text>
+<text x="260.0" y="376.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">14</text>
+<text x="332.0" y="376.0" text-anchor="middle" font-family="Amiri, serif" font-size="30" fill="#1a1208">1</text>
+<text x="224.0" y="432" text-anchor="middle" font-family="Amiri, serif" font-size="16" fill="#1e3d32">Jumlah tiap sisi = 34</text>
+<text x="224.0" y="458" text-anchor="middle" font-family="Amiri, Noto Naskh Arabic, serif" font-size="15" fill="#1a1208">Asas 34 — planet Jupiter / al-Musytari</text>
+</svg>
