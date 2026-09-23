@@ -31,7 +31,7 @@ RAJAH_26 = str(BASE / "assets/rajah-hal-026-waraq-7numbers.jpg")
 RAJAH_27 = str(BASE / "assets/rajah-hal-027-thilasm-baidah.jpg")
 RAJAH_28 = str(BASE / "assets/rajah-hal-028-thilasm-ah-hah.jpg")
 RAJAH_41 = str(BASE / "assets/rajah-hal-041-figures-mahabbah.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B08.pdf")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B09.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -47,7 +47,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-08)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-09)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -201,7 +201,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–08 (Halaman 001–041) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–09 (Halaman 001–046) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -229,7 +229,7 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–08', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–09', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
@@ -240,8 +240,9 @@ pdf.multi_cell(0, 4.5,
 'Batch 05 (022–026): Faras + timah21 Rajah23 + darah kaki 2x Rajah24 + 7 zaitun Rajah26\n'
 'Batch 06 (027–031): Telur Rajah27 + Rajah28 + Syam`atain + 2figur Jim + Wafaq693\n'
 'Batch 07 (032–036): Wafaq693 HurufNur + 7 barwat + RujuZauj + Irsal Haq70x + AqdNaum71x\n'
-'Batch 08 (037–041): Ta`qid Naum 7 kerikil Hal36 + Fatihah malaikat Hal37 + Yaqutah Tsaminah Hal38-41 + Ghazal 21x Barhat + Mahabbah 3 rambut 131x Hal41 Rajah41 figures\n'
-'Batch 09–30 (042–~150) - menyusul per 5 hal., PDF FULL auto', new_x="LMARGIN", new_y="NEXT")
+'Batch 08 (037–041): Ta`qid Naum 7 kerikil Hal36 + Fatihah malaikat Hal37 + Yaqutah Tsaminah Hal38-41 + Ghazal 21x Barhat + Mahabbah 3 rambut 131x Hal41 Rajah41\n'
+'Batch 09 (042–046): Qomash 71x Jin+Zalzalah Hal42 + Ya Dauuh21x+KhatamMutsallats28x Hal43 + Shurah Alqaytu Hal44+Lilin100 Hal44 + Shulh Ayat Panjang + Tahyij12xKursi Hal45 + LilinLebah3malam Hal46+JلبSari104x Hal46 (tanpa Rajah baru)\n'
+'Batch 10–30 (047–~150) - menyusul per 5 hal., PDF FULL auto', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(2)
 
 # --- HAL 01 COVER already done, now detailed per page ---
@@ -486,16 +487,42 @@ pdf.cell(0, 7, 'HALAMAN 41 — Mahabbah 3 Rambut 131x + Rajah — Picture 020 ki
 add_block_box('Teks Arab Asli', "محبة عجيبة إذا أردت ذلك فخذ ثلاث شعرات من رأس المطلوب ثم تكتب سورة الفاتحة بالصفحة الايمنة توكل باسم الطالب والمطلوب وتوضع الشعر فى قلب الورقة بعد البخور وتحمل وهذا ما تكتب بسم الله الرحمن الرحيم الرال كهيعص مالك يوم الدين طسم طسم طسم اياك نستعين الم الم المر اهدنا الصراط المستقيم يس ق ن صراط الذين أنعمت طس طسم عليهم غير المغضوب عليهم والاضالين امين امين امين توكلوا يا خدام هذه السورة الشريفة والاحرف النورانية والقو محبة فلان ابن فلانة فى قلب فلانة بنت فلانة حتى لايستقر لها حال ولا قرار ولا مكان ولا يأخذها هدوء ولا صبر عن محبة وعشق وطاعة فلان ابن فلانة بحق سر الفاتحة وما فيها من الاسماء العظماء الاحرف النورانية ثم تعرم عليها 131 وشمعها وقابل بيها من عملت له تری عجبا", "Mahabbah ‘Ajibah: ambil 3 rambut, tulis Fatihah di halaman kanan, wakukan nama, letak rambut tengah setelah bukhur — yang ditulis Bismillah... Alif Lam Ra Kaf Ha Ya ‘Ain Shad Maliki... Tha Sin Mim 3x Iyyaka nasta‘in... Ya Sin Qaf Nun... Tha Sin Tha Sin Mim... Amin 3x — tawakkalu ya khuddam... jatuhkan cinta Fulan bin Fulanah di hati Fulanah sampai tidak tenteram — dengan sirr Fatihah & Huruf Nur — azimah 131x nyalakan hadapkan — lihat ajaib.")
 add_rajah(RAJAH_41, "Halaman 41 — 2 Figures Top Mahabbah `Ajibah", "2 Rajah atas judul — Atas figur manusia + angka `19 9 111...` + `حـ مو...`, Bawah 2 sigil silang `X` + `77< حجه...` + 5 sigil. Untuk kulit kijang Hal40 + 3 rambut Hal41. HANYA 2 gambar (3092x1708 px, 497KB, 4× putih).")
 
+# ========== BATCH 09: Hal042-046 (Picture 021-023) ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 42 — Qomash Mahabbah 71x + Azimah Surat Jin — Picture 021 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "ليحضرو خدام سورة الجن الشريفه والطريقه هي تحضر قطعة قماش من أثر المطلوب والطالب مثلا قطعة ثوب من هذا ومن هذا تكتب عليها بقلم السبورة الأسود آية عَلَيْكَ مَحَبَّةً مِّنِّي حروف مفرقة وتكتب على ثوب المطلوب فلان ابن فلانة من غير وتوصل القماشتين بوصلة في النص وتكتب عليها يعشق وتكتب على الوصلة الثانية الطالب فلانة بنت فلانة ثم تبخرها بفلفل أسود وأبيض وشب وتقرأ عليها الآية 71 (وَأَلْقَيْتُ عَلَيْكَ مَحَبَّةً مِّنِّي) ثم تأتي بعد أن تبخرها بما تقدم تضعها في قدر ماء يغلي وتضعها بداخله ولا تنسى صرف العمار بسورة الزلزلة مرة واحدة حتى كلمة أشتاتا ثلاثا 7 مرات ولا تنسى التحصين بآية الكرسي 7 مرات قبل العمل وقبل الصرف مع آخر من سورة البقرة ثم بعدما تضع القماش بعد تبخيره في الإناء تقرأ عليه سورة الجن وطريقة العزيمة بسورة الجن تقول (أعزم عليكم بقل أوحي إلي أنه استمع نفر من حتى آخر السورة ثم بعد كل مرة تقرأ سورة الجن تقرأ التوكيل والقسم الآتي (توكلوا سورة الجن الشريفة أعزم وأقسم عليكم بحق من خلقكم من نار السموم أن تلقوا فلانة بنت فلانة في قلب فلان ابن فلانة وتثبتوها للأبد وأنكم والله لتقدرون على وبحق هذه السورة الشريفة عليكم وطاعتها لديكم إلا ما أجبتموني في الحال وقضيتم حاجتي الوحا 2 العجل 2 الساعة 2 بارك الله فيكم وعليكم) بعد ذلك تكمل حتى نهاية السبع مرات قراءة السورة ولا تنسى بعد كل مرة قراءة تقرأ التوكيل والقسم ثم تقول (وَلَقَدْ عَلِمَتِ الْجِنَّةُ إِنَّهُمْ لَمُحْضَرُونَ) 71 مرة وتختم بالصلاة على النبي وما أن الماء حتى يبدأ مفعول العمل بإذن الله والسلام ختام وأرجو من الله العلي العظيم يستخدمها من جار عليها زوجها أو ظلمها أو هجرها لأنها لا تستخدم", "Qomash (kain) mahabbah 71x — Ambil kain atsar target & thalib, tulis با قلم سبورة hitam WA ALQAYTU ‘ALAIKA MAHABBATAN MINNI huruf mufarraqah + nama, sambung tengah tulis YA‘SYAQ, sisi kedua nama thalibah, ukup lada hitam/putih+tawas, baca ayat 71x, masukkan ke periuk mendidih. Jangan lupa sharf ‘ammar Zalzalah sampai ASYTATAN 3x tiap lafaz 7x, tahshin Ayat Kursi 7x + akhir Baqarah. Baca Surat Jin 7x, tiap selesai baca tawkil/qasam Jin Syarifah sumpah demi Pencipta dari nar samum agar lempar cinta ke hati Fulan bin Fulanah kekal — Al-Waha2... lalu WA LAQAD ‘ALIMATIL JINNAH 71x tutup shalawat. Hanya untuk wanita dizalimi suami.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 43 — Ya Dauuh 21x + Khatam Mutsallats 28x Barhatiyyah — Picture 021 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "محبة وقبول تكتب وتحمل ويعلق في الهواء يدوح 21 مرة توكل يادوح يا صاحب الفتوح بحق آدم ونوح والنبي الممدوح وفاتح افتوح افتح قلب فلانة إلى عشق فلان سيجعل لهم الرحمن ودا وألقيت عليك محبة مني إلى ...عيني الله نور السموات والأرض بشمهلا 2 شمهلاب 2 يا عباد الله الصالحين ويا رجال الله في أرضه الذين يردون الضالة ويهدون السبيل أقسمت عليكم بهذه الأسماء وهي أسماء نورانية الاما ايتم ووضعتم محبة فلان ابن فلانة في قلب فلانة بنت فلانة حتى لا يستطيع عن رؤية وجهها صبرا إن نام قياما وإن قام هيجانا وإن هاج جنونا وإن تجنن طيروه وإن طار اجلبوه بمحبة وعشق وطاعة وسماع قول فلانة بنت فلانة في منزل فلانة بنت فلانة ارموه واطرحوه ولا تدعوه يقر له قرار ولا يأخذه اصطبار لا في ليل ولا في نهار فلا طعام يهنيه ولا شراب يرويه ولا قرار يأتيه العجل العجل قبل فوات الوقت وقبل انتهاء الأجل كلما دار الفلك تجري به الشمس ويأتي به القمر ويجيبه عطارد ويجننه المريخ واذناب المشترى وعشقة الزهرة وانجلة الزهرة وانجلة زحل توكلو يا خدام الأيام السبعة العلوية وأعوانكم الملوك الأرضية وخدام الفلك الدوار وخدام الساعات وطلسم الليل والنهار ولا تحلوا عزيمة فلان ابن فلانة حتى يأتي خاضعا ذليلا إلى فلانة بنت فلانة وإلا يرسل عليكم شواظ من نار ونحاس فلا تنتصران فلا تنتصران الوحا العجل الساعة جلب ومحبة وهو أن تصور صورة من أنثى وذكر من ورق غزال وتنزل الخاتم المثلث كما أضعه لك تضع الذكر ثم تحط فيه قطعة سكر نبات وتلقي الأنثى على الذكر على بعضهم لبعض وتنزل البرهتية دائرة في ورقة بيضاء وتقرأ عليهم البرهتية عدد 28 مرة والبخور صاعد وهو لبان ذكر", "Mahabbah Qabul 21x Ya Dauuh digantung udara — tawkil panjang Adam-Nuh-Nabi Mamduh, RAHMAN WUDDA, ALQAYTU... Nur Samawati, BISYAMHALA, ya ‘ibad shalihin rijaal — asma nuraniyyah ALAMA AYTAM letakkan cinta sampai tidak sabar lihat wajah — jika tidur berdiri, gelisah, gila, terbangkan tarik — jangan tenang siang malam tak enak makan/minum — falak Syams-Qamar-Utharid-Mirrikh-Musytari-Zuhrah-Zuhal — khuddam ayyam sab‘ah ulwiyyah, muluk ardhiyyah, falak dawwar, sa‘at, thilasm lail-nahar — datang tunduk hina atau syuwazh nar+ nuhas — Al-Waha... Jلب gambar 2 sosok waraq ghazal + Khatam Mutsallats + Barhatiyyah melingkar 28x bukhur sha‘id luban dzakar — gula batu ditimpuk.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 44 — Lanjutan Jلب Gambar + Shurah ALQAYTU & Jلب Lilin Murabbaah 100 — Picture 022 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "وبعد ذلك تحط الشخصين في الورق وتلف عليهم خيطا أبيضا وتدفنهم في محل مظلم لا أحد يرى فيه شمس ولا قمر وتنزل صورة الرجل وتنزل صورة الأنثى واسم الأنثى في صورة الرجل تكتب بزعفران وماء الورد ودم الأخوين وهذا صورة الرجل | صورة الأنثى - و ألقيت ح ب عليك - عليك فلانة مني محبة فلان و - ب محبة د ح مني - جلب الشمعة شمعة مربعة تكتب على كل وجه من أمين أقش 2 قال عفريت من الجن أنا آتيك به قبل أن تقوم من مقامك وإني عليه أمين الأسماء بجلب قشهوش 2 كشليخ 2 كيكوش 2 نوخ 2 يوع 2 توكلو ياخدام ثم احضر مائة حبة كذالك كذا بحق من قسم بمواقع النجوم وانه لقسم لو تعلمون من الفلفل وتغربها من فيك وتتلو من الفلفل يعني الإزار الأبيض وتوقد الشمعة وتأخذ كل بما تريد وتلقي في النار ال ى أن تفرغ مائة عليها ما كتبته على الشمعة بتمامه و جلب مجرب وصحيح الشمعة موقدة في مكانها إلى أن تنتهي حبة فإذا انتهيت اقرأ بعد صلاة العشاء إلى أن يحقق الله طلبك وملائكاتك على الله شريطة التكرار كل ليلة للصلح بين الزوجين مجرب", "Lilit 2 sosok benang putih kubur gelap tak kena matahari/bulan — tulis gambar pria/wanita za‘faran+mawar+dam akhawain — tabel huruf: WA ALQAYTU terbagi (atas). Jلب Lilin Murabba‘ah 4 sisi Amin Aqisya Qala ‘Ifrit... Qashhush Kashlikh Kikush Nukh Yau‘ — siapkan 100 lada, hembus + QS Waqi‘ah MAWAQI‘ NUJUM, nyalakan lilin lempar 1-1 ke api sampai 100 habis ditulis di lilin — shahih lilin tetap menyala. Baca ba‘da Isya tiap malam sampai hajat — lulus — untuk Shulh Zawjayn mujarrab.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 45 — Ayat Shulh Panjang + Tahyij 12x Kursi — Picture 022 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "بسم الله الرحمن الرحيم وَمِنَ النَّاسِ مَن يَتَّخِذُ مِن دُونِ اللَّهِ أَندَادًا يُحِبُّونَهُمْ كَحُبِّ اللَّهِ وَالَّذِينَ آمَنُوا أَشَدُّ حُبًّا لِّلَّهِ وَلَوْ يَرَى الَّذِينَ ظَلَمُوا إِذْ يَرَوْنَ الْعَذَابَ أَنَّ الْقُوَّةَ لِلَّهِ جَمِيعًا وَأَنَّ اللَّهَ شَدِيدُ الْعَذَابِ فَمَنْ خَافَ مِن مُّوصٍ جَنَفًا أَوْ إِثْمًا فَأَصْلَحَ بَيْنَهُمْ فَلَا إِثْمَ عَلَيْهِ إِنَّ اللَّهَ غَفُورٌ رَّحِيمٌ . وَإِنِ امْرَأَةٌ خَافَتْ مِن بَعْلِهَا نُشُوزًا أَوْ إِعْرَاضًا فَلَا جُنَاحَ عَلَيْهِمَا أَن يُصْلِحَا بَيْنَهُمَا صُلْحًا وَالصُّلْحُ خَيْرٌ وَأُحْضِرَتِ الْأَنفُسُ الشُّحَّ وَإِن تُحْسِنُوا وَتَتَّقُوا فَإِنَّ اللَّهَ كَانَ بِمَا تَعْمَلُونَ خَبِيرًا. وَإِنْ خِفْتُمْ شِقَاقَ بَيْنِهِمَا فَابْعَثُوا حَكَمًا مِّنْ أَهْلِهِ وَحَكَمًا مِّنْ أَهْلِهَا إِن يُرِيدَا إِصْلَاحًا يُوَفِّقِ اللَّهُ بَيْنَهُمَا إِنَّ اللَّهَ كَانَ عَلِيمًا خَبِيرًا يَسْأَلُونَكَ عَنِ الْأَنفَالِ قُلِ الْأَنفَالُ لِلَّهِ وَالرَّسُولِ فَاتَّقُوا اللَّهَ وَأَصْلِحُوا ذَاتَ بَيْنِكُمْ وَأَطِيعُوا اللَّهَ وَرَسُولَهُ إِن كُنتُم مُّؤْمِنِينَ رَبَّنَا وَأَدْخِلْهُمْ جَنَّاتِ عَدْنٍ الَّتِي وَعَدْتَّهُمْ وَمَنْ صَلَحَ مِنْ آبَائِهِمْ وَأَزْوَاجِهِمْ وَذُرِّيَّاتِهِمْ إِنَّكَ أَنتَ الْعَزِيزُ الْحَكِيمُ اللهم بحق هذه الآيات الشريفة اعطف قلب فلانة بنت فلانة على فلان بن فلانة بالمحبة الدائمة والألفة والعطف والحنان فسيكفيكهم الله وهو السميع العليم ولا حول ولا قوة إلا بالله العلي العظيم وصلى الله على سيدنا محمد وآله وصحبه وسلم تكتب هذا في ورقتين يوم الجمعة ساعة الزهرة بماء الورد والزعفران قد طرح فيه يسيرا من المسك ويخر عملك بالجاوي والعنبر و واحدة يحملها الطالب والأخرى تسقى للمطلوب فإنه لا يغرب عليه شمس ذلك اليوم حتى يتوصل الطالب بمطلوبة بمطلوبية فاتقي الله في عملك فائدة تهييج للمحبة عمل تهييج محبة مجرب يكتب بالحبر الروحاني قطعة قماش من الكتان والبخور مقل ولبان وجماجم ثمر الحنا ويعزم عليه بآية الكرسي 12 مرة ) تينانور 7 هيتامور 7 كيبانور 7 جهمانور 7 ) ثم يعزم توكلو خدام هذه الرقعة المباركة الشريفة وبما فيها من اسرار", "Ayat Shulh lengkap Baqarah165,182 Nisa128,35 Anfal1 Ghafir8 + doa i‘thif qalba Fulanah binti Fulanah ‘ala Fulan — fa-sa-yakfikahumullah... Jum‘at Sa‘ah Zuhrah mawar+za‘faran+sedikit misk, bukhur jawi+anbar, 1 dibawa thalib 1 diminum matlub — sebelum matahari tenggelam sampai. Faidah Tahyij mujarrab hibr ruhaniyyah kain kattan muqul+luban+jamajim henna, azam 12x Kursi + Tinanur7 Hitamur7 Kaibanur7 Jahmanur7 + tawakkalu khuddam ruq‘ah mubarakah...")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 46 — Sambungan Tahyij + Jلب Sari 104x QulHu — Picture 023 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "شريفة بتهييج فلان ابن فلانة على فلانة بنت فلانة توكلوا ابتهيج روحانيته وفكره لمحبة فلانة بنت فلانة توكلوا خدام هذه الرقعة الشريفة المباركة بيتمتم وتعلم فلان ابن فلانة على محبة فلانة بنت فلانة الساعة الساعة الوحا العجل وانه لقسم تعلمون عظيم ثم يلف قطعة القماش على شمعة عسل ويوقدها بعد منتصف الليل يكون الناس نيام ويعزم بنفس ما ذكر ويكرر هذه الطريقة ثلاثة أيام وسيرى العجب تعلق روحانية المطلوب بالطالب بشكل لا يتصوره العقل من شدة المحبة والمودة اذا بظهر الغيب الفاضل الحبر الروحاني هو الزعفران وماء الورد وهو أساس في جميع الأعمال اما اذا كان البعض يكتبون الطلاسم بأمور أخرى فهذا ليس بالصحيح بخصوص التعزيم فبعد الكتابة واثناء الحرق بالعدد المذكور بدون زيادة ولا نقصان محبة وجلب سريع الاجابة بسم الله والصلاة والسلام على خير الأنام وهو مجرب ولا شك فيه تصور صورة من تريد من ورق وتكتب على رأس الصورة المطلوب واسم امه وقل هو الله احد وعلى يده اليمنى (الله الصمد) وعلى يده اليسرى (لم يلد) وعلى صدره (ولم يولد) وعلى رجله اليمنى مع فخذه (ولم يكن له) وعلى رجله اليسرى مع فخذه (كفوا احد) وتكون تلك الكتابة احرف مفرقة بغير طمس . وبين كل حرف (ع) وتوضع الشخص قدامك. وتعزم عليه القسم الآتي 104 مرة فإن الصورة تقوم على رجلها فتقول (بارك الله فيكم وعليكم) فهي علامة اجابة بحضور المطلوب والبخور لبان ذكر وكزبرة وهذا هو القسم (بهووتر كوش كوش قوش قوش نفخ نفخ هنوش طيوش اطى اتى اجب يا سيد اتى اجلب وهيج واسحب عقل فلان ابن فلان", "Sambungan tahyij — tawkil ibtahij ruhaniyyah+fikr — lipat kain pada lilin lebah nyalakan selepas tengah malam saat tidur, azam sama 3 hari lihat ajaib ta‘alluq ruhaniyyah tak terbayang. Hibr utama za‘faran+mawar dasar semua amal. Mahabbah Sari‘ mujarrab — gambar kertas, tulis kepala Qul Huwa, tangan kanan Allah Shamad, kiri Lam Yalid, dada Lam Yulad, kaki kanan Lam Yakun lahu, kiri Kufuwan Ahad — huruf mufarraqah bighair thams, antara huruf ‘ain (ع), hadapkan qasam 104x maka gambar berdiri — baraka Allahu — tanda ijabah. Bukhur luban+kuzbarah — qasam Bi-huwatar... Hanush Thayush...")
+
 pdf.ln(4)
 pdf.set_font('DejaVu', 'I', 7)
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Batch 08: Picture 018 (hal.36-37), Picture 019 (hal.38-39), Picture 020 (hal.40-41). Rajah Hal.41 2 figures crop presisi HANYA kotak, putih bersih 4x. Untuk Batch 09-30 (hal.42-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Batch 08: Picture 018-020 (hal.36-41) Rajah41. Batch 09: Picture 021-023 (hal.42-46) tanpa Rajah baru — hanya tabel huruf Hal44 bukan wafaq cetak. Untuk Batch 10-30 (hal.47-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena. Preview: python3 -m http.server 8000 --directory terjemahan', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B08 generated: {PDF_OUT}")
+print(f"PDF B01-B09 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B08) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B09) also at {PDF_FULL}")

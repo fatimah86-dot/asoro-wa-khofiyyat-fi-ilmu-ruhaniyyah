@@ -24,6 +24,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **06** | 027–031 | [BATCH-06-Hal-027-031.md](BATCH-06-Hal-027-031.md) | ✅ Selesai (5.1 MB, 13 Rajah) | Hal.27 thilasm Senin + Hal.28 `اخ ح ح` → 2 Rajah baru |
 | **07** | 032–036 | [BATCH-07-Hal-032-036.md](BATCH-07-Hal-032-036.md) | ✅ Selesai AUTO (5.1 MB, 13 Rajah) | Hal.32-36 tanpa Rajah gambar (hanya teks `هيور 3...`) — 0 Rajah |
 | **08** | 037–041 | [BATCH-08-Hal-037-041.md](BATCH-08-Hal-037-041.md) | ✅ Selesai AUTO (5.6 MB, 14 Rajah) | Hal.41 2 figures `rajah-hal-041...` 497KB — 1 Rajah baru |
+| **09** | 042–046 | [BATCH-09-Hal-042-046.md](BATCH-09-Hal-042-046.md) | ✅ Selesai AUTO (5.6 MB, 14 Rajah) | Hal42-46 tanpa Rajah cetak — hanya tabel huruf Hal44 bukan wafaq (0 Rajah baru) |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
@@ -72,10 +73,10 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut — AUTO LANJUT SAMPAI SELESAI
-- Batch 01–08 sudah jadi — 41 halaman / ±150 (27%) — PDF B01–B08 5.6 MB + FULL 5.6 MB — 14 Rajah HQ — AUTO — **LANJUT TANPA JEDA**
-- Batch 09 (Hal.042–046, Picture 021–023) berikutnya — auto push 15 menit lagi — tidak perlu ketik
-- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B08 UTAMA 5.6 MB — FULL auto membesar sampai 150 — 1 file final)
-- Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru
+- Batch 01–09 sudah jadi — 46 halaman / ±150 (30%) — PDF B01–B09 5.6 MB + FULL 5.6 MB — 14 Rajah HQ — AUTO — **LANJUT TANPA JEDA**
+- Batch 10 (Hal.047–051, Picture 023 kiri+024+025) berikutnya — auto push 15 menit lagi — tidak perlu ketik
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B09 UTAMA 5.6 MB — FULL auto membesar sampai 150 — 1 file final)
+- Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru — Preview: `python3 -m http.server 8000 --directory terjemahan` → https://8000-xxx.e2b.app
 
 ---
 *Dibuat 23 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural.*
