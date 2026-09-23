@@ -365,6 +365,55 @@ footer.colophon {
   .backdrop.show { display: block; }
 }
 
+.spread {
+  width: 100%;
+  border: 1px solid var(--gold);
+  background: #fff;
+  display: block;
+  margin: .4rem 0 1rem;
+}
+.viewer {
+  background: #1a1410;
+  padding: 1rem;
+  border: 1px solid var(--gold);
+  margin: 1rem 0 1.6rem;
+}
+.viewer-bar {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: .8rem;
+  color: #ead9b0;
+  font-size: .9rem;
+}
+.viewer-bar input[type="range"] { width: min(360px, 70%); }
+.masa {
+  border-top: 1px dashed #cbb58a;
+  padding: 1.1rem 0 1.4rem;
+}
+.masa h3 {
+  margin: 0 0 .35rem;
+  color: var(--red);
+  font-size: 1.05rem;
+}
+.badge {
+  display: inline-block;
+  font-size: .72rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border: 1px solid var(--red);
+  color: var(--red);
+  padding: .12rem .45rem;
+  margin-left: .4rem;
+  font-family: Cinzel, serif;
+}
+.badge.ok {
+  border-color: var(--green);
+  color: var(--green);
+}
+
 @media print {
   .cover, .sidebar, .topbar, .backdrop { display: none !important; }
   body.reading .app { display: block; }

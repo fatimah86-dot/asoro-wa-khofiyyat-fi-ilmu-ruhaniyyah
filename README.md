@@ -1,36 +1,24 @@
-# أسرار وخفيات في علم الروحانية
+# أسرار وخفايات في علم الروحانيات
 
-**Asrār wa Khafiyyāt fī ʿIlm al-Rūḥāniyyah**  
-Terjemah Indonesia — rahasia dan hal-hal tersembunyi dalam ilmu ruhani.
+Terjemah Indonesia atas naskah cetak **Syeikh ʿAṭiyyah ʿAbd al-Ḥamīd**.
 
-Edisi digital beranotasi. Setiap rajah/wafak diletakkan langsung di bawah penjelasannya.
+Ekstrak foto naskah ada di commit `cf70ec0` (99 lembar). Salin ke folder `naskah/` agar pembaca lembar-demi-lembar dan rajah di bawah tiap bab tampil:
+
+```bash
+git checkout cf70ec0142be5fcc5318566bb2a67bae8c10c8ae -- '*.jpg'
+mkdir -p naskah
+mv Picture\ *.jpg 1.jpg naskah/
+```
 
 ## Membaca
-
-Buka `index.html` di peramban, atau jalankan peladen setempat:
 
 ```bash
 python3 -m http.server 8080 --bind 0.0.0.0
 ```
 
-## Isi
+Buka `index.html`. Setiap rajah diambil dari halaman naskah yang bersangkutan.
 
-1. Muqaddimah dan adab
-2. Ilmu huruf & ḥisāb jummal
-3. Wafak Budūḥ 3×3, murabbaʿ 4×4, ordo 5–7
-4. Hijāb ʿaẓīm al-qadr
-5. Khātam Sulaimān
-6. Wafak Ahlul Kahfi musabbaʿ
-7. Jalālah khālī al-wasaṭ
-8. Wafak Ayat al-Kursī asy-Syaibānī
-9. Wafak Samsamāʾīlī (menolak gangguan)
-10. As-Suhrawardī ḥall al-marbūṭ
-11. Mutsallats Abū al-Fatḥ (hanya lil-khair)
-12. Mawaddah suami-istri
-13. Saat dan hari
+## Batas terjemahan
 
-Bab naskah yang berisi irsal, pelet, tahyīj, dan sisi syarr **tidak** diterjemahkan sebagai petunjuk praktis.
-
-## Catatan naskah
-
-PDF Arab asli tidak disertakan di repositori ini. Edisi ini merujuk struktur kitab yang dinisbatkan kepada Syeikh ʿAṭiyyah ʿAbd al-Ḥamīd dan ilmu awfāq klasik. Kotak ajaib dihitung ulang secara matematis.
+Judul masʾalah, maksud, dan foto rajah diterjemahkan/ditampilkan.
+Azimah jalb–tahyīj, rajah dalam makanan, ṭilasm sakit/gila, dan menyembelih hewan untuk sihir **tidak** diturunkan sebagai petunjuk praktis.
