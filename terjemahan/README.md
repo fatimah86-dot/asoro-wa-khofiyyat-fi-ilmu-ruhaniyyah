@@ -33,6 +33,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **15** | 072–076 | [BATCH-15-Hal-072-076.md](BATCH-15-Hal-072-076.md) | ✅ Selesai AUTO (20 MB, 53 Rajah) | 8R: 72top 265K + 72bot 299K + 74top 1.4M + 74bot 126K + 75fig 545K + 75scr 246K + 76waf 433K + 76loop 119K |
 | **16** | 077–081 | [BATCH-16-Hal-077-081.md](BATCH-16-Hal-077-081.md) | ✅ Selesai AUTO (24 MB, 62 Rajah) | 9R: 77top 164K +77bot 547K +78waf 837K+78top 113K+78bot 36K +79top 147K+79bot 393K +80top 838K+80bot 323K +81top 441K+81bot 178K |
 | **17** | 082–086 | [BATCH-17-Hal-082-086.md](BATCH-17-Hal-082-086.md) | ✅ Selesai AUTO (27 MB, 72 Rajah) | 10R: 82top 303K+82bot 292K +83top 338K+83bot 206K +84top 217K+84bot 239K +85fig 381K+85bot 151K +86top 341K+86bot 294K |
+| **18** | 087–091 | [BATCH-18-Hal-087-091.md](BATCH-18-Hal-087-091.md) | ✅ Selesai AUTO (30 MB, 82 Rajah) | 10R: 87top 261K+87bot 240K +88top 415K+88mid 507K+88bot 173K +89top 209K+89bot 149K +90fig 411K+90waf 282K +91top 170K |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
@@ -81,9 +82,9 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut — AUTO LANJUT SAMPAI SELESAI
-- Batch 01–17 sudah jadi — 86 halaman / ±150 (57%) — PDF B01–B17 27 MB + FULL 27 MB — 72 Rajah HQ — AUTO 1 menit — **LANJUT TANPA JEDA**
-- Batch 18 (Hal.087–091, Picture 043 kiri Hal87 + 044 Hal88-89 + 045 Hal90-91) berikutnya — auto push 1 menit lagi — tidak perlu ketik
-- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B17 UTAMA 27 MB — FULL auto membesar sampai 150 — 1 file final)
+- Batch 01–18 sudah jadi — 91 halaman / ±150 (60%) — PDF B01–B18 30 MB + FULL 30 MB — 82 Rajah HQ — AUTO tanpa jeda — **LANJUT TANPA JEDA**
+- Batch 19 (Hal.092–096, Picture 046 Hal92-93 + 047 Hal94-95 + 048 Hal96) berikutnya — auto push tanpa jeda — tidak perlu ketik
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B18 UTAMA 30 MB — FULL auto membesar sampai 150 — 1 file final)
 - Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru — Preview: http-server 8000 live
 
 ---
