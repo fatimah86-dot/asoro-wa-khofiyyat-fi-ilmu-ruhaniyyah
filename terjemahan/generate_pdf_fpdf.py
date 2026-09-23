@@ -20,7 +20,11 @@ RAJAH_13 = str(BASE / "assets/rajah-hal-013-thilasm-final.jpg")
 RAJAH_14 = str(BASE / "assets/rajah-hal-014-tilasm-final.jpg")
 RAJAH_16 = str(BASE / "assets/rajah-hal-016-khatam-besar.jpg")
 RAJAH_19 = str(BASE / "assets/rajah-hal-019-khatam-4x4.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B04.pdf")
+RAJAH_23 = str(BASE / "assets/rajah-hal-023-inscription.jpg")
+RAJAH_24T = str(BASE / "assets/rajah-hal-024-top-thilasm.jpg")
+RAJAH_24B = str(BASE / "assets/rajah-hal-024-bottom-thilasm.jpg")
+RAJAH_26 = str(BASE / "assets/rajah-hal-026-waraq-7numbers.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B05.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -36,7 +40,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-04)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-05)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -190,7 +194,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–04 (Halaman 001–021) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–05 (Halaman 001–026) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -218,15 +222,16 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–04', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–05', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
 'Batch 01 (Hal. 001–005): Cover, Fasal 1 Mahabbah/Jalb/Tahyij, Mas-alah 1 (Alfah 20 daun lemon), Mas-alah 2 (72x), Mas-alah 3 (Syaqfah Selasa), Rajah Hal.05 Wafaq, Mas-alah 4 (7 lembar)\n'
 'Batch 02 (Hal. 006–011): Lanjutan Mas-alah 4, Khatam 7 Waraq Hal.07, Mas-alah 5 (400x/300x), Al-Humazah lilin, Mas-alah 7 (Maimun Thayyar), Mas-alah 8 (Harut-Marut lampu hijau), Mas-alah 9 (Mahmala, Ahya Syarahya 31x)\n'
-'Batch 03 (Hal. 012–016): Mas-alah 10 (Malam Ahad, Rajah Hal.12), Mas-alah 12 Susi (Rajah Hal.13 tinta rambut/kuku), Mas-alah 13 Qallama (Rajah Hal.14), Mas-alah 14 awal + Khatam Sulaiman (Hal.15)\n'
-'Batch 04 (Hal. 016–021): Lanjutan Khatam Sulaiman Hal.16 (Rajah Besar 8x8 Hal.16), Mas-alah 14 Da`wah Fatihah (Hal.17-19, Rajah 4x4 Hal.19 837x), Mas-alah 15 Tahyij 7 kertas Sabtu jam 11 (Hal.20-21, azimah Harut-Marut), Mas-alah 16 Mahabbah adonan faras (Hal.21)\n'
-'Batch 05–30 (Hal. 022–~300) - menyusul per 5 hal., PDF FULL akan di-append otomatis', new_x="LMARGIN", new_y="NEXT")
+'Batch 03 (Hal. 012–016): Mas-alah 10 (Malam Ahad, Rajah Hal.12), Mas-alah 12 Susi (Rajah Hal.13), Mas-alah 13 Qallama (Rajah Hal.14), Khatam Sulaiman Hal.15\n'
+'Batch 04 (Hal. 016–021): Khatam Besar 8x8 Hal.16, Da`wah Fatihah Hal.17-19 Rajah 4x4 837x, Tahyij 7 kertas Hal.20-21, faras Hal.21\n'
+'Batch 05 (Hal. 022–026): Lanjutan faras Hal.22, Mas-alah 17 timah+shafqah 21x Rajah Hal.23, Mas-alah 18-19 darah kaki Hal.24 (2 Rajah), Mas-alah 20-21 shafqah & Sirr Mashun (Hayasy...), Mas-alah 22 daun zaitun 7 waraq Rajah Hal.26\n'
+'Batch 06–30 (Hal. 027–~150) - menyusul per 5 hal., PDF FULL akan di-append otomatis', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(2)
 
 # --- HAL 01 COVER already done, now detailed per page ---
@@ -358,17 +363,48 @@ pdf.set_text_color(124,45,18)
 pdf.cell(0, 7, 'HALAMAN 21 — Lanjutan Azimah & Mas-alah 16 — Picture 010 kiri', new_x="LMARGIN", new_y="NEXT")
 add_block_box('Teks Arab Asli', "بالطيران وقريبتك لهياج الجان وأحرقتك بالنار نار على نار واشتد\\nالقلب منك وطار وتنخبل العقل منك وحار ووسواس الصدافيقنا\\nبالأذكار ولقي بك الغرام بنار المحبة فاحترقت حرقاً ٢ ورشحت\\nعرقاً ٢ وهامت عشقاً ٢ وذابت قلقاً كنليان الماء في القدور على\\nالنار إذا ألقوا فيها سمعوا لها شهيقاً وهي تفور ذبتي يا فلانة يا بنت\\nفلانة كما ذابت المونى في القبور فلا ينفك عملي هذا حتى ينفخ\\nإسرافيل في الصور وتخرج الموتى من القبور إن لغير مشكور\\nبرجمت بقسمي وههمت بنفسي وتوكلت على ربي وقلت إنه من\\nسليمان وإنه بسم الله الرحمن الرحيم أن لا تعلوا علي وأتوني\\nمسلمين مسرعين طائعين لله رب العالمين بحق اهيا شراهيا ادوناي\\nاصباؤوت ال شداي وإنه لقسم لو تعلمون عظيم أن ٢ ايل ٢ اه ٢\\nاهيا ٢ مهليل ٢ شلهيب ٢ دوسم ٢ اهمليلا طرخيثا ٢ ميا يا\\nأصحاب الكلام طلس ٢ طلوس ٢ بها ٢ بهوبط ٢ بهابيل مهولة ٢\\nبمعاطفة عطوفة بخاطفة خطوفة اخطفوا قلب فلانة بنت فلانة في\\nمحبة فلان ابن فلانة حتى لا تأكل ولا تشرب ولا تهدتي ولا تنام\\nبحق بعضكم على بعض العجل فيكم وعليكم بارك الله فيكم وكان أمر\\nالله مفعولاً وصلى الله على سيدنا محمد وعلى آله وصحبه وسلم.\\nالمسألة السادسة عشرة\\nمسألة للمحبة\\nتأخذ قطعة عجين وصور منها صورة فرس ونأخذ شيء من", "Lanjutan azimah Hal.20: “...terbang, bakar api di atas api, hati terbang, akal gila, was-was memuncak, bakar cinta 2x keringat 2x mabuk 2x meleleh seperti air mendidih, leleh Fulanah seperti mayat di kubur, tidak lepas sampai Israfil tiup... Aku bersumpah Innahu min Sulaimana... musri’in tha’i’in, Ahya Syarahya Adonai Ashba-ut Al Syaddai, wa innahu la-qasamun lau ta’lamuna ‘azhim, An 2 Il 2 Ah 2 Ahya 2 Mahalil 2, Thalas 2 Thalus 2 Biha 2 Bahubath 2 Bahabil Mahulah, dengan kasih yang menarik menyambar, sambar hati Fulanah sampai tak makan-minum-tidur — bi-haqqi ba’dhikum ‘ala ba’dh, Barakallahu fikum, washalallah ‘ala Muhammad.”\\nMAS-ALAH 16 MAHABBAH: Ambil adonan bentuk kuda (faras), ambil sesuatu dari... (bersambung Hal.22)")
 
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 22 — Mas-alah 16 Lanjutan (Kuda Adonan) & Awal 17 — Picture 011 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "أثر المطلوب وتكتب عليها هذه الأسماء الآتي ذكرها وتلونها\\nقطران وزيت طيب وتبخرهما مثل الفتيلة وتجعلهما في فم الفرس\\nوأيضا تكتبهم في كفك الشمال قبل أن توضع الفتيلة في فم\\nالفرس.\\nوهذا ما تكتب على الكف والأثر\\nقزن قزن قرن هزن هزن هزن خزن خزن خزن فرش فرش\\nفرش الجلبيوش الجلبيوش ذو العزة والسلطان انفروا خفافا وثقالا\\nفإذا قضيت الصلاة فانتشروا في الأرض\\nيا ابا طح بابا لا وتبخرهم بمقل أزرق ولبان ذكر\\nثم توقد الفتيلة وتزعم فإنك ملك روحاني افتح يدك في وجهه\\nوتكون كاتب الكتابة في الكف.\\nوهذا ما تعزم به\\nتقول - معترايش جه مقـرش لطوش هند وفطش طيطيش هيا\\nفلطش بحق فهروش لشـهبا فقـرش الساعة إلى فلان ابن فلانة بارك\\nالله فيكم وعليكم.\\nالمسألة السابعة عشرة\\nللمحبة والتهييج\\nتكتب في صفيحة من الرصاص وتنقش عليها هذه الطلاسم\\nثم تأخذ شيئا من أثر المطلوب وتجيب شقفة جديدة وتوضعها في", "Lanjutan Mas-alah 16 kuda adonan: Tulis nama di atsar, warnai ter+minyak wangi, jadikan sumbu di mulut faras, juga tulis di telapak kiri sebelum sumbu dimasukkan. Yang ditulis di telapak & atsar: “Qazan Qazan Qaran Hazan... Farasy, Ya Jalbuyusy... Infiru khifafan wa tsiqala, fa-idza qudhiyatish shalah... Ya Aba Thah Baba La” — diasapi muqul biru+luban, nyalakan sumbu, klaim sebagai raja ruhani “buka tanganmu”. Azimah: “Ya Mu’tarai Jih Miqrasy Lathusy Hind wa Fathasya... Fahrusy Syahba Fa-qarsy ke Fulan jam ini.”\\nMAS-ALAH 17 UNTUK MAHABBAH & TAHYIJ: Tulis di lembar timah, ukir thilasm, ambil atsar, ambil shafqah baru...")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 23 — Mas-alah 17 Lanjutan + Ta`widh — Picture 011 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "النار فإذا حميت الشقفة ترمي عليها الأثر والرصاص فوق الأثر\\nوتعزم عليها ٢١ مرة والبخور لبان ذكر وكسبرة.\\nوهذا ما تنقش على الرصاص مع اسم المطلوب وأمه كما\\nترى انهم ترشد\\n٩٥٠١١١ ط ٦٢٢١٩ ٦٦ا؛ ٩١٩٦ ط ٠٤٢ اع ٦٢٢١٩\\nهنا ليس ط ١٦ كذا ط ك لم ٦١ لما ط ٢٠٠ا تعالى الحى السلطان\\nسورية ٩١٩ ١١ ١١ ٩١٦٩ ٦٩٩١ سوية ٦٩١٢ ا ٩١٦\\nوهذه العزيمة التي تعزم بها\\nتقول - هيجتك يا فلان يا ابن فلانة وجلبتك مع الكلاب\\nالنابحة وهيجتك مع السباع الضارية هيجتك مع الذئاب العاوية\\nهيجتك مع الديوك الصائحة هيجتك يا فلان مع الرياح الهائلة\\nبالمردة المستر قين السمع من سحب ابا النار والنور والظل\\nوالحرور اعزم على سكان الحمامات والقميدات والبراري\\nوالقفاري والأسواق والأبيار والرياسين عجلوا واسرعوا وهيجوا\\nفلان ابن فلانة مدكيوش هيوش دهوش هاروت وماروت بزوبعة\\nولوبعة والمغاريت الأربعة بحق كبارهم وصغارهم وصغاركم على\\nكباركم بحق بكشارش كشارش وكوش طموش شلبنايشا قدقد\\nوعيال بالغ شهر وش عدد ٧ حلش ٢ هليوش ٢ شلوش ٢ بقلوش\\n٢ وطبطون ٢ رعشتر ٢ اسرعوا ٢ وعجلوا ٢ والقوا محبة فلانة\\nبنت فلانة في قلب فلان ابن فلانة الوحا العجل الساعة.", "“...Shafqah panas lempar atsar+timah di atas atsar, azimah 21x, bukhur luban & kasbarah.” Yang diukir di timah bersama nama+ibu target — lihat Rajah bawah. Azimah: “Aku gelisahkan Fulan bin Fulanah dengan anjing menyalak, binatang buas, serigala, ayam, angin topan, maradah pencuri dengar, Aba An-Nar... aku sumpahi penghuni hammam, padang, pasar, sumur — segeralah gelisahkan Fulan — Madkayusy Hayusy Dahusy Harut-Marut Zau-ba‘ah Lub‘ah Magharit 4 — Kas-yarasy Syalabla-nayasya Qadqad — Halasya 7x Haliyusy 2x Syalusy 2x Baqlusy 2x Thab-thun 2x Ra‘syatar 2x — segeralah lempar cinta Fulanah ke hati Fulan — Al-Waha...”")
+add_rajah(RAJAH_23, "Halaman 23 — Ukiran Timah Mas-alah 17", "2 baris angka/huruf tulisan tangan `٩٥٠١١١ ط ٦٢٢١٩...` + `هنا ليس ط...` — ukiran di timah + nama target/ibu. HANYA blok ukiran (3020x864 px, 203KB, 4x putih bersih).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 24 — Mas-alah 18 & 19 : Darah Kaki — Picture 012 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli - Mas-alah 18', "٢ وطبطون ٢ رعشتر ٢ اسرعوا ٢ وعجلوا ٢ والقوا محبة فلانة\\nبنت فلانة في قلب فلان ابن فلانة الوحا العجل الساعة.\\nالمسألة الثامنة عشرة\\nمسألة للمحبة\\nتكتب بدم رجلك وتضرب بها من شئت فإنه يتبعك من شدة\\nالمحبة وإن شككت فيها فاضرب بها حمارة فإن تبعك.\\nوهذا ما تكتب\\nك هـ ح ع وز نعص ع هـ ط ص ط ل ك ك ساكح\\nلعمه", "Penutup Mas-alah 17: “...Thab-thun 2x...”\\nMAS-ALAH 18 UNTUK MAHABBAH: Tulis dengan darah kaki (dam rijlik), pukul siapa kau mau — ia ikut karena sangat cinta. Tes: pukul himarah (keledai); jika ikut terbukti. Yang ditulis: lihat Rajah Atas.")
+add_rajah(RAJAH_24T, "Halaman 24 Atas — Thilasm Mas-alah 18", "Baris `كـ هـ ح ع وز نـعـصـ عـ هـ طـ صـ طـ لـ ك ك سـا كـح` + 3 sigil bawah `لعمه`. Darah kaki. HANYA thilasm+sigil (2952x956 px, 233KB, 4x).")
+add_block_box('Teks Arab Asli - Mas-alah 19', "المسألة التاسعة عشرة\\nمسألة للمحبة\\nتكتب بدم رجلك وتضرب بها من شئت من شئت ثلاث مرات على\\nرأسها لاشك فيها وإن شككت فيها فاضرب بها حمارة فإنها تتبعك\\nوتكون الكتابة يوم الجمعة ترى عجبا عظيما.\\nوهذا ما تكتب\\nفقطط هـ هـ هـ طو مـعص الطو طـلا ق كـ يحصه\\nعمر طـطـ مـعـ هـم هـ مـ هـ\\n...", "MAS-ALAH 19 JUGA DARAH KAKI: Pukul 3x di kepala, tanpa ragu; tes himarah. Tulis hari Jumat — lihat keajaiban. Yang ditulis: lihat Rajah Bawah.")
+add_rajah(RAJAH_24B, "Halaman 24 Bawah — Thilasm Mas-alah 19 (Jumat)", "Baris `فـقـطـط هـ هـ هـ طـو مـعـص...` + `عـمـر طـطـ...` + baris titik ○○○○ — khas Jum'at. HANYA thilasm+titik (3092x1000 px, 303KB, 4x).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 25 — Mas-alah 20 & 21 — Picture 012 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli - Mas-alah 20', "المسألة العشرون\\nباب محبة\\nيكتب على شقفة بمعتبر معتبر طيبير طيبير منفرد منفرد منفرد\\nمنفرد ينفرد بهشهشة ٢ بكشكشة ٢ مكشكشة ٢ هاطلة ٢ مهولة ٢\\nخاطفة ٢ خطوفة ٢ احتفظ يا هـاروش وانت ياماروش وانت يا سريع\\nوانت يا بريق وانت يا عبد النار قلب فلانة بنت فلانة إلى محبة\\nفلان ابن فلانة الوحا العجل الساعة والبخور لبان ذكر وكسبرة\\nوتقرأ العزيمة بعد كتابتها على الشقفة عدد ٤ مرات أو عدد ٢١ مرة\\nوهي في النار دائمة الوقود.\\nالمسألة الواحدة والعشرون\\nباب السر المصون\\nملمون ثم ملمون من يطلع عليه غير أهله وهو من ذخائر\\nالملوك وهو يتصرف في أمور شتى فمنها للتهيج فمنها لإحضار الخصم\\nومنها لإرسال الهواتف ومنها لصرع المصاب.", "MAS-ALAH 20 BAB MAHABBAH: Tulis di shafqah dengan Mu‘tabir Thaybir Munfarid... Hasyhasyah 2x Kasykasyah... Hathilah Mahulah Khathifah — “Jagalah Harusy Marusy Sari‘ Bariq ‘Abdan Nar hati Fulanah ke Fulan — Al-Waha...” bukhur luban+kasbarah, baca 4x atau 21x di api tetap nyala.\\nMAS-ALAH 21 BAB SIRR MASHUN: “Malmoun yang menampakkan ke bukan ahli — simpanan raja, untuk tahyij/hadirkan lawan/kirim hawatif/robohkan orang kesurupan.”")
+add_block_box('Teks Arab Asli - Sirr Mashun lanjut', "فإذا أردت التهيج تكتب يوم الأحد عند طلوع الشمس\\nواجعلها عليك بعد قراءة العزيمة ٢١ مرة واتقي الله ويبخرها\\nبالصندل الأحمر وإن أردت للإرسال تقرؤه ليلة الجمعة. وإن\\nأردت للصرع اكتبه في كف المصاب.\\nوهي هذه هياش مياش شالوش طاشي وتركل بهم بهذه\\nالأسماء تقول:", "Jika ingin tahyij: tulis Ahad terbit matahari, bawa setelah baca 21x, takutlah Allah, asapi cendana merah. Jika kirim: baca malam Jumat. Jika robohkan: tulis di telapak orang kesurupan. Mantranya: Hayasy Mayasy Syalusy Thasyi — wakilkan dengan nama berikut: (bersambung Hal.26).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 26 — Sirr Mashun Lanjutan + Mas-alah 22 Daun Zaitun — Picture 013 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "كشارش ٢ مشارش ٢ طرباش ٢ ايغوش ٢ جالهوش ٢\\nتعملوش ٢ كندريوش ٢ عواديوش ٢ هيا ٢ يا أهل النار والنار والشرار\\nوالأزعاج والأمراض وتركلـوا وافعلوا كذا بحق هذه الأسماء عليكم\\nوطاعتها لديكم نار واحراق من عصى منكم يكون قتيلا الوحا ٢\\nالعجل ٢ الساعة ٢\\nواصرافه\\nوالصافات إلى قوله ناقب يا راصد الجن ياغليطا امتنع دبيلح\\nبخ ٢ سلام ٢ هيو ٢ ميهو ٢ الملك لله الواحد القهار.\\nالمسألة الثانية والعشرون\\nباب محبة\\nيكتب على ورق الزيتون يوم الأحد قبل طلوع الشمس على\\nسبع ورقات زيتون ونجعل في ورقة حصوة لبان ذكر واحرتهم\\nواحدة بعد واحدة وأنت تقول يا خدام هذه الأسماء احرقوا قلب\\nفلان ابن فلانة في محبة فلانة بنت فلانة.\\nوهذا ما تكتب على الورقة الأولى ٦٣٨٢١ ٩٥١١٩٩١١ هـ ٩٥١١\\nالثانية ٩٨٢١١٢١١٠ ٢١٩٦٣ ٨٨٨٨٢٢١٨٢١٣\\nالثالثة\\nالرابعة طنـش طـلع طـسمح الخامسة د١١١٧ ك ١١١١ ٨٢ ١١\\nالسادسة\\nالسابعة ٨٢١٨١ ١١٣٢ م ٦٨٢١١ السادسة ١١ا على ملح", "Lanjutan Hayasy Mayasy: “Kas-yarasy 2x... Jalhasy 2x... Kandariyusy ‘Awadiyusy — hayya ya Ahlan Nar wasy-Syarar... dengan hak asma & ketaatannya, api bakar yang durhaka akan terbunuh — Al-Waha 2...” Israf: “Wash-Shaffat... tsaqib, Ya Rashidul Jin Ya Ghalitha Imtana‘ Dubailah Bakh 2 Salam 2 Hayw 2 Mihaw — milik Allah Al-Wahid Al-Qahhar.”\\nMAS-ALAH 22 BAB MAHABBAH 7 DAUN ZAITUN: Tulis di daun zaitun Ahad sebelum terbit matahari pada 7 lembar, tiap daun 1 kerikil luban, bakar satu-satu sambil berkata “wahai khadam bakar hati Fulan bin Fulanah”. Tulis di waraq 1-7 lihat Rajah bawah.")
+add_rajah(RAJAH_26, "Halaman 26 — 7 Waraq Daun Zaitun", "7 baris untuk 7 daun: W1 `٦٣٨٢١ ٩٥١١٩٩١١`, W2 `٩٨٢١١٢١١٠ ٢١٩٦٣...`, W4 `طـنـش طـلـع طـسـمـح` W5 `د١١١٧ ك ١١١١`, W6-7 `٨٢١٨١ ١١٣٢ م ٦٨٢١١` + catatan. Tulis di daun zaitun tiap 1 luban, bakar 1-1 Ahad subuh. HANYA 7 baris (3092x1176 px, 416KB, 4x).")
+
 # FOOTER FOR PDF
 pdf.ln(4)
 pdf.set_font('DejaVu', 'I', 7)
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Sumber Batch 04: Picture 008 (hal.16-17), Picture 009 (hal.18-19), Picture 010 (hal.20-21). Rajah Hal.16 (8x8) & Hal.19 (4x4) crop presisi HANYA kotak, putih bersih 4x. Untuk Batch 05-30 (hal.22-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Batch 05: Picture 011 (hal.22-23), Picture 012 (hal.24-25), Picture 013 (hal.26). Rajah Hal.23 + Hal.24 Atas/Bawah + Hal.26 crop presisi HANYA kotak, putih bersih 4x. Untuk Batch 06-30 (hal.27-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B04 generated: {PDF_OUT}")
+print(f"PDF B01-B05 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B04) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B05) also at {PDF_FULL}")
