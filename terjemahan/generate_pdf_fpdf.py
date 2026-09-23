@@ -62,7 +62,15 @@ RAJAH_68B = str(BASE / "assets/rajah-hal-068-bottom-box.jpg")
 RAJAH_69 = str(BASE / "assets/rajah-hal-069-thilasm.jpg")
 RAJAH_70 = str(BASE / "assets/rajah-hal-070-wafaq.jpg")
 RAJAH_71 = str(BASE / "assets/rajah-hal-071-four-squares.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B14.pdf")
+RAJAH_72T = str(BASE / "assets/rajah-hal-072-top-thilasm.jpg")
+RAJAH_72B = str(BASE / "assets/rajah-hal-072-bottom-numbers.jpg")
+RAJAH_74T = str(BASE / "assets/rajah-hal-074-fish-top.jpg")
+RAJAH_74B = str(BASE / "assets/rajah-hal-074-fish-bottom.jpg")
+RAJAH_75F = str(BASE / "assets/rajah-hal-075-figure.jpg")
+RAJAH_75S = str(BASE / "assets/rajah-hal-075-script.jpg")
+RAJAH_76W = str(BASE / "assets/rajah-hal-076-wafaq.jpg")
+RAJAH_76L = str(BASE / "assets/rajah-hal-076-loop.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B15.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -78,7 +86,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-14)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-15)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -232,7 +240,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–14 (Halaman 001–071) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–15 (Halaman 001–076) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -260,7 +268,7 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–14', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–15', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
@@ -278,7 +286,8 @@ pdf.multi_cell(0, 4.5,
 'Batch 12 (057–061): Zawjain Couple Hal57 + Ruh Sitting Hal58 + Qawathi Yasin Hal59 + Shabaz Script Hal60 + 2 Shabaz Face Hal61 — 5 Rajah baru — total 31\n'
 'Batch 13 (062–066): Hadid 4H + Hawa Hu + Turab Jinn21x Hal63 + Fatilah Mirrikh11x Hal64 + 2Figur & 2Wafaq Barhat11x Hal65 + Qarurah Nar35x Hal66 + Baidah — 7 Rajah baru — total 38\n'
 'Batch 14 (067–071): Mahabbah Ta‘thil Zahrah Buruj21x Hal67 + Samakah Barhatiyyah Hal68 (2) + 4 Waraq Jalb Tahyij Haban Hal69 + 7 Waraq Mirrikh21x Hal70 + 4 Squares + Wadud 60k Hal71 — 7 Rajah baru — total 45\n'
-'Batch 15–30 (072–~150) - menyusul per 5 hal., PDF FULL auto', new_x="LMARGIN", new_y="NEXT")
+'Batch 15 (072–076): Baydhah Sabtu Hal72(2) + Jim 53 Waraq Hal73 + Fish 54 ikan Hal74(2) + Sha‘ban figur Hal75(2) + Qalb Dha’ni Wafaq Hal76(2) — 8 Rajah baru — total 53\n'
+'Batch 16–30 (077–~150) - menyusul per 5 hal., PDF FULL auto', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(2)
 
 # --- HAL 01 COVER already done, now detailed per page ---
@@ -714,16 +723,46 @@ pdf.cell(0, 7, 'HALAMAN 71 — 4 Squares + Sharf + Wadud 60k — Picture 035 kir
 add_block_box('Teks Arab Asli', "تكتب على اربع ورقات بهذه الصفة وتحرق واحدة بعد واحدة سريعا وهى هذا ومن الله التوفيق [4 squares 1 هداد وماح 2 مـ ر ع 3 هوا جومع مرده العجل 4 سممم امحلها] وقبل البدء اصرف العمار باصرف قوي وعزم على الورق عند الحرق بدعوة العهد القديم وضع فص لبان ذكر فى الورقة وقبل انقطاع الدخان للورقة الاولى ارمى الورقة الثانية فى النار الى تمام الرابعة شيخ الروحانيين الشيخ عطية 00201062022238 (( محبة للاسم ودود )) تقرأ اسمه تعالى ودود ستين ألف في ثلاث ليالي متواليات كل ليلة عشرون الف على عشرين حبة من الحمص من القمح في فمك وتوضع الحبة من القمح في فمك وتقرأ الألف ثم أوضعها في النار والبخور صاعد وهو جاوى فقط اقرأ الدعاء الآتي مرة واحدة ثم خذ حبة ثانية وقرأ الألف ووضعها فى النار واقرأ الدعاء أيضا وهكذا حتى يتم العشرون حبه وهذا الدعاء بسم الله الرحمن الرحيم ( يا ودود يا ودود ... أنت الذي وأعلنت سر المحبة", "4 squares 1 Hidad Ma... 2 Ma Ra ‘... 3 Hawa Juma‘ Mardah Al-‘Ajal 4 Sammam... — bakar cepat sharf ‘ammar qawwiyy Oath Qadim 70px luban qabla inqitha‘ dukhan — Wadud 60k 3 layali 20k 20 habbah qamh fi fam 1k + Nar jawi tiap habbah + du‘a Ya Wadud... Ya Dzal ‘Arsh...)")
 add_rajah(RAJAH_71, "Halaman 71 Atas — 4 Squares Hidad", "4 kotak `هداد وماح / مـ ر ع ... / هوا جومع مرده العجل / سممم امحلها` 1-4 — 4 waraq sari‘an. HANYA squares 136K 4x.")
 
+# ========== BATCH 15: Hal072-076 (Picture 036 + 037 + 038 kanan) 8 Rajah ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 72 — Jalb Baydhah Sabtu 2 Telur + Maraj al-Bahrayn — Picture 036 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "وألفت بين الأرواح أسألك اللهم بسر وبسريان ودك وحبك في قلب أنبيائك وأوليائك وأصفيائك أن تلقي ودك وحبك في قلبي وأن تلقي محبة كذا في قلب كذا كما ألقيت الوحي على نبيك وحبيبك محمد صلى الله عليه وسلم وأن تسخر لي روحانية هذا الشريف يا ودود وان تجعل ناصيتهم بيدي أنت على كل شيء قدير وبالإجابة قدير يا روحانية هذا الاسم الشريف العظيم وهو بقضاء حاجتي وبلغوا إرادتي بحق ( بلخ بلخي هملوخيم أجيبوا بحق ربا واحدا في العالمين .. تم .. جلب على بيضتين يكتب يوم السبت ويكتب هذا الطلسم على البيضة الاولى ٤٤٦٢٨٤ عـ ـ ٤٨١٤حـ مرج البحرين يلتقيان ايتها الارواح القوا محبة فلان ابن فلانة في قلب فلانة بنت فلان تلتقيان البيضتان واجمعوا بينهم كما جمعت بين البيضتين الوحا العجل الساعة ويكتب البيضة الثانية هذا الطلسم ١١٩ ١١١ ٦٨٤ ٤٨١٩ ح ١١١م ١١٨٦ ١١٤ ١١١ ١٨٨٨٠ ٩٩٩٩ ح ٤ ١١٩٥ ع ١١٨هـ ٩٨ والتوكيل واوضع البيضتين على الارض وتفصل بينهم المسافة شبر وتتلى العزيمة يجتمعوا على بعض وهذه علامة الاجابة وهذه العزيمة بسم الله الرحمن الرحيم وقل فيها السير سيروا فيها ليالي واياما امنين ولقد فتنا سليمان والقينا على كرسيه جسدا ثم أناب الى آخر الآية مجرب وصحيح", "Doa mahabbah agung + Jلب 2 telur Sabtu: Balakh-Balkhi-Hamlukhim bi-haqqi Rabban Wahidan... Thilasm telur1 `446284` + telur2 `119.../1888...` + Maraja al-Bahrayn yaltaqiyan... tawakil jangkan telur 1 syibr, azimah Syiru fiha layaliya + Wa laqad fatanna...+ thumma anaba — telur mendekat tanda ijabah — mujarrab sahih.")
+add_rajah(RAJAH_72T, "Halaman 72 Atas — Thilasm Telur1", "1 baris `٤٤٦٢٨٤ عـ ٤٨١٤ حـ` + garis — telur1 Sabtu. HANYA thilasm 265K 4× putih.")
+add_rajah(RAJAH_72B, "Halaman 72 Bawah — Thilasm Telur2 2 Baris", "2 baris `١١٩ ١١١... / ١٨٨٨ ٩٩٩٩ ح...` — telur2. HANYA rajah 299K 4×.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 73 — Mahabbah 11 Waraq Biru + Jim 53 Waraq Luban — Picture 036 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "محبه وجلب سريع ألا جابه تكتب الأسماء الآتية على إحدى عشر ورقة لازرق وبعد الكتابة تحرق الورقة في النار بعد أن توضع ثلاث حبات كسبرة وثلاث حبات فلفل أبيض وقرن شطة وجزء كافور الطيار وتعزم بما تكتب على كل ورقة وهذا ما تكتب وبه تعزم والحبوب توضع في كل ورقة وتعزم بما تكتب على كل ورقة 11 ( العزيمة.. تمليخ 2 سليخ 2 سلسبيخ 2 ) أجب يا أحمر أنت وأعوانك وجنودك واحرقوا قلب كذا في محبة كذا واحضروها لهذه خاضعة ذليلة مشغوفة القلب كما تحرق أسمائك في النار عجل هيا بالحضور من غير تأخير والعمل في يوم الثلاثاء في ساعة المريخ .. تم .. فائدة مجربة لحرف الجيم تكتب على 53 ورقة حرف جيم ويكون ذنبها في راسها وفي وسط كل جيم طلسم هكذا وتوكل حولة بالتهييج والجلب ثم توضع في كل ورقة حصوة لبان ذكر وتتلو سورة الجن وتتلو على كل ورقة مرة واحدة والله الذي لا اله الا هو لارب غيره ما يتم العدد الا والمطلوب حاضر بين يديك وهذا العمل من الاسرار وهذه الحروف والطلاسم التي تكتب في قلب الجيم", "Mahabbah sari‘ 11 waraq biru + 3 ketumbar + 3 lada + cabai + kafur, Tamlikh Salikh Salsabikh 2x ya Ahmar ... khadhi‘ah dzalilah masyghufah ... fi sa‘at Mirrikh Selasa — mujarrab. Jim 53 waraq: Jim ekor di atas, perut berisi ikan-wafaq (lihat Hal74), tawkil tahyij jalb + luban Jinn 1x tiap — tidak selesai 53 kecuali hadir — min al-asrar.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 74 — Fish Jim 40+16 Simbol Ikan-Wafaq — Picture 037 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "[5 kolom × 8 = 40 simbol ikan besar + 4 kolom × 4 = 16 ikan kecil — tiap ikan berisi `ح هو لا اله الا ج ودود` + angka 1111 811 dll. — فائدة محبة وجلب]", "Model thilasm perut Jim 53 waraq: 40 ikan besar (5×8) + 16 kecil (4×4) — tiap ikan-wafaq berisi huruf hikmah `ح هو لا اله الا ج ودود` + angka 1111 dll. — untuk disalin di tengah huruf Jim (lihat Rajah).")
+add_rajah(RAJAH_74T, "Halaman 74 Atas — 40 Ikan-Wafaq", "40 ikan 5×8 `ح/هو/ودود/لا اله الا` + angka — model perut Jim. HANYA rajah 1.4M 4× putih.")
+add_rajah(RAJAH_74B, "Halaman 74 Bawah — 16 Ikan Kecil", "16 ikan 4×4 + `تم وكل` — lanjutan model ikan. HANYA rajah 126K 4×.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 75 — Sha‘ban Figur Manusia + Thilasm 3 Baris — Picture 037 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "ايها الطالب النجيب تقص مثل هذا الشعبان وتكتب خلفة الطلسم مع عزيمة النار وتعزم بيها عدد جمل المطلوب وامة فانة يكون ويدفن تحت الدفاية او بجوار فرن وهذا الشعبان [figur bertopi `ن فوقه منار` / baju 3×3 `9 4 / 3 5 7 / 8 1 6` + tulisan `من فقعه منار` `اهيا شراهيا` `هذا الاسماء`] وهذا الطلسم اداع 11ا ع 11ا اداع اول ويا حاط رهـاديم 10ا طلع 11ا عـ رعوم 11ا 11ا له واذا اردت الاجابة الوقتي قص سبع اشخاص بنفس الطريقة واوضع في كل ورقة فص لبان مع حبة من الفلفل وعزم حتى ينقطع الدخان فانة يكون سريع تم ومجرب", "Sha‘ban figur manusia topi `ن فوقه منار` baju wafaq 3×3: gunting belakang tulis thilasm + azimah nar sejumlah jummal, kubur bawah dafayah/tungku — 7 figur lebih cepat tiap luban+lada sampai dukhan putus — mujarrab.")
+add_rajah(RAJAH_75F, "Halaman 75 Atas — Figur Sha‘ban", "Figur manusia bertopi + baju 3×3 `9 4/ 3 5 7/8 1 6` + tulisan — Sha‘ban dafayah. HANYA figur 545K 4× putih.")
+add_rajah(RAJAH_75S, "Halaman 75 Bawah — Thilasm 3 Baris", "3 baris `اداع 11ا ع...` — belakang Sha‘ban. HANYA thilasm 246K 4×.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 76 — Qalb Dha’ni Jantung Domba + Wafaq 4×4 Loop + Barhatiyyah — Picture 038 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "فائدة جلب تحضر قلب ضاني من الغنم الذكر له قلب كبش والانسى لها قلب نعجة ويكتب هذا الوفق بالطلسم ويوضع في القلب ويوضع على نار هادئة وتعزم عليه الى النار حتى يأتي المطلوب تانة امامك واصارفة ياكل المطلوب منة يفوق في ساعتة الوفق والطلسم [wafaq 4×4 `5555 ع ع 2918 1450 / 19155 33 1111112 5555 / 1461 9112 818 914 / ΦΦΦΦ` + loop `12 14612 اجلب فلان فـ 912`] فائدة للمحبة والمودة تكتب هذا الطلسم وتوكل حولة بدعوة البرهتية الكبرى 21 مرة وتوضع للمطلوب في مشروب او ماكول فانة يكون وهذا الطلسم آآت550 5 3092 7191 ظ آ له آ له آ له 333 / آ1555 5 3 5 7 4 9 2 33 ممم 3 آ 816", "Qalb Dha’ni: jantung domba jantan/betina, wafaq 4×4 di dalam jantung di api tenang sampai ta’ni amamak — sharaf makan sebagian yafuqu — wafaq `5555...` + loop `اجلب فلان`. Mawaddah Barhatiyyah Kubra 21x makanan/minuman — thilasm `آآت550.../آ1555...`")
+add_rajah(RAJAH_76W, "Halaman 76 Atas — Wafaq 4×4 + Loop Oval", "4×4 `5555|ع ع|2918|1450` + loop `اجلب فلان` — jantung domba api tenang. HANYA wafaq 433K 4× putih.")
+add_rajah(RAJAH_76L, "Halaman 76 Tengah — Loop Detail `اجلب`", "Loop `12 14612 اجلب فلان فـ 912` 3×12 — perbesar wafaq atas. HANYA loop 119K 4×.")
+
 pdf.ln(4)
 pdf.set_font('DejaVu', 'I', 7)
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Total 45 Rajah HQ. Untuk Batch 15-30 (hal.72-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Total 53 Rajah HQ. Untuk Batch 16-30 (hal.77-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B14 generated: {PDF_OUT}")
+print(f"PDF B01-B15 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B14) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B15) also at {PDF_FULL}")
