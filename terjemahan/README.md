@@ -29,6 +29,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **11** | 052–056 | [BATCH-11-Hal-052-056.md](BATCH-11-Hal-052-056.md) | ✅ Selesai AUTO (12 MB, 26 Rajah) | 6R: 52 341K + 53 581K + 54 809K + 55 553K + 56×2 406K/615K |
 | **12** | 057–061 | [BATCH-12-Hal-057-061.md](BATCH-12-Hal-057-061.md) | ✅ Selesai AUTO (14 MB, 31 Rajah) | 5R: 57 423K + 58 486K clean + 59 480K + 60 480K + 61 392K |
 | **13** | 062–066 | [BATCH-13-Hal-062-066.md](BATCH-13-Hal-062-066.md) | ✅ Selesai AUTO (16 MB, 38 Rajah) | 7R: 62 761K + 63 126K + 64 373K + 65top 303K + 65bot 510K + 66top 173K + 66mid 205K |
+| **14** | 067–071 | [BATCH-14-Hal-067-071.md](BATCH-14-Hal-067-071.md) | ✅ Selesai AUTO (17 MB, 45 Rajah) | 7R: 67top 273K + 67bot 66K + 68top 249K + 68bot 175K + 69 113K + 70 187K + 71 136K |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
@@ -77,9 +78,9 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut — AUTO LANJUT SAMPAI SELESAI
-- Batch 01–13 sudah jadi — 66 halaman / ±150 (44%) — PDF B01–B13 16 MB + FULL 16 MB — 38 Rajah HQ — AUTO 5 menit — **LANJUT TANPA JEDA**
-- Batch 14 (Hal.067–071, Picture 033 kiri+034+035) berikutnya — auto push 5 menit lagi — tidak perlu ketik
-- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B13 UTAMA 16 MB — FULL auto membesar sampai 150 — 1 file final)
+- Batch 01–14 sudah jadi — 71 halaman / ±150 (47%) — PDF B01–B14 17 MB + FULL 17 MB — 45 Rajah HQ — AUTO 1 menit — **LANJUT TANPA JEDA**
+- Batch 15 (Hal.072–076, Picture 036+037) berikutnya — auto push 1 menit lagi — tidak perlu ketik
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B14 UTAMA 17 MB — FULL auto membesar sampai 150 — 1 file final)
 - Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru — Preview: http-server 8000 live
 
 ---
