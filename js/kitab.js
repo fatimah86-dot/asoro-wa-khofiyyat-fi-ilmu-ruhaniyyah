@@ -46,7 +46,7 @@
   sections.forEach((s) => obs.observe(s));
 
   const leaves = ["naskah/Picture 001.jpg", "naskah/1.jpg"];
-  for (let i = 2; i <= 99; i++) {
+  for (let i = 2; i <= 149; i++) {
     const n = String(i).padStart(3, "0");
     leaves.push("naskah/Picture " + n + ".jpg");
   }
@@ -54,6 +54,10 @@
   const leaf = document.getElementById("leaf");
   const pager = document.getElementById("pager");
   const range = document.getElementById("range");
+  if (range) {
+    range.min = "0";
+    range.max = String(leaves.length - 1);
+  }
   let idx = 0;
 
   function show(i) {
