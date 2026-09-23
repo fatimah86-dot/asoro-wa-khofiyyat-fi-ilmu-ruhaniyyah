@@ -19,8 +19,8 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **01** | 001–005 | [BATCH-01-Hal-001-005.md](BATCH-01-Hal-001-005.md) | ✅ Selesai | Hal. 05 — 1 Rajah (Wafaq Tahyij) → `assets/rajah-hal-005-wafaq-tehij.jpg` (4×, 2916×1372 px, putih bersih) |
 | **02** | 006–011 | [BATCH-02-Hal-006-011.md](BATCH-02-Hal-006-011.md) | ✅ Selesai | Hal. 07 — 1 Rajah (Khatam 7 Waraq) → `assets/rajah-hal-007-khatam-7waraq.jpg` (4×, 2404×1244 px) |
 | **03** | 012–016 | [BATCH-03-Hal-012-016.md](BATCH-03-Hal-012-016.md) | ✅ Selesai | Hal.12 Thilasm 2 baris, Hal.13 Thilasm 1 baris, Hal.14 Thilasm 2 baris → 3 Rajah final (4×, putih bersih) |
-| 04 | 017–021 | `BATCH-04-Hal-017-021.md` | ⏳ Sedang diproses | — |
-| 03 | 011–015 | `BATCH-03-Hal-011-015.md` | ⏳ Antri | — |
+| **04** | 016–021 | [BATCH-04-Hal-016-021.md](BATCH-04-Hal-016-021.md) | ✅ Selesai (3.1 MB, 7 Rajah total) | Hal.16 Khatam 8×8 `rajah-hal-016-khatam-besar.jpg` (1.1 MB, 2884×2152 px), Hal.19 Khatam 4×4 `rajah-hal-019-khatam-4x4.jpg` (767 KB, 2744×1976 px) |
+| 05 | 022–026 | `BATCH-05-Hal-022-026.md` | ⏳ Berikutnya (Picture 011–013) | — |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri | — |
 
@@ -69,9 +69,10 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut
-- Batch 01 sudah jadi — silakan cek `BATCH-01-Hal-001-005.md`
-- Batch 02 sedang diproses — akan otomatis menyambung dari kalimat terakhir Batch 01: *“...pada tujuh lembar”*
-- Semua file akan di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh`
+- Batch 01–04 sudah jadi — 21 halaman / ±150 (14%) — PDF B01–B04 3.1 MB + FULL 3.1 MB
+- Batch 05 (Hal.022–026, Picture 011–013) sedang diproses — akan otomatis menyambung dari kalimat terakhir Batch 04: *“...صورة فرس ونأخذ شيء من”* (ambil adonan bentuk kuda)
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B04)
+- Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh untuk batch baru (±5 hal. per push)
 
 ---
 *Dibuat 23 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural.*

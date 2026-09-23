@@ -18,7 +18,9 @@ RAJAH_07 = str(BASE / "assets/rajah-hal-007-khatam-7waraq.jpg")
 RAJAH_12 = str(BASE / "assets/rajah-hal-012-thilasm-final.jpg")
 RAJAH_13 = str(BASE / "assets/rajah-hal-013-thilasm-final.jpg")
 RAJAH_14 = str(BASE / "assets/rajah-hal-014-tilasm-final.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B03.pdf")
+RAJAH_16 = str(BASE / "assets/rajah-hal-016-khatam-besar.jpg")
+RAJAH_19 = str(BASE / "assets/rajah-hal-019-khatam-4x4.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B04.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -34,7 +36,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-03)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-04)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -188,7 +190,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–02 (Halaman 001–011) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–04 (Halaman 001–021) • Versi PDF • 23 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -216,13 +218,15 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–02', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–04', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
-'Batch 01 (Hal. 001–005): Cover, Fasal 1 Mahabbah/Jalb/Tahyij, Mas-alah 1 (Alfah suami-istri, 20 daun lemon), Mas-alah 2 (Mahabbah 72x), Mas-alah 3 (Tahyij di Syaqfah Selasa pagi), Rajah Hal.05 Wafaq Tahyij 4 baris, Mas-alah 4 (7 lembar)\n'
-'Batch 02 (Hal. 006–011): Lanjutan Mas-alah 4 (2 luban + 3x2 kuzbarah, 21x), Azimah Bismillahil Azhim, Khatam 7 Waraq Rajah Hal.07, Mas-alah 5 (Tahyij 400x/300x), Mas-alah 5 duplikat (Al-Humazah di lilin Iskandari), Mas-alah 7 (Maimun Thayyar, Rabu di pohon timur), Mas-alah 8 (Harut-Marut, lampu hijau), Mas-alah 9 (Mahabbah Jalb, minyak Yasamin, Thilasm Mahmala...), Azimah Ahya Syarahya 31x\n'
-'Batch 03–30 (Hal. 012–~300) - akan menyusul otomatis per 5 halaman, PDF ini akan di-update ke versi FULL', new_x="LMARGIN", new_y="NEXT")
+'Batch 01 (Hal. 001–005): Cover, Fasal 1 Mahabbah/Jalb/Tahyij, Mas-alah 1 (Alfah 20 daun lemon), Mas-alah 2 (72x), Mas-alah 3 (Syaqfah Selasa), Rajah Hal.05 Wafaq, Mas-alah 4 (7 lembar)\n'
+'Batch 02 (Hal. 006–011): Lanjutan Mas-alah 4, Khatam 7 Waraq Hal.07, Mas-alah 5 (400x/300x), Al-Humazah lilin, Mas-alah 7 (Maimun Thayyar), Mas-alah 8 (Harut-Marut lampu hijau), Mas-alah 9 (Mahmala, Ahya Syarahya 31x)\n'
+'Batch 03 (Hal. 012–016): Mas-alah 10 (Malam Ahad, Rajah Hal.12), Mas-alah 12 Susi (Rajah Hal.13 tinta rambut/kuku), Mas-alah 13 Qallama (Rajah Hal.14), Mas-alah 14 awal + Khatam Sulaiman (Hal.15)\n'
+'Batch 04 (Hal. 016–021): Lanjutan Khatam Sulaiman Hal.16 (Rajah Besar 8x8 Hal.16), Mas-alah 14 Da`wah Fatihah (Hal.17-19, Rajah 4x4 Hal.19 837x), Mas-alah 15 Tahyij 7 kertas Sabtu jam 11 (Hal.20-21, azimah Harut-Marut), Mas-alah 16 Mahabbah adonan faras (Hal.21)\n'
+'Batch 05–30 (Hal. 022–~300) - menyusul per 5 hal., PDF FULL akan di-append otomatis', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(2)
 
 # --- HAL 01 COVER already done, now detailed per page ---
@@ -322,17 +326,49 @@ pdf.cell(0, 7, 'HALAMAN 15 — Khatam Mahabbah Sulaiman — Picture 007 kiri', n
 add_block_box('Teks Arab Asli — Khatam', "وهذا ما تكتب مع الخاتم\nبسم الله الرحمن الرحيم الحمد لله الذي جعل الظلمات والنور اللهم نور قلب فلان وفلانة بمحبة لو أنفقت ما في الأرض جميعاً إلى قوله حكيم اللهم ألف بين فلان وفلانة فلبثت سنين في أهل مدين ثم جئت على قدر يا موسى كذلك يجعل الله محبة فلان في قلب فلانة شهد الله أنه لا إله إلا الله هو والملائكة إلى حكيم عسى الله أن يجعل بينكم وبين الذين عاديتم منهم مودة والله قدير والله غفور رحيم اللهم عطف قلب فلان في قلب فلانة اللهم ألف بينهم كما ألفت بين سيدنا محمد وعائشة وكما ألفت بين علي وفاطمة وكما ألفت بين يوسف وزليخا يا الله يا الله يا رحمن يارحمن يارحيم يا رحيم يارحيم يارحيم ياودود ياودود ياودود يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف يارؤوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف ياعطوف اللهم عطف قلب فلان إلى محبة فلانة بحق هذه الأسماء عليكم يا الله بحق اسمك الظاهر ياذا الجلال والإكرام عدد ٣ ألم نشرح لك صدرك إلى آخرها اللهم رغب محبة فلانة في قلب فلان ربنا عليك توكلنا وإليك أنبنا وإليك المصير اللهم يارب بحق أسمائك الظاهرة وملائكتك وأنيائك أن تجعل محبة فلانة في قلب فلان بالريح العاصف والبرق الخاطف إنه من سليمان وإنه بسم الله الرحمن الرحيم", "Dan inilah yang engkau tulis bersama Khatam: Bismillah... Segala puji bagi Allah yang menjadikan gelap & cahaya. Ya Allah terangilah hati Fulan & Fulanah... (kutip QS Al-Anfal:63, Thaha, Ali Imran:18, Al-Mumtahanah:7, doa ta’lif antara Muhammad-Aisyah, Ali-Fatimah, Yusuf-Zulaikha, Ya Allah Ya Rahman Ya Rahim Ya Wadud Ya Ra’uf Ya ‘Athuf (diulang), Ya Allah lembutkan hati Fulan kepada Fulanah dengan hak asma ini, dengan Nama-Mu Zahir, Wahai Pemilik Keagungan, 3x Alam nasyrah, Ya Allah jadikan cinta Fulanah di hati Fulan dengan angin topan & kilat — Innahu min Sulaimana wa innahu Bismillahir Rahmanir Rahim.")
 
 
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 16 — Khatam Besar 8x8 + Penutup Doa Sulaiman — Picture 008 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli — Lanjutan doa Sulaiman', "الرحيم أن لا تعلوا علي وأتوني مسلمين يالغو اثه رب العالمين\\nلياخيم أجب يا مذهب بحق دائرة الشمس أجب يامرة بحق دائرة\\nالقمر لبلاغمو أجب يا احمر بحق دائرة المريخ ليافور أجب يا برقان\\nبحق دائرة الكاتب لياروع أجب ياشمهورش بحق دائرة المشتري\\nلباروت أجب يا أبيض بحق دائرة الزهرة لياروش أجب يا ميمون\\nبحق دائرة زحل ليابلاش توكلوا يا معشر السادات الأقربين بحق\\nهذا الخاتم بمحبة فلان في قلب فلانة.\\nوهذا الجدول\\nشيخ الروحانيين\\nالشيخ عطية عبد الحميد\\nنسألكم الفاتحة والدعاء", "Lanjutan doa dari Hal.15 (Innahu min Sulaimana...): “...Ar-Rahim, alla ta’lu ‘alayya wa’tuni muslimin, Ya Alghu Rabbal ‘Alamin, Ya Liyakhim jawablah Mudzahhab dengan hak lingkaran matahari, Murrah lingkaran bulan, Ahmar-Mars, Barqan-Utarid, Syamhuris-Musytari, Abyadh-Zuhrah, Maimun-Zuhal, Liyabalasy, wakilkan wahai pemuka yang dekat, demi Khatam ini untuk mahabbah Fulan di hati Fulanah.” Dan inilah tabelnya — Syaikh Ar-Ruhaniyyin Syaikh Athiyah Abdul Hamid, mohon Fatihah.")
+add_rajah(RAJAH_16, "Halaman 16 — Khatam Besar 8x8 Fawatih", "Khatam 8 kolom x 8 baris isi huruf muqatha'ah/angka + 4 sigil di pojok. Tulis di murabba' diasapi wangi di jam Mars. HANYA tabel (1.1MB, 2884x2152 px, 4x, putih bersih, tanpa teks sekitar), siap cetak.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 17 — Mas-alah 14 : Doa Fatihah Murabba — Picture 008 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli — Mas-alah 14', "المسألة الرابعة عشرة\\nمسألة للمحبة\\nمجربة على يد كاتبها وهي لدعوة الفاتحة في مربع وتبخر\\nبرائحة طيبة وتكتب في يوم ساعة المريخ وتكتب وتحمل في أي\\nيوم كان سعيد\\nوهذا ما تكتب وبه تعزم\\nتقول بسم الله الرحمن الرحيم الحمد لله رب العالمين ياحي\\nياقيوم أجب يارو قيائيل أنت وأعوانك العلوية واجلب فلان إلى\\nفلانة بحق الحمد لله رب العالمين الحي القيوم وبحق سيدنا\\nمحمد ﷺ وبحرمة الملائكة الموكلين بقوائم العرش أبجد أجب يا\\nمذهب أنت وخدامك الأرضية واجلبوا وهيجوا واجذبوا فلان إلى\\nفلانة بحق الملك الغالب عليك أمره السيد ورقيائيل الرحمن\\nالرحيم الرؤوف العطوف أجب ياجبرائيل أنت وأعوانك العلوية\\nواجلب وهيج واحرق قلب فلان بمحبة فلانة بحق الرحمن الرحيم\\nالرؤوف العطوف وبحق سيدنا ﷺ وبحق الملك الموكل بالقوائم\\nالعرشية هوزح أجب يا أبيض أنت وخدامك الأرضية أجب واجلب\\nوهيج واحرق قلب فلان بمحبة فلانة بحق الملك الغالب عليك\\nأمره جبرائيل مالك يوم الدين يا مقلب القلوب والأبصار أجب\\nياسمسائيل أنت وأعوانك العلوية أجب واجلب وهيج واحرق\\nقلب فلان بمحبة فلانة بحق مالك يوم الدين يا مقلب القلوب", "MAS-ALAH 14 — DOA AL-FATIHAH Mujarrabah: Tulis di murabba' diasapi wangi, di jam Mars, dibawa di hari sa’id. Azimah panjang: Bismillah Alhamdulillahi Rabbil ‘Alamin Ya Hayyu Ya Qayyum jawablah Ruqya’ilulwiyyah, bawa Fulan ke Fulanah dengan hak Alhamdulillah, hak Nabi ﷺ, kemuliaan malaikat tiang Arsy — Abjad jawablah Mudzahhab ardiyyah tarik Fulan, dengan hak Sayyid Ruqya’il Ar-Rahman Ar-Rahim, wahai Jibra’il... Hawzah jawablah Abyadh... Maliki Yaumid Din Ya Muqallib... wahai Samsama’il... (pola diulang tiap ayat Fatihah + malaikat penjaga).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 18 — Lanjutan Azimah Doa Fatihah — Picture 009 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "والأبصار وبحق سيدنا محمد ﷺ وبحرمة الملك المزكل بغائم\\nالعرش طيكل أجب يا احمر أنت وخدامك الأرضية أجب واجلب\\nوهيج واحرق قلب فلان بمحبة فلانة بحق الملك الغالب عليك\\nأمره والأخذ بناصيتك سمسائيل إياك نعبد وإياك نستعين السريع\\nالقريب وبحق سيدنا محمد ﷺ وبحرمة الملك الموكل بقائم العرش\\nمنسع أجب يا برقان أنت وخدامك الأرضية أجب واجلب وهيج واحرق\\nقلب فلان بمحبة فلانة بحق الملك الغالب عليك أمره والأخذ\\nبناصيتك ميكائيل اهدنا الصراط المستقيم ياقادر يامقتدر أجب\\nياصرفيائيل أنت وأعوانك العلوية أجب واجلب وهيج واحرق قلب\\nفلان بمحبة فلانة بحق اهدنا الصراط المستقيم وبحق القادر\\nالمقتدر وبحق سيدنا محمد ﷺ وبحرمة الملك الموكل بقائم\\nالعرش فصقر أجب ياشمهورش أنت وخدامك الأرضية أجب\\nواجلب وهيج واحرق قلب فلان بمحبة فلانة بحق الملك الغالب\\nعليك أمره والأخذ بناصيتك صرفيائيل صراط الذين أنعمت عليهم\\nيا عليم ياحكيم أجب ياعنيائيل أنت وأعوانك العلوية أجب واجلب\\nواحرق قلب فلان بمحبة فلانة بحق صراط الذين أنعمت عليهم\\nوبحق العليم الحكيم وبحق سيدنا محمد ﷺ وبحق الملك الموكل\\nبقائم العرش شننخ أجب يازوبعة أنت وخدامك الأرضية أجب واجلب\\nوهيج واحرق قلب فلان بمحبة فلانة بحق الملك الغالب عليك\\nأمره والأخذ بناصيتك عنيائيل غير المغضوب عليهم ولا الضالين\\nوبحق القاهر العزيز وبحق سيدنا محمد ﷺ وبحرمة الملك الموكل", "Lanjutan azimah Hal.17 tiap ayat Fatihah: Thaykal-Ahmar, Munsa’-Barqan, Mikail-Ihdinas Shirath, Sharfaya’il-Syamhursy, ‘Anyail-Ghairil maghdhubi... semua diakhiri “jawablah, bawa, gelisahkan, bakar hati Fulan dengan cinta Fulanah dengan hak Raja Yang Mengalahkan & memegang ubunmu...” + hak Al-Qahir Al-‘Aziz, hak Nabi ﷺ.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 19 — Khatam 4x4 837x & Penutup Mas-alah 14 — Picture 009 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "بقائم العرش ضظغض أجب يا ميمون ابانوح أنت وخدامك الأرضية\\nواجلب وهيج واحرق قلب فلان بمحبة فلانة بحق الملك الغالب\\nعليك أمره والأخذ بناصيتك كسفيائيل أجيبوا يا معاشر الأرواح\\nالروحانية العلوية والخدام السفلية والملائكة العرشية أجيبوا واجلبوا\\nواحرقوا قلب فلان بمحبة فلانة بحق السبعة المثاني وبحق السماء\\nالعظام والآيات الكرام أجيبوا واجلبوا وهيجوا واحرقوا قلب فلان\\nبمحبة فلانة بحق ما تعتقدونه فيها من العظمة والكبرياء الوحا عدد ٢\\nالعجل عدد ٢ الساعة عدد ٢ بارك الله فيكم وعليكم.\\nوهذا هو الخاتم المشار إليه\\nوالقسم عليك", "“...Dhazaghadh Maimun Abanuh ardiyyah, Kasfayail, jawablah wahai arwah ruhaniyyah ulwiyyah, khadam suflyyah, malaikat Arsy, bakar hati Fulan dengan hak As-Sab’u al-Matsani (Fatihah 7 ayat) & langit & ayat mulia, dengan keagungan — Al-Waha 2 Al-‘Ajal 2 As-Sa’ah 2, Barakallahu fikum. Dan inilah Khatam yang dimaksud, sumpah atasmu:”")
+add_rajah(RAJAH_19, "Halaman 19 — Khatam 4x4 Angka 837x", "Khatam 4x4 angka baris 1: 8368 8280 8278 8372, baris 2: 8379 8266 8271 8376, baris 3: 8267 8282 8273 8370, baris 4: 8372 8269 8268 8281 + sigil pojok + tulisan Wal-qasam ‘alaik. Tulis di murabba’ jam Mars. HANYA 4x4 (767KB, 2744x1976 px, 4x putih bersih).")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 20 — Mas-alah 15 : Tahyij 7 Kertas Sabtu Jam 11 — Picture 010 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "المسألة الخامسة عشرة\\nباب تهييج ومحبة\\nيكتب في سبعة أوراق الساعة ١١ يوم السبت وهي ساعة\\nالشمس في أول الشهر ثم اجعل في كل ورقة سبع حبات فلفل\\nأبيض وسبع حصوات لبان ذكر وشيء من أثر المطلوب ثم القى\\nورقة في النار وهكذا تحرق واحدة بعد واحدة يحضر المطلوب\\nمذهول العقل.\\nوهذا ما تكتب في الأوراق السبعة\\nاحون عدد ٢ احماطيس عدد ٢ كملموصا عدد ٢ كهلموصا عدد ٢\\nهمير كدهير عدد ٢ اطلع عدد ٢ أفراطين عدد ٢ دليهوو عدد ٢ طلههميك\\nعدد ٢ توكلوا يا خدام هذه الأسماء بتهييج وحرق قلب فلانة على\\nمحبة فلان بحقها بحكم عليكم بحكم عليكم بجلب وتهييج فلانة بنت فلانة في محبة\\nفلان ابن فلانة الوحا العجل الساعة عدد ٢.\\nوهذه العزيمة\\nتقول - السلام عليك يا فلانة يا بنت فلانة إن كنت نائمة أو\\nيقظانة فإني جلبتك في هذه الساعة سبعة السماء فاهبنك وحيرتك\\nودهمشت عقلك ودخلت عليك بسحر هاروت وماروت فاشتغلتك\\nوضربت الأرض من تحتك وعقدت الجن من خلفك نطقت\\nقرينتك لبست جنتك فأطلقت محبة فلان ابن فلانة في قلبك وفي\\nذكرك وفي دمك وفي لحمك فاشتعل قلبك بالهيجان وعقلك", "MAS-ALAH 15 TAHYIJ 7 KERTAS: Tulis 7 lembar jam 11 Sabtu (jam Syams awal bulan), tiap lembar 7 lada putih + 7 luban dzakar + atsar, bakar satu-satu target hadir linglung. Tulis di 7 lembar: “Ahun 2x Ahmathis 2x Kamalmuwsa 2x ... Thalhahmik 2x — wakilkan gelisahkan bakar hati Fulanah — Al-Waha Al-‘Ajal As-Sa’ah 2x.” Azimah: “Salam Fulanah, kuterik di jam 7 langit, kubingungkan, kumasuki sihir Harut-Marut, kupukul bumi bawahmu, kuikat jin belakangmu, kubuat qarinmu bicara, kulepas cinta Fulan di hati-darah-dagingmu, menyala...”")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 21 — Lanjutan Azimah & Mas-alah 16 — Picture 010 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "بالطيران وقريبتك لهياج الجان وأحرقتك بالنار نار على نار واشتد\\nالقلب منك وطار وتنخبل العقل منك وحار ووسواس الصدافيقنا\\nبالأذكار ولقي بك الغرام بنار المحبة فاحترقت حرقاً ٢ ورشحت\\nعرقاً ٢ وهامت عشقاً ٢ وذابت قلقاً كنليان الماء في القدور على\\nالنار إذا ألقوا فيها سمعوا لها شهيقاً وهي تفور ذبتي يا فلانة يا بنت\\nفلانة كما ذابت المونى في القبور فلا ينفك عملي هذا حتى ينفخ\\nإسرافيل في الصور وتخرج الموتى من القبور إن لغير مشكور\\nبرجمت بقسمي وههمت بنفسي وتوكلت على ربي وقلت إنه من\\nسليمان وإنه بسم الله الرحمن الرحيم أن لا تعلوا علي وأتوني\\nمسلمين مسرعين طائعين لله رب العالمين بحق اهيا شراهيا ادوناي\\nاصباؤوت ال شداي وإنه لقسم لو تعلمون عظيم أن ٢ ايل ٢ اه ٢\\nاهيا ٢ مهليل ٢ شلهيب ٢ دوسم ٢ اهمليلا طرخيثا ٢ ميا يا\\nأصحاب الكلام طلس ٢ طلوس ٢ بها ٢ بهوبط ٢ بهابيل مهولة ٢\\nبمعاطفة عطوفة بخاطفة خطوفة اخطفوا قلب فلانة بنت فلانة في\\nمحبة فلان ابن فلانة حتى لا تأكل ولا تشرب ولا تهدتي ولا تنام\\nبحق بعضكم على بعض العجل فيكم وعليكم بارك الله فيكم وكان أمر\\nالله مفعولاً وصلى الله على سيدنا محمد وعلى آله وصحبه وسلم.\\nالمسألة السادسة عشرة\\nمسألة للمحبة\\nتأخذ قطعة عجين وصور منها صورة فرس ونأخذ شيء من", "Lanjutan azimah Hal.20: “...terbang, bakar api di atas api, hati terbang, akal gila, was-was memuncak, bakar cinta 2x keringat 2x mabuk 2x meleleh seperti air mendidih, leleh Fulanah seperti mayat di kubur, tidak lepas sampai Israfil tiup... Aku bersumpah Innahu min Sulaimana... musri’in tha’i’in, Ahya Syarahya Adonai Ashba-ut Al Syaddai, wa innahu la-qasamun lau ta’lamuna ‘azhim, An 2 Il 2 Ah 2 Ahya 2 Mahalil 2, Thalas 2 Thalus 2 Biha 2 Bahubath 2 Bahabil Mahulah, dengan kasih yang menarik menyambar, sambar hati Fulanah sampai tak makan-minum-tidur — bi-haqqi ba’dhikum ‘ala ba’dh, Barakallahu fikum, washalallah ‘ala Muhammad.”\\nMAS-ALAH 16 MAHABBAH: Ambil adonan bentuk kuda (faras), ambil sesuatu dari... (bersambung Hal.22)")
+
 # FOOTER FOR PDF
 pdf.ln(4)
 pdf.set_font('DejaVu', 'I', 7)
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Bandingkan dengan file sumber: 1.jpg, Picture 001.jpg (hal.2–3), Picture 002.jpg (hal.4–5), Picture 003.jpg (hal.6–7), Picture 004.jpg (hal.8–9), Picture 005.jpg (hal.10–11). Rajah Hal.05 & Hal.07 - crop presisi HANYA kotak, putih bersih, 4x. Untuk Batch 03–30 (hal.12–selesai), PDF FULL akan di-append otomatis per 5 halaman. Generate 23 Sep 2026 - Arena. Jika butuh cetak jilid, gunakan PDF ini (A4, margin 18/16mm, font Amiri).', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf dari scan asli. Sumber Batch 04: Picture 008 (hal.16-17), Picture 009 (hal.18-19), Picture 010 (hal.20-21). Rajah Hal.16 (8x8) & Hal.19 (4x4) crop presisi HANYA kotak, putih bersih 4x. Untuk Batch 05-30 (hal.22-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 23 Sep 2026 - Arena.', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B03 generated: {PDF_OUT}")
+print(f"PDF B01-B04 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B03) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B04) also at {PDF_FULL}")
