@@ -27,6 +27,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **09** | 042–046 | [BATCH-09-Hal-042-046.md](BATCH-09-Hal-042-046.md) | ✅ Selesai AUTO (5.6 MB, 14 Rajah) | Hal42-46 tanpa Rajah cetak — hanya tabel huruf Hal44 bukan wafaq (0) |
 | **10** | 047–051 | [BATCH-10-Hal-047-051.md](BATCH-10-Hal-047-051.md) | ✅ Selesai AUTO (7.9 MB, 20 Rajah) | 6R: 48×2 + 49×2 + 51×2 |
 | **11** | 052–056 | [BATCH-11-Hal-052-056.md](BATCH-11-Hal-052-056.md) | ✅ Selesai AUTO (12 MB, 26 Rajah) | 6R: 52 341K + 53 581K + 54 809K + 55 553K + 56×2 406K/615K |
+| **12** | 057–061 | [BATCH-12-Hal-057-061.md](BATCH-12-Hal-057-061.md) | ✅ Selesai AUTO (14 MB, 31 Rajah) | 5R: 57 423K + 58 486K clean + 59 480K + 60 480K + 61 392K |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
@@ -75,9 +76,9 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut — AUTO LANJUT SAMPAI SELESAI
-- Batch 01–11 sudah jadi — 56 halaman / ±150 (37%) — PDF B01–B11 12 MB + FULL 12 MB — 26 Rajah HQ — AUTO — **LANJUT TANPA JEDA**
-- Batch 12 (Hal.057–061, Picture 028 kiri+029+030) berikutnya — auto push 15 menit lagi — tidak perlu ketik
-- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B11 UTAMA 12 MB — FULL auto membesar sampai 150 — 1 file final)
+- Batch 01–12 sudah jadi — 61 halaman / ±150 (40%) — PDF B01–B12 14 MB + FULL 14 MB — 31 Rajah HQ — AUTO 5 menit — **LANJUT TANPA JEDA**
+- Batch 13 (Hal.062–066, Picture 030 kiri+031+032) berikutnya — auto push 5 menit lagi — tidak perlu ketik
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B12 UTAMA 14 MB — FULL auto membesar sampai 150 — 1 file final)
 - Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru — Preview: http-server 8000 live
 
 ---
