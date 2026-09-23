@@ -20,7 +20,8 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **02** | 006–011 | [BATCH-02-Hal-006-011.md](BATCH-02-Hal-006-011.md) | ✅ Selesai | Hal. 07 — 1 Rajah (Khatam 7 Waraq) → `assets/rajah-hal-007-khatam-7waraq.jpg` (4×, 2404×1244 px) |
 | **03** | 012–016 | [BATCH-03-Hal-012-016.md](BATCH-03-Hal-012-016.md) | ✅ Selesai | Hal.12 Thilasm 2 baris, Hal.13 Thilasm 1 baris, Hal.14 Thilasm 2 baris → 3 Rajah final (4×, putih bersih) |
 | **04** | 016–021 | [BATCH-04-Hal-016-021.md](BATCH-04-Hal-016-021.md) | ✅ Selesai (3.1 MB, 7 Rajah total) | Hal.16 Khatam 8×8 `rajah-hal-016-khatam-besar.jpg` (1.1 MB), Hal.19 Khatam 4×4 `rajah-hal-019-khatam-4x4.jpg` (767 KB) |
-| **05** | 022–026 | [BATCH-05-Hal-022-026.md](BATCH-05-Hal-022-026.md) | ✅ Selesai (4.2 MB, 11 Rajah total) | Hal.23 timah, Hal.24 atas `ك هـ ح ع` + Hal.24 bawah `فقطط` + Hal.26 7 waraq → 4 Rajah baru (203K/233K/303K/416K, 4× putih) |
+| **05** | 022–026 | [BATCH-05-Hal-022-026.md](BATCH-05-Hal-022-026.md) | ✅ Selesai (4.2 MB, 11 Rajah total) | Hal.23 timah, Hal.24 atas `ك هـ ح ع` + Hal.24 bawah `فقطط` + Hal.26 7 waraq → 4 Rajah baru |
+| **06** | 027–031 | [BATCH-06-Hal-027-031.md](BATCH-06-Hal-027-031.md) | ✅ Selesai (5.1 MB, 13 Rajah total) | Hal.27 thilasm Senin 3 sigil `rajah-hal-027...` 426KB + Hal.28 thilasm `اخ ح ح` 495KB → 2 Rajah baru (4× putih) |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri | — |
 
@@ -69,10 +70,10 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut
-- Batch 01–05 sudah jadi — 26 halaman / ±150 (17%) — PDF B01–B05 4.2 MB + FULL 4.2 MB — 11 Rajah HQ
-- Batch 06 (Hal.027–031, Picture 013–015) berikutnya — akan otomatis menyambung dari kalimat terakhir Batch 05: *“السابعة ٨٢١٨١... على ملح”* (7 waraq daun zaitun)
-- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B05 UTAMA)
-- Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh untuk batch baru (±5 hal. per push)
+- Batch 01–06 sudah jadi — 31 halaman / ±150 (20%) — PDF B01–B06 5.1 MB + FULL 5.1 MB — 13 Rajah HQ
+- Batch 07 (Hal.032–036, Picture 016–018) berikutnya — akan otomatis menyambung dari `...ادخل في بيت الواحد...` (Wafaq 693 Tijani) — lanjut nonstop sampai Hal. ~150
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B06 UTAMA — tombol UNDUH langsung 5.1 MB)
+- Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh untuk batch baru (±5 hal. per push) — PDF FULL akan otomatis membesar sampai selesai
 
 ---
 *Dibuat 23 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural.*
