@@ -1,0 +1,75 @@
+# Terjemahan Lengkap Kitab Asrar wa Khofayyat fi Ilmi Ruhaniyyat
+### أسرار و خفايات في علم الروحانيات — Syaikh Athiyah Abdul Hamid
+
+Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanpa menghilangkan satu huruf pun.
+
+## Aturan yang Dipenuhi
+1. ✅ Terjemahan 100% dari awal sampai akhir
+2. ✅ Format 2 tingkat: **[Teks Arab Asli]** di atas — **[Terjemahan Indonesia]** di bawah setiap paragraf
+3. ✅ Rajah/Wafaq/Tabel/Angka/Gambar mistik **dibiarin apa adanya persis seperti aslinya** — tidak diterjemahkan jadi teks, hanya diberi keterangan `Gambar Rajah Asli Halaman ...` + crop presisi background putih resolusi tinggi
+4. ✅ Istilah kunci hikmah tanpa padanan dibiarin Arab + penjelasan dalam kurung
+5. ✅ Bahasa Indonesia mudah dipahami, tidak kaku
+6. ✅ Dikerjakan **per 5 halaman** agar tidak terpotong
+7. ✅ Crop **HANYA** bagian Rajah/Wafaq saja — presisi mengikuti kotak rajah, bukan 1 halaman penuh, bukan teks sekitar, tidak digambar ulang, angka/huruf tidak diubah
+
+## Daftar Batch (Per 5 Halaman)
+
+| Batch | Halaman | File | Status | Rajah di-crop |
+|-------|---------|------|--------|---------------|
+| **01** | 001–005 | [BATCH-01-Hal-001-005.md](BATCH-01-Hal-001-005.md) | ✅ Selesai | Hal. 05 — 1 Rajah (Wafaq Tahyij) → `assets/rajah-hal-005-wafaq-tehij.jpg` (4×, 2908×1416 px, putih bersih) |
+| 02 | 006–010 | `BATCH-02-Hal-006-010.md` | ⏳ Berikutnya | — |
+| 03 | 011–015 | `BATCH-03-Hal-011-015.md` | ⏳ Antri | — |
+| ... | ... | ... | ... | ... |
+| 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri | — |
+
+> Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
+
+## Contoh Kualitas Crop Rajah
+
+**Halaman 05 — sebelum vs sesudah:**
+- **Asli:** ada di `Picture 002.jpg` (spread hal. 4-5), ukuran 1755×1275, posisi kiri-bawah
+- **Hasil crop:** `assets/rajah-hal-005-wafaq-tehij.jpg`
+  - Hanya kotak tabel 4 baris + simbol vertikal kiri + simbol horizontal bawah
+  - **Tanpa** teks Arab paragraf di sekitarnya (sudah dipisah ke terjemahan)
+  - **Tidak digambar ulang** — pakai pixel asli, hanya di-enhance kontras 1.5× & brightness 1.1×, diberi padding putih 25px, di-upscale 4× (LANCZOS) jadi 2908×1416 px
+  - Background putih bersih, siap cetak
+  - Jika dalam 1 halaman ada 2 rajah, akan di-crop terpisah jadi `rajah-hal-XXX-1-atas.jpg` dan `rajah-hal-XXX-2-bawah.jpg`
+
+Cara lihat: buka `assets/rajah-hal-005-wafaq-tehij.jpg` — klik untuk zoom 100%.
+
+## Cara Baca Terjemahan
+Setiap paragraf ditampilkan dua tingkat:
+
+```markdown
+### [Teks Arab Asli]
+```
+...teks Arab persis seperti di scan...
+
+### [Terjemahan Indonesia]
+...terjemahan mudah dipahami...
+```
+
+Jika ada Rajah/Wafaq:
+```markdown
+### Gambar Rajah Asli Halaman 05 — Wafaq Tahyij
+![Rajah](assets/rajah-hal-005-wafaq-tehij.jpg)
+**Gambar Rajah Asli Halaman 05**
++ keterangan cara bacanya dalam Indonesia
+```
+
+## Sumber Gambar
+- Repo utama: `https://github.com/fatimah86-dot/asoro-wa-khofiyyat-fi-ilmu-ruhaniyyah/tree/a0afa0fefce78efb1a0b9e03a66e978c1ef0c903` → `1.jpg`, `Picture 001.jpg` … `Picture 099.jpg`
+- Lanjutan: `https://github.com/fatimah86-dot/asror-wa-khofiyyat/tree/a8b761e48d66fa68b1676f9509012e33bf4624f9` → `Picture 100.jpg` … `Picture 149.jpg` + `Picture.jpg`
+
+File gambar tidak diubah — transliterasi manual per huruf dari scan.
+
+## Peringatan Etis
+Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
+
+## Progress & Cara Lanjut
+- Batch 01 sudah jadi — silakan cek `BATCH-01-Hal-001-005.md`
+- Batch 02 sedang diproses — akan otomatis menyambung dari kalimat terakhir Batch 01: *“...pada tujuh lembar”*
+- Semua file akan di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh`
+
+---
+*Dibuat 23 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural.*
