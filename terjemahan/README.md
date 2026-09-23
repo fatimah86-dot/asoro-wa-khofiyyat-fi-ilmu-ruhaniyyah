@@ -31,6 +31,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **13** | 062–066 | [BATCH-13-Hal-062-066.md](BATCH-13-Hal-062-066.md) | ✅ Selesai AUTO (16 MB, 38 Rajah) | 7R: 62 761K + 63 126K + 64 373K + 65top 303K + 65bot 510K + 66top 173K + 66mid 205K |
 | **14** | 067–071 | [BATCH-14-Hal-067-071.md](BATCH-14-Hal-067-071.md) | ✅ Selesai AUTO (17 MB, 45 Rajah) | 7R: 67top 273K + 67bot 66K + 68top 249K + 68bot 175K + 69 113K + 70 187K + 71 136K |
 | **15** | 072–076 | [BATCH-15-Hal-072-076.md](BATCH-15-Hal-072-076.md) | ✅ Selesai AUTO (20 MB, 53 Rajah) | 8R: 72top 265K + 72bot 299K + 74top 1.4M + 74bot 126K + 75fig 545K + 75scr 246K + 76waf 433K + 76loop 119K |
+| **16** | 077–081 | [BATCH-16-Hal-077-081.md](BATCH-16-Hal-077-081.md) | ✅ Selesai AUTO (24 MB, 62 Rajah) | 9R: 77top 164K +77bot 547K +78waf 837K+78top 113K+78bot 36K +79top 147K+79bot 393K +80top 838K+80bot 323K +81top 441K+81bot 178K |
 | ... | ... | ... | ... | ... |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
@@ -79,9 +80,9 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut — AUTO LANJUT SAMPAI SELESAI
-- Batch 01–15 sudah jadi — 76 halaman / ±150 (50%) — PDF B01–B15 20 MB + FULL 20 MB — 53 Rajah HQ — AUTO 1 menit — **LANJUT TANPA JEDA**
-- Batch 16 (Hal.077–081, Picture 038 kiri Hal77 + 039 Hal78-79 + 040 Hal80-81) berikutnya — auto push 1 menit lagi — tidak perlu ketik
-- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B15 UTAMA 20 MB — FULL auto membesar sampai 150 — 1 file final)
+- Batch 01–16 sudah jadi — 81 halaman / ±150 (54%) — PDF B01–B16 24 MB + FULL 24 MB — 62 Rajah HQ — AUTO 1 menit — **LANJUT TANPA JEDA**
+- Batch 17 (Hal.082–086, Picture 041 Hal82-83 + 042 Hal84-85 + 043 Hal86) berikutnya — auto push 1 menit lagi — tidak perlu ketik
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B16 UTAMA 24 MB — FULL auto membesar sampai 150 — 1 file final)
 - Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru — Preview: http-server 8000 live
 
 ---
