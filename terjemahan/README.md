@@ -38,6 +38,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **20** | 096–101 | [BATCH-20-Hal-097-101.md](BATCH-20-Hal-097-101.md) | ✅ Selesai AUTO (33 MB, 96 Rajah) | 7R baru: 98top 110K+98bot 109K +99top 63K+99bot 84K +100left 101K+100right 41K +101box 115K — Hal096 stamped 0 + Hal097 alias 2 |
 | **21** | 102–106 | [BATCH-21-Hal-102-106.md](BATCH-21-Hal-102-106.md) | ✅ Selesai AUTO (33 MB, 99 Rajah) | 3R: 102star 472K+102num 66K +103script 32K — Najm Tsamani Furqah |
 | **22** | 107–111 | [BATCH-22-Hal-107-111.md](BATCH-22-Hal-107-111.md) | ✅ Selesai AUTO (34 MB, 105 Rajah) | 6R: 107script 83K +108top 112K+108num 16K +110circle 509K +111top 97K+111bot 98K |
+| **23** | 112–116 | [BATCH-23-Hal-112-116.md](BATCH-23-Hal-112-116.md) | ✅ Selesai AUTO (36 MB, 116 Rajah) | 11R: 112 254K +113top 191K+113mid 60K+113tab 77K +114top 163K+114bot 119K +115top 110K+115mid 118K+115bot 162K +116top 622K+116bot 363K |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
 > Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
@@ -85,10 +86,10 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut — AUTO LANJUT SAMPAI SELESAI
-- Batch 01–22 sudah jadi — 111 halaman / ±150 (74%) — PDF B01–B22 34 MB + FULL 34 MB — 105 Rajah HQ — AUTO tanpa jeda — **LANJUT TANPA JEDA**
-- Batch 23 (Hal.112–116, Picture 056 Hal112-113 + 057 Hal114-115 + 058 Hal116) berikutnya — auto push tanpa jeda — tidak perlu ketik
+- Batch 01–23 sudah jadi — 116 halaman / ±150 (77%) — PDF B01–B23 36 MB + FULL 36 MB — 116 Rajah HQ — AUTO tanpa jeda — **LANJUT TANPA JEDA**
+- Batch 24 (Hal.117–121, Picture 058 Hal117 + 059 Hal118-119 + 060 Hal120-121) berikutnya — auto push tanpa jeda — tidak perlu ketik
 - Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B22 UTAMA 34 MB — FULL auto membesar sampai 150 — 1 file final)
 - Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru — Preview: http-server 8000 live
 
 ---
-*Dibuat 24 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural — Batch22 111 hal 74% 105 Rajah.*
+*Dibuat 24 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural — Batch23 116 hal 77% 116 Rajah.*
