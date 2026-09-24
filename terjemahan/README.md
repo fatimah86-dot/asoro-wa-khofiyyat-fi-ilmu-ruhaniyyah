@@ -34,8 +34,8 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **16** | 077–081 | [BATCH-16-Hal-077-081.md](BATCH-16-Hal-077-081.md) | ✅ Selesai AUTO (24 MB, 62 Rajah) | 9R: 77top 164K +77bot 547K +78waf 837K+78top 113K+78bot 36K +79top 147K+79bot 393K +80top 838K+80bot 323K +81top 441K+81bot 178K |
 | **17** | 082–086 | [BATCH-17-Hal-082-086.md](BATCH-17-Hal-082-086.md) | ✅ Selesai AUTO (27 MB, 72 Rajah) | 10R: 82top 303K+82bot 292K +83top 338K+83bot 206K +84top 217K+84bot 239K +85fig 381K+85bot 151K +86top 341K+86bot 294K |
 | **18** | 087–091 | [BATCH-18-Hal-087-091.md](BATCH-18-Hal-087-091.md) | ✅ Selesai AUTO (30 MB, 82 Rajah) | 10R: 87top 261K+87bot 240K +88top 415K+88mid 507K+88bot 173K +89top 209K+89bot 149K +90fig 411K+90waf 282K +91top 170K |
-| **19** | 092–096 | [BATCH-19-Hal-092-096.md](BATCH-19-Hal-092-096.md) | ✅ Selesai AUTO (32 MB, 89 Rajah) | 7R: 92top 324K+92bot 292K +93top 266K+93bot 369K +94grid 524K +96top 215K+96bot 150K |
-| ... | ... | ... | ... | ... |
+| **19** | 092–096 | [BATCH-19-Hal-092-096.md](BATCH-19-Hal-092-096.md) | ✅ Selesai AUTO (32 MB, 89 Rajah) | 7R: 92top 324K+92bot 292K +93top 266K+93bot 369K +94grid 524K +96top 215K+96bot 150K — koreksi: 096=stamped → 097 |
+| **20** | 096–101 | [BATCH-20-Hal-097-101.md](BATCH-20-Hal-097-101.md) | ✅ Selesai AUTO (33 MB, 96 Rajah) | 7R baru: 98top 110K+98bot 109K +99top 63K+99bot 84K +100left 101K+100right 41K +101box 115K — Hal096 stamped 0 + Hal097 alias 2 |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
 > Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
@@ -83,10 +83,10 @@ File gambar tidak diubah — transliterasi manual per huruf dari scan.
 Lihat kotak `CAUTION` di setiap batch. Terjemahan ini untuk **studi akademik / pelestarian naskah**, bukan anjuran praktik. Penggunaan untuk memanipulasi orang tanpa izin bertentangan dengan etika dan hukum.
 
 ## Progress & Cara Lanjut — AUTO LANJUT SAMPAI SELESAI
-- Batch 01–19 sudah jadi — 96 halaman / ±150 (64%) — PDF B01–B19 32 MB + FULL 32 MB — 89 Rajah HQ — AUTO tanpa jeda — **LANJUT TANPA JEDA**
-- Batch 20 (Hal.097–101, Picture 048 kiri Hal97 + 049 Hal98-99 + 050 Hal100-101) berikutnya — auto push tanpa jeda — tidak perlu ketik
-- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B19 UTAMA 32 MB — FULL auto membesar sampai 150 — 1 file final)
+- Batch 01–20 sudah jadi — 101 halaman / ±150 (67%) — PDF B01–B20 33 MB + FULL 33 MB — 96 Rajah HQ (koreksi Hal096 stamped) — AUTO tanpa jeda — **LANJUT TANPA JEDA**
+- Batch 21 (Hal.102–106, Picture 051 Hal102-103 + 052 Hal104-105 + 053 Hal106) berikutnya — auto push tanpa jeda — tidak perlu ketik
+- Panel unduhan: `panel-unduhan.html` — versi PDF SAJA (BARU B01–B20 UTAMA 33 MB — FULL auto membesar sampai 150 — 1 file final)
 - Semua file di-push ke branch `arena/01a0ccba-asoro-wa-khofiyyat-fi-ilmu-ruh` — refresh panel = dapat PDF terbaru — Preview: http-server 8000 live
 
 ---
-*Dibuat 23 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural.*
+*Dibuat 24 Sep 2026 — Arena Agent — transliterasi manual, crop presisi, bahasa Indonesia natural — Batch20 koreksi Hal096 stamped, 101 hal 67%.*
