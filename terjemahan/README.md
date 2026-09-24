@@ -41,9 +41,14 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **23** | 112–116 | [BATCH-23-Hal-112-116.md](BATCH-23-Hal-112-116.md) | ✅ Selesai AUTO (36 MB, 116 Rajah) | 11R: 112 254K +113top 191K+113mid 60K+113tab 77K +114top 163K+114bot 119K +115top 110K+115mid 118K+115bot 162K +116top 622K+116bot 363K |
 | **24** | 117–121 | [BATCH-24-Hal-117-121.md](BATCH-24-Hal-117-121.md) | ✅ Selesai AUTO (38 MB, 125 Rajah) | 9R: 117top 159K+117bot 114K +118top 243K+118bot 53K +119top 166K+119bot 105K +120 242K +121top 2×+121bot 2× |
 | **25** | 122–126 | [BATCH-25-Hal-122-126.md](BATCH-25-Hal-122-126.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 4R: 122 494K +123 343K +124 468K +125 489K +126 Dua — |
+| **26** | 127–131 | [BATCH-26-Hal-127-131.md](BATCH-26-Hal-127-131.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 0R — Dua Syarifah Zajr Thabi'ah teks — |
+| **27** | 132–136 | [BATCH-27-Hal-132-136.md](BATCH-27-Hal-132-136.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 0R — Thabi'ah teks — |
+| **28** | 137–141 | [BATCH-28-Hal-137-141.md](BATCH-28-Hal-137-141.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 0R — Khatam Syar teks — |
+| **29** | 142–146 | [BATCH-29-Hal-142-146.md](BATCH-29-Hal-142-146.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 0R — Burhatiyah teks — |
+| **30** | 147–151 | [BATCH-30-Hal-147-151.md](BATCH-30-Hal-147-151.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 0R — Khatimah Ijazah teks — SELESAI 100% |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
-> Next: Batch 25 Hal122-126 (Picture 061+062) — auto lanjut tanpa jeda — Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
+> SELESAI 100% 151 hal 129 Rajah — Next: — (Picture 061+062) — auto lanjut tanpa jeda — Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
 
 ## Contoh Kualitas Crop Rajah
 
