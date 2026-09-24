@@ -162,7 +162,16 @@ RAJAH_154B = str(BASE / "assets/rajah-hal-154-bottom-script.jpg")
 RAJAH_155T = str(BASE / "assets/rajah-hal-155-top-numbers.jpg")
 RAJAH_155B = str(BASE / "assets/rajah-hal-155-bottom-script.jpg")
 RAJAH_156T = str(BASE / "assets/rajah-hal-156-tilasm10.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B32.pdf")
+RAJAH_159  = str(BASE / "assets/rajah-hal-159-tilasm11.jpg")
+RAJAH_160  = str(BASE / "assets/rajah-hal-160-tilasm14.jpg")
+RAJAH_161T = str(BASE / "assets/rajah-hal-161-top-tilasm12.jpg")
+RAJAH_161B = str(BASE / "assets/rajah-hal-161-bottom-tilasm15.jpg")
+RAJAH_162T = str(BASE / "assets/rajah-hal-162-top-tilasm16.jpg")
+RAJAH_162B = str(BASE / "assets/rajah-hal-162-bottom-tilasm17.jpg")
+RAJAH_163T = str(BASE / "assets/rajah-hal-163-top-tilasm18.jpg")
+RAJAH_163B = str(BASE / "assets/rajah-hal-163-bottom-tilasm19.jpg")
+RAJAH_164  = str(BASE / "assets/rajah-hal-164-tilasm20.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B33.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -178,7 +187,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-32)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-33)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -332,7 +341,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–32 (Halaman 001–159) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–33 (Halaman 001–164) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -360,7 +369,7 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–32', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–33', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
@@ -1252,6 +1261,38 @@ pdf.cell(0, 7, 'HALAMAN 157-159 — Qasam Syarif lanjutan — Picture 079 kiri +
 add_block_box('Teks Arab Asli', "وهذا هو القسم الشريف الذي تقرءه على العشرة طلاسم التي مضت تقول: بسم الله الرحمن الرحيم لو أنزلنا هذا القرآن على جبل لرأيته خاشعاً ... إلا هو الملك القدوس السلام المؤمن المهيمن العزيز الجبار ...", "Qasam Syarif 157-159 — tanpa Rajah.")
 
 
+
+# ========== BATCH 33: Hal159 koreksi + 160-164 9 Rajah ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'KOREKSI HALAMAN 159 — Tilasm 11 — Picture 080 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم الحادي عشر لعاقة الرجل عن الزواج وهو طه عن الزنى ... وهو هذا الطلسم: وبلوا ردوا لعدوا له عدة وقي باقع دوا ١١١ م قف ١١١١ هـ ٦ا مرانع / صد لا هو عه سح د ع و١١١١عها مرانع ☆ مانع — يصرح كذا وكذا عن الزواج", "Tilasm 11 — atsar + celak — koreksi Batch32.")
+add_rajah(RAJAH_159, "Halaman 159 — Tilasm 11 — وبلوا ردوا", "2 baris + kotak `صد` — 4× putih bersih koreksi")
+
+pdf.cell(0, 7, 'HALAMAN 160 — Tilasm 13-14 — Picture 081 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم الثالث عشر للمنع عن الزواج نكتبه في لوح أسرب ... مه طه مه مه مه طل هي ☆ عد وصح لا يزول ابدا / الطلسم الرابع عشر للمنع عن الزواج أيضا نكتبه في كاغد", "Tilasm 13 lauh asrob + 14 kaghid.")
+add_rajah(RAJAH_160, "Halaman 160 — Tilasm 13 — مه طه ☆", "`مه طه مه مه ☆ عد وصح لا يزول ابدا` — 160K 4×")
+
+pdf.cell(0, 7, 'HALAMAN 161 — Tilasm 12 & 15 — Picture 081 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم الثاني عشر لعاقة المرأة عن الزواج والحرام نكتبه على بيضة بنت يومها يوم الخميس ... فطه ه ل هه ... توكلوا يا خدام هذا الطلم واعقدوا زواج كذا / الطلسم الخامس عشر للمنع مطلقاً على بيضة يوم الخميس ... لله هه ٢٢٢٢٢ ٠٠٠٠٠ هـ واه ... حم توكلوا يا ضام هه", "Tilasm 12 beidha + 15.")
+add_rajah(RAJAH_161T, "Halaman 161 Atas — Tilasm 12 — فطه", "`فطه ه ل هه ... توكلوا يا خدام` — 89K 4×")
+add_rajah(RAJAH_161B, "Halaman 161 Bawah — Tilasm 15 — لله هه ٢٢٢٢٢", "`لله هه ٢٢٢٢٢ ٠٠٠٠٠ ه واه... حم توكلوا يا ضام` — 159K 4×")
+
+pdf.cell(0, 7, 'HALAMAN 162 — Tilasm 16 & 17 — Picture 082 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم السادس عشر للمنع عن الزواج في ورقة في أنبوبة قصب فارسي ... ٤ووع ١٢٦١٤ ... قياش طاش ابن المانعون / الطلسم السابع عشر عقد الذكر عن النكاح في ورقة زرقاء ... طهره ول طرخ لخ ... ☆ ١١ هو ٤٤ عقبا", "Tilasm 16 bambu + 17 kertas biru.")
+add_rajah(RAJAH_162T, "Halaman 162 Atas — Tilasm 16 — ٤ووع", "6 baris `٤ووع ١٢٦١٤... قياش طاش` — 242K 4×")
+add_rajah(RAJAH_162B, "Halaman 162 Bawah — Tilasm 17 — طهره ول", "`طهره ول طرخ... اعقدى ذكر كذا ☆` — 171K 4×")
+
+pdf.cell(0, 7, 'HALAMAN 163 — Tilasm 18 & 19 — Picture 082 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم الثامن عشر للرباط في لوح رصاص بابرة نحاس ... شلشا يل ☆ شورا يل ... ميخا يل ١١١ ... اعن كز ☆ / الطلسم التاسع عشر للرباط على عود رمان حامض ... ١١١١١١ ع ع ع ... عقدت وربطت فرج كذا", "Tilasm 18 lauh + 19 ruman.")
+add_rajah(RAJAH_163T, "Halaman 163 Atas — Tilasm 18 — شلشا يل ☆", "`شلشا يل ☆ شورا... ميخا يل ١١١` — 142K 4×")
+add_rajah(RAJAH_163B, "Halaman 163 Bawah — Tilasm 19 — ١١١١١١ ع", "`١١١١١١ ع ع ... عقدت وربطت` — 99K 4×")
+
+pdf.cell(0, 7, 'HALAMAN 164 — Tilasm 20 — Picture 083 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم العشرون للرباط أيضا نكتبه في كفك ... خ ح ه عا وب مرد اذ رس ل تـ يه حشف كفغان اه اه ... بروج ح ... بدوود ... عايل ... اعقدوا ذكر كذا عن فرج كذا يا خدام هذه الطلاسم العظام", "Tilasm 20 kaf — salam.")
+add_rajah(RAJAH_164, "Halaman 164 — Tilasm 20 — خ ح ه عا", "6 baris `خ ح ه عا... اه اه... بروج` — 312K 4×")
+
+
 pdf.ln(4)
 
 pdf.set_font('DejaVu', 'I', 7)
@@ -1261,9 +1302,9 @@ pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10:
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B32 generated: {PDF_OUT}")
+print(f"PDF B01-B33 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B32) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B33) also at {PDF_FULL}")

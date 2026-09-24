@@ -48,6 +48,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **30** | 147–151 | [BATCH-30-Hal-147-151.md](BATCH-30-Hal-147-151.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 0R — Khatimah Ijazah — |
 | **31** | 150–154 | [BATCH-31-Hal-150-154.md](BATCH-31-Hal-150-154.md) | ✅ Selesai AUTO (40 MB, 137 Rajah) | 8R: 151top 89K+151bot 165K +152top 161K+152mid 159K +153top 67K+153mid 127K +154pyr 210K+154bot 91K |
 | **32** | 155–159 | [BATCH-32-Hal-155-159.md](BATCH-32-Hal-155-159.md) | ✅ Selesai AUTO (41 MB, 140 Rajah) | 3R: 155top 134K+155bot 129K +156 3baris |
+| **33** | 159–164 | [BATCH-33-Hal-160-164.md](BATCH-33-Hal-160-164.md) | ✅ Selesai AUTO (42 MB, 149 Rajah) | 9R: 159+160☆+161×2+162×2+163×2+164 koreksi+baru |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
 > SELESAI 100% 151 hal 129 Rajah — Next: — (Picture 061+062) — auto lanjut tanpa jeda — Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
