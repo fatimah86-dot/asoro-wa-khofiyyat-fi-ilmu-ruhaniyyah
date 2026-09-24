@@ -32,6 +32,7 @@ Kitab ini terdiri dari **149 foto pindaian** (setiap foto = 1 sebaran berisi 2 h
 | `halaman-002-011.md` | 2–11 | `Picture 001`–`005` |
 | `halaman-012-021.md` | 12–21 | `Picture 006`–`010` |
 | `halaman-022-031.md` | 22–31 | `Picture 011`–`015` |
+| `halaman-032-041.md` | 32–41 | `Picture 016`–`020` |
 | … | … | … |
 | `halaman-290-299.md` | 290–299 | `Picture 145`–`149` |
 
@@ -40,7 +41,9 @@ Kitab ini terdiri dari **149 foto pindaian** (setiap foto = 1 sebaran berisi 2 h
 - ✅ **Halaman 1 mukadimah** (`halaman-001.md`)
 - ✅ **Batch 1: halaman 2–11** — selesai (bab 1: amalan maḥabbah, jalab, taḥwīj — ritual 1–9)
 - ✅ **Batch 2: halaman 12–21** — selesai (ritual 10–16; 3 wafaq + tabel 8×8 + tabel angka 4×4)
-- ⏳ Batch 3 dst. — dikerjakan berurutan per 10 halaman
+- ✅ **Batch 3: halaman 22–31** — selesai (soal 17–25 + Bab Jalab Qawī; 8 rajah/wafaq)
+- ✅ **Batch 4: halaman 32–41** — selesai (7 lembar ḥarīq, Bab Jalab al-Ḥaqq, ʿaqd nawm, ʿazīmah malaikat, maḥabbat ʿajābiyyah; 1 tajsm)
+- ⏳ Batch 5 dst. — dikerjakan berurutan per 10 halaman
 
 ### Rajah/wafaq yang sudah di-crop
 | Gambar | Halaman | Keterangan |
@@ -52,6 +55,15 @@ Kitab ini terdiri dari **149 foto pindaian** (setiap foto = 1 sebaran berisi 2 h
 | `images/rajah/rajah-halaman-14-01.png` | 14 | Empat baris ṭilasm (ritual ke-12, tinta kuku/rambut) |
 | `images/rajah/rajah-halaman-16-01.png` | 16 | Tabel wafaq besar 8×8 huruf ("al-jadwāl") |
 | `images/rajah/rajah-halaman-19-01.png` | 19 | Tabel wafaq angka 4×4 (al-Ḫātim yang diisyaratkan) |
+| `images/rajah/rajah-halaman-22-01.png` | 22 | Wafaq 2 baris "ما بيطح / يبالاه" |
+| `images/rajah/rajah-halaman-23-01.png` | 23 | Deretan wafaq 3 baris huruf-angka (untuk pelat timah) |
+| `images/rajah/rajah-halaman-24-01.png` | 24 | Wafaq "كفحص وز بعدصمدك عمشكع / لعصه" (Rajah 1 atas, soal 18) |
+| `images/rajah/rajah-halaman-24-02.png` | 24 | Wafaq "فطبت حطقي... / عمر طقمها... + deretan bulatan" (Rajah 2 bawah, soal 19) |
+| `images/rajah/rajah-halaman-26-01.png` | 26 | Wafaq angka 4 baris berlabel lembar (soal 22, daun zaitun) |
+| `images/rajah/rajah-halaman-27-01.png` | 27 | Rangkaian nama 4 baris yang ditulis pada telur (soal 23) |
+| `images/rajah/rajah-halaman-27-02.png` | 27 | Wafaq "هذه الآية ٩٩٩..." + kolom angka (soal 24, mujarrab ṣarīḥ) |
+| `images/rajah/rajah-halaman-28-01.png` | 28 | Wafaq 9 baris dengan potongan ayat (soal 25) |
+| `images/rajah/rajah-halaman-41-01.png` | 41 | Tajsm figur manusia (angka + huruf) untuk maḥabbat ʿajābiyyah |
 
 ## ⚠️ Catatan akidah
 Kitab ini berisi materi **sihir dan khurafat** yang bertentangan dengan akidah Islam (menjadikan jin/nama gaib sebagai sebab hajat, menyalahgunakan ayat Al-Qur'an untuk sihir, bersumpah kepada selain Allah). Terjemahan disajikan **utuh untuk keperluan akademik/studi tekstual** atas permintaan, dan tidak merestui pengamalan isi kitab ini.
