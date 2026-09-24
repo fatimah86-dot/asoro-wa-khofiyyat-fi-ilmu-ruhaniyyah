@@ -121,7 +121,12 @@ RAJAH_102S = str(BASE / "assets/rajah-hal-102-star.jpg")
 RAJAH_102N = str(BASE / "assets/rajah-hal-102-numbers.jpg")
 RAJAH_103S = str(BASE / "assets/rajah-hal-103-script.jpg")
 RAJAH_107S = str(BASE / "assets/rajah-hal-107-script.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B21.pdf")
+RAJAH_108T = str(BASE / "assets/rajah-hal-108-top-script.jpg")
+RAJAH_108N = str(BASE / "assets/rajah-hal-108-numbers.jpg")
+RAJAH_110C = str(BASE / "assets/rajah-hal-110-circle.jpg")
+RAJAH_111T = str(BASE / "assets/rajah-hal-111-top-numbers.jpg")
+RAJAH_111B = str(BASE / "assets/rajah-hal-111-bottom-scripts.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B22.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -137,7 +142,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-21)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-22)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -291,7 +296,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–20 (Halaman 001–106) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–20 (Halaman 001–111) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -344,6 +349,7 @@ pdf.multi_cell(0, 4.5,
 'Batch 19 (092–096): Hawa’iyyah Jarum Hajar Ahmar Hal92(2) + Tarsh Mizan Hal93(2) + Tabaq Ya Sin Hal94(1) + Jami‘ah Hal95(0) + Tashrif Baydhah/Nar Hal96(2) — 7 Rajah baru — total 89\n'
 'Batch 20 (096–101): Hal096 Stamped (0) + Hal097 Tashrif Awwal-Tsalits Mahabbah 2 Rajah (alias) + Hal098 Rabi/Khamis Jalb 2 Rajah + Hal099 Sabi/Tsamin 2 Rajah + Hal100 Tasi\u2018 Hall Marbuth 2 Rajah + Hal101 Tsani\u2013Khamis \u2018Asyar 1 Rajah \u2014 7 Rajah baru \u2014 total 96\\n'
 'Batch 21 (102–106): Najm Tsamani Furqah Hal102(2) + Hifz Kanz Hal103(1) + Jalb Bathlimus Hal104(0) + Jild Thayr Hal105(0) + Hermes Hadi\u2018Isyrin Hal106(0) \u2014 3 Rajah baru \u2014 total 99\\n'
+'Batch 22 (107–111): Shifa 20 Waraq Hal107(1) + Waqayah 444 Hal108(2) + Ikhtifa Nuhas Hal109-110(1) + 7 Waraqat Hal110-Circle(1) + Qadha Hawa\u2019ij 112 Hal111(2) \u2014 6 Rajah baru \u2014 total 105\\n'
 'Batch 21\u201330 (102\u2013~150) - menyusul per 5 hal., PDF FULL auto', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(2)
 
@@ -997,17 +1003,47 @@ pdf.set_text_color(124,45,18)
 pdf.cell(0, 7, 'HALAMAN 106 — Hermes Hadi & Isyrin — Harir Rizq Qubul — Picture 053 kanan', new_x="LMARGIN", new_y="NEXT")
 add_block_box('Teks Arab Asli', "ويخيط عليه جلد أحمر ويحمله الطالب فإن المعمول له يصير\nمجنونا على الدوام من شدة المحبة ولا يقدر على فراقه طرفة\nعين.\nوإذا أردت جلب الخضرة ارم النحاسة في النار واتل\nالدعوة ٣ مرات والزجر مرة فإن المعمول له يأتي له في الحضرة\nلطالبه تائها لا يدري أين هو.\nالتصريف الحادي والعشرون\nوهو عن هرمس الهرامسة وهو من العجائب لجلب المحبة\nوالقبول ونفاذ الكلمة على سائر المخلوقات وللطلسم الآتي\nخواص نذكرها إن شاء الله تعالى وهو أن تكتب الطلسم على قطعة\nحرير بين الحمرة والصفرة ويكون القمر والشمس في برج هوائي\nوتبخره بالعود واللبان الذكر وتتلو عليه ٧ مرات والزجر مرة\nوتخيط عليه جلد طاهر مدبوغ ويحمله الطالب على عضده الأيسر\nفإن الأرزاق تتراكم عليه من غير سبب ولا تعب ولا يرى عمره\nأبدا.\nوإذا أردت ذلك وحملته ورأوك السلاطين والملوك عظموا\nوقربوك منهم وتكون كلمتك نافذة على كل مخلوق وإذا قلت\nكلاما لا يستمعون غيره ولو جاء عليك ألف شاهد وترى من\nالتسهيل والفرج والأمور والبشر من كل جانب ولا يقربك حيران\nمؤذي ولا حشرات وتهيبك الإنس والجن والسباع الضارة وانطلق", "Majnun jild ahmar — jilb khadhrah rami nar ta'ihan — Hermes harir baina humrah shufrah qamar syams hawa oud luban 7x jild thahir riziq qubul nafidz kalimah — sultan muatham.")
 
+
+# ========== BATCH 22: Hal107-111 (Picture 053 kiri + 054 + 055) 6 Rajah ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 107 — Tsani Isyrin Lanjutan + Talisman Hermes — Picture 053 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "القلوب القاسية وسعة الرزق.\nومن حملها على عضده الأيسر وتاجر باع متجره في الوقت\nوكسب فيها النصف ونمته عنده المواشي وبصير في غنوة تامة لا\nتعيير لها ويصير بهذا الطلسم فريد زمانه في كل أمر ومطلب وبصير\nكالخليفة في عصره.\nوهذا هو الطلسم\nفترع يو صريح سكه ما صه فا معو\nمرح فه كمو\nتوكلوا يا خدام هذا الطلسم بكذا وكذا\nالتصريف الثاني والعشرون\nلإذهاب الأمراض والأسقام من يوم وليلة وهذا الطلسم من\nالعجائب وهو لدفع أرياح الجان والريح الأحمر والرياح الباطنية\nوكل داه في البدن وهو أن تكتب الطلسم الآتي في ٢٠ ورقة أو\n٤٠ أو أكثر على حسب ما أردت والشمس في برج عطارد في برج الشمس في برج عطارد ثم تبخر\nالأوراق باللبان والعود القافلي وتتلو عليه الدعوة ٧ مرات والزجر\nمرة وتحفظهم عندك فإن جاءك مريض بأي مرض ذوب له ورقة\nمنهن في الماء في إناء ويشربه على الريق ودورة يحملها على\nعضده الأيمن فإنه يبرأ من يومهما ولو كان له سنين مريضا وإن", "Qulub qasiah rizq — hamal aysar tajir — ftr' ya usw... Talisman Hermes — tawakkalu bi-kaza — Tsani Isyrin 20-40 waraq Attarid luban qaquli — hamal aysar.")
+add_rajah(RAJAH_107S, "Halaman 107 — Talisman Hermes — فترع يو", "2 baris `فترع يو صريح سكه ما صه فا معو / مرح فه كمو` — harir Hermes — tawakkalu bi-kaza. 83K 4×.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 108 — Tsalits Isyrin — Shifa 20 Waraq & 444 — Picture 054 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "كررت عليه شرب الأوراق ثلاث مرات على ثلاثة أيام كان أبين\nوهذا هو الطلسم:\nولع ومه وه ه وه مري مري وطهطها\n٤٤٤\nتوكلوا يا خدام هذا الطلسم وامنعوا الرصد والسقام والرياح\nعن حامل وشارب هذا الطلسم.\nالتصريف الثالث والعشرون\nوهو مخصوص بالمرض والسقام والقحط والجرب والمرت\nوالغناء وإرسال هاتف الحي والرذاذ والفالج وتسليط\nالضارب وانصداع فإذا أردت المرض والسقام على مدينة حتى\nتمررض سائر أهلها اكتب الطلسم الآتي على لوح من رصاص\nوالقمر في برج زحل ثم بخِّره بفص سقطري وتنكار واتل عليه\nالدعوة ٧ مرات والزجر مرة ولفه في صوف أسود وادفنه في وسط\nالبلد أو الدار فإن أهلها يمرضون جميعا ويمرضون ولا يبرأ يسر\nبها أحد سليم وإذا أردت إرسال الموت والفناء ادفن اللوح\nبعد كتابته ويخوره كما تقدم في قبور البلد فإن الموت يفشى فيهم\nويهلكون وتخرب البلد أو الدار بعد ثلاثة أيام فاتق الله وقل منه", "Wala wa mah... 444 — wamna'u rashad saqam riyah — Tsalits Isyrin rashash Zuhal shuf aswad — Maut qubur 3 ayam.")
+add_rajah(RAJAH_108T, "Halaman 108 Atas — `ولع ومه`", "Baris `ولع ومه وه ه وه مري مري وطهطها` — 20-40 waraq shifa. 112K 4×.")
+add_rajah(RAJAH_108N, "Halaman 108 Bawah — Kotak `٤٤٤`", "Kotak `٤٤٤` — waqayah. 16K 4×.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 109 — Lanjutan Tsalits — Humma/Nuzayf/Ikhtifa — Picture 054 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "جميعا وخربت البلد في ثلاثة أيام.\nوإذا أردت إرسال الحمى والرداخ على من شئت من خذ اللوح\nبعد كتابته ويخوره والتلاوة عليه كما تقدم وضعه في دست فيه ماء\nوأوقد عليه النار حتى يغلي وأنت تتلو الدعوة من غير عدد واحضر\nحفرة جانب صور البلد أو الدار وفرغ الماء والملوح واردم عليه فإن\nالمعمول له تأخذه الحمى والرداخ من وقتها ولا برأ حتى تذوب\nاللوح في النار.\nوإذا أردت إرسال الضارب والصداع على من شئت من خذ\nاللوح بعد كتابته ويخوره والتلاوة عليه وادفنه تحت عجلة طاحونة\nفإن المعمول له يأخذه الضارب والصداع لوقتها حتى يشرف على\nالعمى ولا يبرأ حتى تذوب اللوح في النار.\nوإذا أردت النزيف على من شئت من خذ اللوح بعد كتابته\nويخوره والتلاوة عليه وادفنه في مكان يجري بجانبه الماء ولا يراه\nأحد فإن الدم يجري عليه كماء البحر فاتق الله تعالى.\nوإذا أردت معرفة خاصية هذا الطلسم فهي تدهش العقول\nإلا وهي الاختفاء عن الناس وهو أن تأخذ لوحا من النحاس مطليا\nبالقصدير وتكتب عليه الطلسم والقمر في برج المشتري وتبخره\nبالصندل والمقل الأزرق وتتلو عليه الدعوة ٧ مرات والزجر مرة\nولكن عند التوكيـل تقول اخفوا حامله عن أعين الناظرين ولا يراه", "Humma radakh dast ma ghaly — Dharib ajalah thahuna — Nuzayf majra ma — Ikhtifa nuhas muqashdar Musytari shandal muqul azraq akhfu hamilahu.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 110 — Rabi Isyrin 7 Waraqat + Khatam Bintang 5 — Picture 055 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "إلا تعالى ولا يظهر للناس حتى ينزل من عليه. وهذا هو\nالطلسم\nلمع ل بل محكلنا و ههه وه و لعو\nوته\nتوكلوا يا خدام هذا الطلسم وافعلوا كذا وكذا.\nالتصريف الرابع والعشرون\nوهو أن تكتب الخاتم الآتي على سبع ورقات والقمر في\nبرج هوائي ثم تضع في كل ورقة سبع حبات من الفلفل وتضع\nالمجمرة أمامك وترمي أول ورقة في النار وتقرأ الدعوة مرة والزجر\nمرة وهكذا إلى تمام السبع ورقات فما تكمل العدد حتى يحضر\nالمطلوب لطالبه ذليلا حقيرا ولا يستطيع فراقه طرفة عين. وهذا\nهو الخاتم.", "Lam' la balla mahkalna ... — tawakkalu — Rabi Isyrin 7 waraq qamar hawai 7 filfil majmarah tarmi — Khatam circle star 7.")
+add_rajah(RAJAH_110C, "Halaman 110 — Khatam Lingkaran Bintang 5", "Lingkaran + najm 5 `ود قلب / دم حارث / ٤٣٠` — 7 waraq qamar hawai. 509K 4×.")
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 111 — Khamis & Sadis Isyrin — Qadha 112 & Raghiif — Picture 055 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "التصريف الخامس والعشرون\nلقضاء الحوائج المتعسرة وهو من عجائب الروماني الكبرى\nتكتب الطلسم الآتي في آنية وتمحوه بالماء وتتلو الدعوة ٣ مرات\nوالزجر مرة ثم تغسل وجهك بذلك الماء وتسير إلى من شئت فإن\nيقضي لك حاجتك قبل أن يتحرك في الوقت والحين.\nوهذا هو الطلسم\n١١٢ ١١٢ ١١٣ ١١٣ ٣٠٠ ١١٣ ١١٣ ١١٣ ١١٣\n١١٣ ١١ ٣ ١١ ٣ ٥١١٣ ١٦١١١ ٣\nتوكلوا يا خدام هذا الطلسم واقضوا حاجتي أو حاجة كذا\nمن كذا.\nالتصريف السادس والعشرون للمحبة\nتكتب الطلسم الآتي على رغيف خبز وتعلقه في سبية و تتلو\nعليه القسم ٣ مرات والزجر مرة والبخور شغال وهو جاوي ولبان\nذكر وتأخذه وتخرج خارج البلد فإن قابلك كلب قاطعه الرغيف\nفإن المعمول يصير كالمجنون ولا يقر له قرار ولا هدوء ولا\nاصطبار ولا يستطيع الصبر عنك طرفة عين ولا يبرد العمل حتى\nيموت. وهذا ما تكتب\nرو وق ع ٨١١٩ صح معه وكه موكلهه\nاط ر ٣ ١١١ ١١١ ولا سهما صحو", "Khamis aniyah ma ghusl wajh 3× 112/113 — Sadis raghiif sabiyyah jawi luban kalbun majnun.")
+add_rajah(RAJAH_111T, "Halaman 111 Atas — Angka `١١٢`", "2 baris `١١٢ ١١٢ ١١٣... / ١١٣ ١١ ٣...` — aniyah. 97K 4×.")
+add_rajah(RAJAH_111B, "Halaman 111 Bawah — `رو وق ع`", "2 baris `رو وق ع ٨١١٩... / اط ر ٣...` — raghiif. 98K 4×.")
+
 pdf.ln(4)
 
 pdf.set_font('DejaVu', 'I', 7)
+
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 99 Rajah HQ (koreksi Hal096 stamped). Batch 21: Hal102-106 3 baru (102×2,103×1) — Picture 051-053. Batch 20: Hal096-101 7 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 105 Rajah HQ. Batch 22: Hal107-111 6 baru (107×1,108×2,110×1,111×2) — Picture 053-055. Batch 21: Hal102-106 3 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B21 generated: {PDF_OUT}")
+print(f"PDF B01-B22 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B21) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B22) also at {PDF_FULL}")
