@@ -151,7 +151,17 @@ RAJAH_122S = str(BASE / "assets/rajah-hal-122-square.jpg")
 RAJAH_123S = str(BASE / "assets/rajah-hal-123-4squares.jpg")
 RAJAH_124S = str(BASE / "assets/rajah-hal-124-x-square.jpg")
 RAJAH_125T = str(BASE / "assets/rajah-hal-125-table.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B30.pdf")
+RAJAH_151T = str(BASE / "assets/rajah-hal-151-top-numbers.jpg")
+RAJAH_151B = str(BASE / "assets/rajah-hal-151-bottom-table.jpg")
+RAJAH_152T = str(BASE / "assets/rajah-hal-152-top-numbers.jpg")
+RAJAH_152M = str(BASE / "assets/rajah-hal-152-middle-numbers.jpg")
+RAJAH_153T = str(BASE / "assets/rajah-hal-153-top-loops.jpg")
+RAJAH_153M = str(BASE / "assets/rajah-hal-153-middle-table.jpg")
+RAJAH_154P = str(BASE / "assets/rajah-hal-154-pyramid.jpg")
+RAJAH_154B = str(BASE / "assets/rajah-hal-154-bottom-script.jpg")
+RAJAH_155T = str(BASE / "assets/rajah-hal-155-top-numbers.jpg")
+RAJAH_155B = str(BASE / "assets/rajah-hal-155-bottom-script.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B31.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -167,7 +177,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-30)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-31)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -321,7 +331,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–30 (Halaman 001–151) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–31 (Halaman 001–154) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -349,7 +359,7 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–30', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–31', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
@@ -1201,18 +1211,43 @@ add_block_box('Teks Arab Asli', "و به ختم الكتاب — و صلى ال�
 
 
 
+
+# ========== BATCH 31: Hal150-154 Fashal Tsalis 8 Rajah ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 150 — Fashal Tsalis Muqaddimah 40 Tilsam — Picture 076 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الفصل الثالث فى الدعوة الاولى من دعوات الطلاسم وهم اربعون طلسما من المجربات العظام لان هذه الطلاسم منتخبة من افخر العلوم التى لا تخيب ابدا ولا يضعف ناموسها على الدوم ولكل قسم منهم دعوة خاصة به وهذه الدعوة هي الاولى لها عشرة طلاسم", "Fashal Tsalis — 40 tilsam — Muqaddimah. Picture 076 kanan.")
+pdf.cell(0, 7, 'HALAMAN 151 — Tilasm 1 Kaf Yumna & 2 Aniyah — Picture 076 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم الاول وهو من العجائب الكبرى للمحبة والجلب الوقتي نكتبه في كف يدك اليمنى بيدك اليسرى بزعفران ونطلق البخور وهو جاوي ولبان ذكر تحت كفك وتتلو القسم 11 مرة ثم تطبق كفك وتلمس به من شئت فإنه يتبعك ويخرج من عقله بحبك. ٨٨٣٧٩١١١٩٧٣ م ط ط١١٩ ١١١١ / ٩١ ١١١ ... والطلسم الثاني نكتبه في آنية بزعفران وماء ورد ... # م ووو هـ ل م / ع ع هـ و # + جدول", "Tilasm 1 Kaf 11x + 2 Aniyah.")
+add_rajah(RAJAH_151T, "Halaman 151 Atas — Tilasm 1 — 88379", "2 baris `٨٨٣٧٩١١١٩٧٣ م ط ط١١٩ / ٩١ ١١١ ...` — kaf yumna 11x — 89K 4×")
+add_rajah(RAJAH_151B, "Halaman 151 Bawah — Tilasm 2 — م ووو", "`# م ووو هـ ل م / ع ع هـ و #` + جدول 3×3 — aniyah — 165K 4×")
+pdf.cell(0, 7, 'HALAMAN 152 — Tilasm 3 Qadha Hajat & 4 Shamah — Picture 077 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم الثالث لقضاء الحوائج المتعسرة وهو من عجائب الروماني الكبرى تكتبة في آنية وتمحوه بالماء ... ا٢ر١١٤ ١١٣ ١١٣ ١١٣ ... والطلسم الرابع للجلب الوقتي وهو من العجائب الكبرى نكتبه على شمعة اسكندراني ... ١٣و ز١٤ ٤م ١١١٩ ## ٨٩٤٤٩٣٠٠١٩", "Tilasm 3 Qadha Hajat + 4 Shamah Iskandarani.")
+add_rajah(RAJAH_152T, "Halaman 152 Atas — Tilasm 3 — 113", "`ا٢ر١١٤ ١١٣ ١١٣ ١١٣ / الب٣١٦٥٠` — aniyah — 161K 4×")
+add_rajah(RAJAH_152M, "Halaman 152 Tengah — Tilasm 4 — 89449", "`١٣و ز١٤ ٤م ١١١٩ ## ٨٩٤٤٩٣٠٠١٩` — shamah — 159K 4×")
+pdf.cell(0, 7, 'HALAMAN 153 — Tilasm 5 Loops & 6 Sab Waraqah — Picture 077 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم الخامس للمحبة السريعة والجلب الوقتي نكتبه في ورقة وتمالأ الورقة من اللبان الذكر ... ه٨ ٨٨٨٨٥ و ه٨ ه٨ ه٨ ٤٤٥ ... والطلسم السادس للجلب الوقتي أيضاً نكتبه في سبع ورقات ...", "Tilasm 5 Nar Jumah + 6 Sab Waraqah.")
+add_rajah(RAJAH_153T, "Halaman 153 Atas — Tilasm 5 Loops", "`ه٨ ٨٨٨٨٥ و ه٨ ه٨ ه٨ ٤٤٥` — 67K 4×")
+add_rajah(RAJAH_153M, "Halaman 153 Tengah — Tilasm 5 Khatam", "`ب دو ح / ح دو ع / دو ب ع` — 127K 4×")
+pdf.cell(0, 7, 'HALAMAN 154 — Tilasm 7 Kaf & 8 Kaghad — Picture 078 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم السابع للجلب والمحبة أيضاً التبعية نكتبه في كفك ... بلكوا ١١١١ طااا ١١١١ س — والطلسم الثامن للمحبة أيضاً نكتبه في كاغد في ساعة سعيدة ...", "Tilasm 7 Kaf + 8 Kaghad Sibyah.")
+add_rajah(RAJAH_154P, "Halaman 154 Pyramid — Sabi", "Pyramid `١ / ٧٣ / ٠٠٠٠١ / ٩٠٠٠` — 210K 4×")
+add_rajah(RAJAH_154B, "Halaman 154 Bawah — Tsamin", "`بلكوا ١١١١ طااا ١١١١ س` — 91K 4×")
+# Hal155 will be in next batch, but include briefly?
+
+
 pdf.ln(4)
 
 pdf.set_font('DejaVu', 'I', 7)
 
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 129 Rajah HQ. Batch 26-30: Hal127-151 0 baru (Dua & Khatam teks saja) — total 129. Batch 25: Hal122-126 4 baru (122 494K + 123 343K + 124 468K + 125 489K) — total 129. Batch 24: Hal117-121 9 baru (117 159K+114K + 118 243K+53K + 119 166K+105K + 120 242K + 121 2×) — total 125. Batch 23: Hal112-116 11 baru (112 254K + 113 191K+60K+77K + 114 163K+119K + 115 110K+118K+162K + 116 622K+363K) — total 116. Batch 22: Hal107-111 6 baru (107×1,108×2,110×1,111×2) — Picture 053-055. Batch 21: Hal102-106 3 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 129 Rajah HQ. Batch 31: Hal150-154 8 baru (151 89K+165K + 152 161K+159K + 153 67K+127K + 154 210K+91K) — total 137. Batch 26-30: Hal127-151 0 baru (Dua & Khatam teks saja) — total 129. Batch 25: Hal122-126 4 baru (122 494K + 123 343K + 124 468K + 125 489K) — total 129. Batch 24: Hal117-121 9 baru (117 159K+114K + 118 243K+53K + 119 166K+105K + 120 242K + 121 2×) — total 125. Batch 23: Hal112-116 11 baru (112 254K + 113 191K+60K+77K + 114 163K+119K + 115 110K+118K+162K + 116 622K+363K) — total 116. Batch 22: Hal107-111 6 baru (107×1,108×2,110×1,111×2) — Picture 053-055. Batch 21: Hal102-106 3 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B30 generated: {PDF_OUT}")
+print(f"PDF B01-B31 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B30) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B31) also at {PDF_FULL}")
