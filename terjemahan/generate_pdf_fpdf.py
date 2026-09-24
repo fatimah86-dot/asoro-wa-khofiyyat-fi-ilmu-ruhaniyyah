@@ -137,7 +137,17 @@ RAJAH_115M = str(BASE / "assets/rajah-hal-115-middle-script.jpg")
 RAJAH_115B = str(BASE / "assets/rajah-hal-115-bottom-script.jpg")
 RAJAH_116T = str(BASE / "assets/rajah-hal-116-top-script.jpg")
 RAJAH_116B = str(BASE / "assets/rajah-hal-116-bottom-script.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B23.pdf")
+RAJAH_117T = str(BASE / "assets/rajah-hal-117-top-script.jpg")
+RAJAH_117B = str(BASE / "assets/rajah-hal-117-bottom-script.jpg")
+RAJAH_118T = str(BASE / "assets/rajah-hal-118-top-script.jpg")
+RAJAH_118B = str(BASE / "assets/rajah-hal-118-bottom-script.jpg")
+RAJAH_119T = str(BASE / "assets/rajah-hal-119-top-script.jpg")
+RAJAH_119B = str(BASE / "assets/rajah-hal-119-bottom-script.jpg")
+RAJAH_120T = str(BASE / "assets/rajah-hal-120-top-script.jpg")
+RAJAH_120B = str(BASE / "assets/rajah-hal-120-bottom-script.jpg")
+RAJAH_121T = str(BASE / "assets/rajah-hal-121-top-script.jpg")
+RAJAH_121B = str(BASE / "assets/rajah-hal-121-bottom-script.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B24.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -153,7 +163,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-23)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-24)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -307,7 +317,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–23 (Halaman 001–116) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–24 (Halaman 001–121) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -335,7 +345,7 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–23', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–24', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
@@ -1083,18 +1093,56 @@ add_rajah(RAJAH_116B, "Halaman 116 Bawah — Aqd Dzakar — طعم ع فرح", "
 
 
 
+
+# ========== BATCH 24: Hal117-121 (Picture 058 kiri + 059 + 060) 10 Rajah ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 117 — Sadis/Sabi Ribath Lawh Rasas & Ud Rumman — Picture 058 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "بعد كتابة الورقة والقراءة والبخور لابد من تخطيتها.\nالتصريف السادس والثلاثون\nللرباط أيضاً تكتبه في لوح رصاص بابرة نحاس وتتلو عليه الدعوة ٣ مرات والزجر مرة والبخور مقل وحنتيت وبعد التخطية تدفنه في مكان رطب فإنه رباط مؤذي لا ينفك إلى يوم القيامة.\nوهذا هو الطلسم كما ترى\nشلشلايل ☆ شنورايل ق غورايل ه تورايل\n١١١١ روفايل # وغلايل آآآ توكلوا يا خدام هذه الاسماء والطلسم بعقد ذكر كذا عن كذا ☆\nتوكلوا يا خدام هذه الطلاسم واعقدوا ذكر كذا وكذا عن كذا وكذا.\nالتصريف السابع والثلاثون\nللرباط أيضاً تكتبه على عود رمان حامض وتتلو عليه الدعوة ٣ مرات والزجر مرة والبخور المذكور قبله وتلمس به من شئت فإنه ينعقد في الوقت والحال. وهذا هو الطلسم\n١١١١١١ ع ع ع ع ع ع هـ ٥ وع مرص\nص ص ه ه مرسه عقدت ورابطت كذا عن فرج كذا وكذا", "Ba'da kitabah waraqah wa qira'ah bukhur labudda min takhtiyatiha — Sadis (36) Ribath Lawh Rasas ibrah nuhas muqul hantit dafn ruthb la yanfakk ila yaum qiyamah — thilasm 3 lines shalshalayil — Sabi' (37) 'ud rumman hamidh talmass fil-hal.")
+add_rajah(RAJAH_117T, "Halaman 117 Atas — Ribath Lawh Rasas — شلشلايل ☆", "3 baris `شلشلايل ☆ شنورايل ق غورايل / ١١١١ روفايل # وغلايل آآآ / الاسماء والطلسم بعقد ☆` — lauh rasas. 159K 4×.")
+add_rajah(RAJAH_117B, "Halaman 117 Bawah — Ribath Ud Rumman — ع ع ع", "3 baris `١١١١١١ ع ع ع ع ع ع هـ ٥ وع مرص / ص ص هـ هـ مرسه عقدت ورابطت / عن فرج كذا وكذا` — 'ud rumman hamidh. 114K 4×.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 118 — Tsamin Kaf & Tasi Bughdhah Azhmah — Picture 059 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "التصريف الثامن والثلاثون\nللرباط أيضاً تكتب الطلسم الآتي في كفك وتتلو عليه الدعوة ٣ مرات والزجر مرة والبخور المذكور وتسلم على من شئت فإنه ينعقد في الوقت والحين ولا يحله غيرك. وهو هذا\nجمج بالوب رداز ارس لات مجحف لفف ان\nا٥١٥١٥١٥١٥١ ه له له له له له له رس رس\nدد سر س بروع ٢٢ اهيا اهيا شراهيا شراهيا\nبراهيا بدوح باسما رب هرطل شداهيا هملاهلا\nهملا هلا هلا هلا عايل عايل عايل عايل عايل\nاعقدوا ذكر كذا عن فرج كذا وكذا يا خدام هذه الاسماء والطلاسم.\nالتصريف التاسع والثلاثون\nللبغضة والكراهة وهو من القواطع العظام تكتب الطلسم على عظمة حمار وتعلقه في السبية ثم تدفنها في عتبة المطلوب فإنهم يبغضون في طرفة عين فاتق الله ولا تعمله لمستحقه وهو هذا.\nوع مع ك م ٦١١ ص ٥هـ ٨٨ ٥٠١١ ط ٧١١ ط", "Tsamin (38) Ribath Kaf salam la yahulluhu ghairuk — 5 lines jamja — Tasi' (39) Bughdhah 'azhmah himar sibyah 'atabah bughdh fi tharfah.")
+add_rajah(RAJAH_118T, "Halaman 118 Atas — Ribath Kaf — جمج بالوب", "5 baris `جمج بالوب رداز ارس لات / ا٥١٥١ هـ له له رس / دد سر س بروع ٢٢ اهيا / براهيا بدوح هرطل / هملا هلا عايل عايل` — kaf salam. 280K 4×.")
+add_rajah(RAJAH_118B, "Halaman 118 Bawah — Bughdhah — وع مع ك م", "`وع مع ك م ٦١١ ص ٥هـ ٨٨ ٥٠١١ ط ٧١١ ط` — 'azhmah himar. 63K 4×.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 119 — Arbaun Shaqfah & Hadi Aqad Alsinah — Picture 059 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الواحاً٢ العجل٢ الساعة٢.\nالتصريف الأربعون\nللكراهة والبغضة والعداوة تكتب على شقفة نية وتبخره بالمقل والحتيت وتتلو عليها الدعوة ٣ مرات والزجر مرة وتذيبها وترشها في طريقهم فإنهم يبغضون في طرفة عين.\nق س٣١٣ وادي مـ هو حب قسيم له ط طط\nوه لم و فمه مو له ٨ و له هه\nاو عوك هه طه ١١٦ ط طط لهب هر وععه\nم هه هبه وه لو\nالتصريف الحادي والأربعون\nلعقد الألسنة وهو للحكام وما أشبه ذلك تكتب الطلسم الآتي في كاغد أيضاً وتتلو عليه الدعوة ٣ مرات والزجر مرة وتحمله معك فإن دخلت به على أي حاكم فإنه يلتحم ولا يتكلم إلا بخير وإن أردت أن تجره فعقله على كلب فإنه لا ينبح أبداً وهو هذا:\nوعا وط ط ااا ح ٤٤٤ ع ه ح خ عدن حص ح\nااا ح وا واع ٤٤٤ ه ع ٥ ط ح م ح ١١١\nااا ح ٥ د ع لا ١١١ ×× ٥١٥ هه ١١١\nع ٤٥٨ ١١١ هد وع ٤٤ وسكوس", "Waha 2 — Arba'un (40) Bughdhah shaqfah nayyi'ah muqul hantit rashsh — Hadi (41) 'aqd alsinah hukkam kaghad hamal — yaltahim — 'aqilhu 'ala kalb.")
+add_rajah(RAJAH_119T, "Halaman 119 Atas — Shaqfah Niyyah — ق س٣١٣", "4 baris `ق س٣١٣ وادي مـ هو حب قسيم / وهـ لم و فمه مو له ٨ / او عوك هه طه ١١٦ ط / م هه هبه وه لو` — shaqfah nayyi'ah. 166K 4×.")
+add_rajah(RAJAH_119B, "Halaman 119 Bawah — Aqd Alsinah — وعا وط", "4 baris `وعا وط ط ااا ح ٤٤٤ ع ه ح / ااا ح وا واع ٤٤٤ ه ع ٥ / ااا ح ٥ د ع لا ١١١ ×× ٥١٥ / ع ٤٥٨ ١١١ هد وع ٤٤ وسكوس` — kaghad. 105K 4×.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 120 — Tsani Suqm Baydhah & Tsalits Nafkh Ziq — Picture 060 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "التصريف الثاني والأربعون\nللسقم والتمريض والكسل وما أشبه ذلك تكتب على بيضة بقطران أو مداد أسود وتنقب البيضة وتفرغ ما فيها وتعلقها في السبية وتتلو عليها القسم ٣ مرات والزجر مرة وتدفنها في قبر لا يزار فإن المعمول له يسقم ويشرف على الهلاك فاخرج البيضة واحرقها فإن يتحل.\nوهذا هو الطلسم\nوع هه ٩٩ ٧ و و و و و م ول سه\nعريده ما م مصعة\nتوكلوا يا خدام هذا الطلسم واسقموا وامرضوا كذا وكذا الوحاً٢ العجل٢ الساعة٢.\nالتصريف الثالث والأربعون\nلنفخ من شئت نحو السارق أو غيره وهو من المجربات تكتب الطلسم في كاغد أزرق ثم تضعه في زق مع اسم السارق وتنفخ الزق وتربطه جيداً وتكون كتبت أيضاً على فصيب رمان أو توت وتطلق البخور مقل وحنتيت وتتلو الدعوة ٣ مرات والزجر مرة وكل مرة تضرب الزق بالعود ثم تعلقه مكان مظلم فإن السارق لو عته نفخاً عظيماً فاتق الله ومهما حلبت الزق انتهى", "Tsani (42) Suqm baydhah qathran sibyah qabr la yuzar yusqim — Tsalits (43) Nafkh sariq kaghad azraq ziq rumman tut muqul hantit.")
+add_rajah(RAJAH_120T, "Halaman 120 — Suqm Baydhah — وع هه ٩٩ / عريده", "2 baris `وع هه ٩٩ ٧ و و و و و م ول سه / عريده ما م مصعة` — baydhah qathran sibyah qabr la yuzar. 242K 4×. — Tashrif 43 rajah di Hal121.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 121 — Tatimmah Nafkh & Rabi Nazf Dam Qadus — Picture 060 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "المنفوخ وهو هذا.\nم يه ط ١١١ ع ١١١١ ط ٩١١ ع\nو ١١١١١ ١١٨٩٨١١١ ٦٦١١١ هـ ٥٥ هـ ٩٥٦\nتوكلوا يا خدام هذه الأسماء والطلاسم بنفخ كذا وكذا ميما افعلوا كذا وكذا.\nالتصريف الرابع والأربعون\nلنزف الدم وهو أمانة في عنقك لأنه من القواطع تكتبه في يوم الثلاثاء بقلم نحاس على قادوس والبخور عمال وهو صندل أحمر ومقل أزرق وتتلو الدعوة ٢ مرة والزجر مرة والبخور عمال وتضع في القادوس ماء وتعلقه في مطلع الشمس وتنقبه ثقباً خفيفاً وتضع تحته ماعوناً ينلقي الماء الذي ينزل منه وكل ما قرب ينقص رجع الماء في القادوس فاتق الله وكن من الصالحين.\nوهذا هو الطلسم\nك ه ٣٤١٥١٧ ت ج ع ف ف فس شرع اك\n٣ ك ه طحيا طوما طموما باحه مس كطع", "Manfukh hua hadza — Rabi' (44) Nazf dam qadus tsulatsa' nuhas shandal ahmar muqul azraq mathla' syams — amanah fi 'unuqik.")
+add_rajah(RAJAH_121T, "Halaman 121 Atas — Nafkh Ziq — م يه ط", "2 baris `م يه ط ١١١ ع ١١١١ ط ٩١١ ع / و ١١١١١ ١١٨٩٨١١١ ٦٦١١١ هـ ٥٥ هـ ٩٥٦` — ziq. 4×.")
+add_rajah(RAJAH_121B, "Halaman 121 Bawah — Nazf Dam — ك ه ٣٤١٥١٧", "2 baris `ك ه ٣٤١٥١٧ ت ج ع ف ف فس شرع اك / ٣ ك ه طحيا طوما طموما باحه مس كطع` — qadus. 4×.")
+
+
+
 pdf.ln(4)
 
 pdf.set_font('DejaVu', 'I', 7)
 
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 105 Rajah HQ. Batch 23: Hal112-116 11 baru (112 254K + 113 191K+60K+77K + 114 163K+119K + 115 110K+118K+162K + 116 622K+363K) — total 116. Batch 22: Hal107-111 6 baru (107×1,108×2,110×1,111×2) — Picture 053-055. Batch 21: Hal102-106 3 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 105 Rajah HQ. Batch 24: Hal117-121 9 baru (117 159K+114K + 118 243K+53K + 119 166K+105K + 120 242K + 121 2×) — total 125. Batch 23: Hal112-116 11 baru (112 254K + 113 191K+60K+77K + 114 163K+119K + 115 110K+118K+162K + 116 622K+363K) — total 116. Batch 22: Hal107-111 6 baru (107×1,108×2,110×1,111×2) — Picture 053-055. Batch 21: Hal102-106 3 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B23 generated: {PDF_OUT}")
+print(f"PDF B01-B24 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B23) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B24) also at {PDF_FULL}")
