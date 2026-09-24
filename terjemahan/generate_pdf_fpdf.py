@@ -147,7 +147,11 @@ RAJAH_120T = str(BASE / "assets/rajah-hal-120-top-script.jpg")
 RAJAH_120B = str(BASE / "assets/rajah-hal-120-bottom-script.jpg")
 RAJAH_121T = str(BASE / "assets/rajah-hal-121-top-script.jpg")
 RAJAH_121B = str(BASE / "assets/rajah-hal-121-bottom-script.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B24.pdf")
+RAJAH_122S = str(BASE / "assets/rajah-hal-122-square.jpg")
+RAJAH_123S = str(BASE / "assets/rajah-hal-123-4squares.jpg")
+RAJAH_124S = str(BASE / "assets/rajah-hal-124-x-square.jpg")
+RAJAH_125T = str(BASE / "assets/rajah-hal-125-table.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B25.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -163,7 +167,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-24)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-25)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -317,7 +321,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–24 (Halaman 001–121) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–25 (Halaman 001–126) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -345,7 +349,7 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–24', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–25', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
@@ -1131,18 +1135,50 @@ add_rajah(RAJAH_121B, "Halaman 121 Bawah — Nazf Dam — ك ه ٣٤١٥١٧", "
 
 
 
+
+# ========== BATCH 25: Hal122-126 (Picture 061 + 062 + 063 kanan) 4 Rajah ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 122 — Khamis Nafkh Waraqah Hamra & Square Salib — Picture 061 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "وفجرنا الأرض عيوناً فالتقى الماء على أمر قد قدر وحملناه على ذات ألواح ودسر تجري بأعيننا.\nالتصريف الخامس والأربعون\nلنفخ من شئت أيضاً في الوقت والحال تكتبه في ورقة حمراء يوم الثلاثاء وتبخرها برائحة كريهة وتضعها في قرية وعلقها في حائط ويبخر تحتها البخور وتتلو عليها الدعوة ٣ مرات والزجر مرة وكل مرة تشير بيدك إلى القرية ففي آخر ترتعد القرية وتتمخض مثل المطلقة فتنفتخ الخصم لوفته وهو هذا.\n[مربع كبير صليب 1-9-5-3-7]", "Wafajjarnal ardh ... — Khamis (45) Nafkh waraqah hamra' Tsulatsa' raiha kariha qaryah ha'ith tarta'idu.")
+add_rajah(RAJAH_122S, "Halaman 122 — Nafkh Square Salib 1-9-5-3-7", "Murb' `1 9 5 3 7` + `توكلوا يا خدام` + `هـ ص` loops — 494K 4×.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 123 — Sadis Tanzif Qassah Farsi & Sabi Rasm Qaws — Picture 061 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "كذا ماء جارياً لا ينقطع أبداً آناء الليل وأطراف النهار فالتقى الماء على أمر قد قدر إلى قوله بأعيننا الوحا٢ العجل٢ الساعة٢.\nالتصريف السادس والأربعون\nللنزيف أيضاً تكتبه الآتي في ورقة حمراء وتضع الورقة في قصة فارسي وشهدها بزفت وشمع وضعهما في ماء فإن الدم يجري كالبحر وتكفون قرأت الدعوة ٣ مرات والزجر مرة على الورقة قبل وضعها في القصعة والبخور المذكور شغال واحذر ضياع القصعة فإن المعمول له يهلك له يهلك: وهذا ما تكتب:\nسليبوش | طهوش ربيوش | طفقوش طقطقو | طفقطوش ليوش فروش\nتوكلوا يا خدام هذه الأسماء وانزفوا دم كذا وكذا الوحا العجل الساعة.\nالتصريف السابع والأربعون\nاكتب الرسم الآتي في ورقة بيضاء والقمر في برج القوس مطلقاً ساعة الزهرة من أي يوم ثم علقه في السبية واتل عليه الدعوة ٣ مرات والزجر مرة وهو عود وجاوي ثم علق الورقة", "Sadis (46) Tanzif qassah Farsi waraq hamra' bahr yahlak — 4 kotak Silaibush — Sabi' (47) Rasm Qaws.")
+add_rajah(RAJAH_123S, "Halaman 123 — Tanzif 4 Kotak — سليبوش", "4 kotak `سليبوش | طهوش ربيوش | طفقوش طقطقو | طفقطوش` — 343K 4×.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 124 — Tatimmah Sabi & X Kabir — Picture 062 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "في شجرة عالية اتل فإن المعمول له يأتي مجنوناً لطائبة مسحوراً لا يدري أين هو من شدة المحبة وهذا هو الرسم كما ترى:\n[مربع X كبير توكلوا يا خدام # ٦هـ١١١ و م هـ و هـ طمحطمهيا]\nوهذا بخور الخير هو جاري وعود هندي ومسكى ولبان ذكر وعود قلقلي وبخور الشر صبر ومر ومقل أزرق ونتر وصل.", "Fi syajarah 'aliyah majnun latha'ib — murabba' X Kabir.")
+add_rajah(RAJAH_124S, "Halaman 124 — X Kabir — توكلوا يا خدام", "X `توكلوا يا خدام # ٦هـ١١١ و م هـ / طمحطمهيا` — 468K 4×.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 125 — Khatam Da\'wah Syarifah 7×4 — Picture 062 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "وهذا هو خاتم الدعوة الشريفة كما ترى وبإله التوفيق:\nاهيا | شراهيا | اهطم | ال شرا ئي نز\nاله | احد | صمد | قادر\nاله | صمد | قادر | احد\nاحمد | قادر | اله | اله\nقادر | اله | احد | صمد\nوازا الدامى | مجيب عفوقه\nفاني قريب | ازا دعاني | سالك عبادي عني\nإصراف الدعوة بعد الأعمال تقول: بسم الله الرحمن الرحيم انصرفوا مأجورين أيتها الملوك الكرام بارك الله فيكم وعليكم بحق اهيا شراهيا ادوناي اصباؤت ال شداي بخ انصرفوا بحق قل هو الله احد الله الصمد لم يلد ولم يولد ولم يكن له كفواً أحد انصرفوا بارك الله فيكم وعليكم وصلى الله على سيدنا محمد وعلى آله وصحبه وسلم.", "Khatam 7x4 Ahya Syarahya — israf.")
+add_rajah(RAJAH_125T, "Halaman 125 — Khatam Da'wah — اهيا شراهيا", "Tabel 7x4 `اهيا شراهيا اهطم / اله احد صمد قادر / ...` — 489K 4×.")
+
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 126 — Da\'wah Syarifah Kamilah — Picture 063 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "وهذه هي الدعوة الشريفة كما ترى إن شاء الله تعالى والله الموفق للصواب\nبسم الله الرحمن الرحيم\nبسم الله المنعوت بالجلال والكبرياء المتقدس عن الشبيه بمخلوقاته بسم الله رب الآخرة والأولى رب العباد المنزه عن الأضداد والأنداد والصاحبة والأولاد خالق الأشباح والأرواح بسم الله ذي البطش الشديد والقوة المتين الذي قامت بأمره السموات والأرض يسبح الرعد بحمده والملائكة من خيفته باختلاف اللغات والأصوات بسم الله الذي خلق السموات بقدرته ومدحا الأرض بإرادته ومشيئته وأدار النجوم في الأفلاك بحكمته وفجر البحار وسخرها لبرينه واستوى على جميع ما كونه من الأشياء بفهره وقدرته أزلي الأزل ومعلل العلل كان وجوده قبل الأزمان الغابرة والدهور الداهرة القدوس الظاهر العلي المتعال القاهر تعاليت يا محيط واحتجبت بقدوس الأنوار اللاهوتية والعظمة الأزلية الخفية عن إدراك فهم البرية الثاقبة في عقول ذوي الأذهان الصافية الركيزة يا باريء، تعالى مجدك وتقدست أسماؤك وعظم ولاؤك وكبرياؤك", "Da'wah Syarifah — Bismillah al-man'ut bil-jalal ... — murni doa tanpa Rajah.")
+
+
 pdf.ln(4)
 
 pdf.set_font('DejaVu', 'I', 7)
 
 pdf.set_text_color(100,116,139)
-pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 105 Rajah HQ. Batch 24: Hal117-121 9 baru (117 159K+114K + 118 243K+53K + 119 166K+105K + 120 242K + 121 2×) — total 125. Batch 23: Hal112-116 11 baru (112 254K + 113 191K+60K+77K + 114 163K+119K + 115 110K+118K+162K + 116 622K+363K) — total 116. Batch 22: Hal107-111 6 baru (107×1,108×2,110×1,111×2) — Picture 053-055. Batch 21: Hal102-106 3 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
+pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10: Hal47-51 6 Rajah (48×2,49×2,51×2). Batch 11: Hal52-56 6 Rajah (52,53,54,55,56×2) — Picture 026-028. Batch 12: Hal57-61 5 Rajah. Batch 13: Hal62-66 7 Rajah (62,63,64,65×2,66×2) — Picture 031-033. Batch 14: Hal67-71 7 Rajah (67×2,68×2,69,70,71) — Picture 033-035. Batch 15: Hal72-76 8 Rajah (72×2,74×2,75×2,76×2) — Picture 036-038. Batch 16: Hal77-81 9 Rajah (77×2,78×3,79×2,80×2,81×2) — Picture 038-040. Batch 17: Hal82-86 10 Rajah (82×2,83×2,84×2,85×2,86×2) — Picture 041-043. Batch 18: Hal87-91 10 Rajah (87×2,88×3,89×2,90×2,91×1) — Picture 043-045. Batch 19: Hal92-96 7 Rajah (92×2,93×2,94×1,96×2) — Picture 046-048. Total 105 Rajah HQ. Batch 25: Hal122-126 4 baru (122 494K + 123 343K + 124 468K + 125 489K) — total 129. Batch 24: Hal117-121 9 baru (117 159K+114K + 118 243K+53K + 119 166K+105K + 120 242K + 121 2×) — total 125. Batch 23: Hal112-116 11 baru (112 254K + 113 191K+60K+77K + 114 163K+119K + 115 110K+118K+162K + 116 622K+363K) — total 116. Batch 22: Hal107-111 6 baru (107×1,108×2,110×1,111×2) — Picture 053-055. Batch 21: Hal102-106 3 baru (098×2,099×2,100×2,101×1) — Picture 048-050. Untuk Batch 21-30 (hal.102-selesai), PDF FULL akan di-append otomatis per 5 hal. Generate 24 Sep 2026 - Arena. Preview: http-server 8000 1-menit AUTO', align='L', new_x="LMARGIN", new_y="NEXT")
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B24 generated: {PDF_OUT}")
+print(f"PDF B01-B25 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B24) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B25) also at {PDF_FULL}")

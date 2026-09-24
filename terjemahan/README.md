@@ -40,6 +40,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **22** | 107–111 | [BATCH-22-Hal-107-111.md](BATCH-22-Hal-107-111.md) | ✅ Selesai AUTO (34 MB, 105 Rajah) | 6R: 107script 83K +108top 112K+108num 16K +110circle 509K +111top 97K+111bot 98K |
 | **23** | 112–116 | [BATCH-23-Hal-112-116.md](BATCH-23-Hal-112-116.md) | ✅ Selesai AUTO (36 MB, 116 Rajah) | 11R: 112 254K +113top 191K+113mid 60K+113tab 77K +114top 163K+114bot 119K +115top 110K+115mid 118K+115bot 162K +116top 622K+116bot 363K |
 | **24** | 117–121 | [BATCH-24-Hal-117-121.md](BATCH-24-Hal-117-121.md) | ✅ Selesai AUTO (38 MB, 125 Rajah) | 9R: 117top 159K+117bot 114K +118top 243K+118bot 53K +119top 166K+119bot 105K +120 242K +121top 2×+121bot 2× |
+| **25** | 122–126 | [BATCH-25-Hal-122-126.md](BATCH-25-Hal-122-126.md) | ✅ Selesai AUTO (39 MB, 129 Rajah) | 4R: 122 494K +123 343K +124 468K +125 489K +126 Dua — |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
 > Next: Batch 25 Hal122-126 (Picture 061+062) — auto lanjut tanpa jeda — Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
