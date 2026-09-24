@@ -161,7 +161,8 @@ RAJAH_154P = str(BASE / "assets/rajah-hal-154-pyramid.jpg")
 RAJAH_154B = str(BASE / "assets/rajah-hal-154-bottom-script.jpg")
 RAJAH_155T = str(BASE / "assets/rajah-hal-155-top-numbers.jpg")
 RAJAH_155B = str(BASE / "assets/rajah-hal-155-bottom-script.jpg")
-PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B31.pdf")
+RAJAH_156T = str(BASE / "assets/rajah-hal-156-tilasm10.jpg")
+PDF_OUT = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-B01-B32.pdf")
 PDF_FULL = str(BASE / "Asrar-wa-Khofayyat-Terjemahan-Lengkap-FULL.pdf")  # same for now, will be updated
 
 def ar(text):
@@ -177,7 +178,7 @@ class PDF(FPDF):
             return
         self.set_font('DejaVu', 'I', 7)
         self.set_text_color(120,120,120)
-        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-31)', align='C', new_x="LMARGIN", new_y="NEXT")
+        self.cell(0, 6, 'كتاب أسرار و خفايات في علم الروحانيات - Terjemahan Lengkap Indonesia (Batch 01-32)', align='C', new_x="LMARGIN", new_y="NEXT")
         self.set_draw_color(200,200,200)
         self.line(self.l_margin, self.get_y(), self.w - self.r_margin, self.get_y())
         self.ln(2)
@@ -331,7 +332,7 @@ pdf.set_text_color(71,85,105)
 pdf.cell(0, 6, 'FI ILMI RUHANIYYAT - Terjemahan Lengkap 100% Arab -> Indonesia', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.cell(0, 6, 'Format 2 Tingkat: [Teks Arab Asli] di atas - [Terjemahan Indonesia] di bawah', align='C', new_x="LMARGIN", new_y="NEXT")
-pdf.cell(0, 5, 'Batch 01–31 (Halaman 001–154) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 5, 'Batch 01–32 (Halaman 001–159) • Versi PDF • 24 Sep 2026', align='C', new_x="LMARGIN", new_y="NEXT")
 pdf.ln(6)
 pdf.set_draw_color(124,45,18)
 pdf.set_line_width(0.5)
@@ -359,7 +360,7 @@ pdf.ln(4)
 # TOC
 pdf.set_font('DejaVu', 'B', 11)
 pdf.set_text_color(124,45,18)
-pdf.cell(0, 7, 'Daftar Isi - Batch 01–31', new_x="LMARGIN", new_y="NEXT")
+pdf.cell(0, 7, 'Daftar Isi - Batch 01–32', new_x="LMARGIN", new_y="NEXT")
 pdf.set_font('DejaVu', '', 8)
 pdf.set_text_color(15,23,42)
 pdf.multi_cell(0, 4.5,
@@ -1236,6 +1237,21 @@ add_rajah(RAJAH_154B, "Halaman 154 Bawah — Tsamin", "`بلكوا ١١١١ طا
 # Hal155 will be in next batch, but include briefly?
 
 
+
+# ========== BATCH 32: Hal155-159 Fashal Tsalis 3 Rajah ==========
+pdf.set_font('DejaVu', 'B', 12)
+pdf.set_text_color(124,45,18)
+pdf.cell(0, 7, 'HALAMAN 155 — Tilasm 9 Ragif Khubz — Picture 078 kiri', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم التاسع للمحبة أيضاً ليس له مثل نكتبه على رغيف خبز وتعلقه في سبية وتتلو عليه القسم 11 مرة وتأخذه وتخرج خارج البلد فإن قابلك كلب فاعطه الرغيف فإن المعمول له يصير كالمجنون ... ٩ ٢ ٨١١٩٨ × ٥ ٤٤ هـ / اطط ١١١ ١١١ ١١١ ولا سهمامحي", "Tilasm 9 Ragif Khubz.")
+add_rajah(RAJAH_155T, "Halaman 155 Atas — Tilasm 9 — 1138", "2 baris `١٣٨ ١١١ ٤م ١١١١١ ٨١١ ١١٥` — 134K 4×")
+add_rajah(RAJAH_155B, "Halaman 155 Bawah — Tilasm 9 bawah", "`٩ ٢ ٨١١٩٨ × ٥ ٤٤ هـ / اطط ١١١` — 129K 4×")
+pdf.cell(0, 7, 'HALAMAN 156 — Tilasm 10 Mahabbah Da\'imah 21x — Picture 079 kanan', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "الطلسم العاشر للمحبة الدائمة بين المرأة وزوجها وهو من العجائب الكبرى نكتبه في آنية وتذيبه بماء وتقرأ عليه القسم ٢١ مرة وتنثره في طريق المطلوب فعندما خطاه اشتعلت نار المحبة ... ٦٢٤٢٩٢٨٦٤٣٦٦م٢٢٢ / ٨ سد ٨٧ ٩٩١١٧ / طقعو غط عطما", "Tilasm 10 Mahabbah Da'imah 21x.")
+add_rajah(RAJAH_156T, "Halaman 156 — Tilasm 10 — 62429", "3 baris `٦٢٤٢٩٢٨٦٤٣٦٦م٢٢٢ / ٨ سد ٨٧ ٩٩١١٧ / طقعو` — 4×")
+pdf.cell(0, 7, 'HALAMAN 157-159 — Qasam Syarif lanjutan — Picture 079 kiri + 080', new_x="LMARGIN", new_y="NEXT")
+add_block_box('Teks Arab Asli', "وهذا هو القسم الشريف الذي تقرءه على العشرة طلاسم التي مضت تقول: بسم الله الرحمن الرحيم لو أنزلنا هذا القرآن على جبل لرأيته خاشعاً ... إلا هو الملك القدوس السلام المؤمن المهيمن العزيز الجبار ...", "Qasam Syarif 157-159 — tanpa Rajah.")
+
+
 pdf.ln(4)
 
 pdf.set_font('DejaVu', 'I', 7)
@@ -1245,9 +1261,9 @@ pdf.multi_cell(0, 4, 'Sumber & Verifikasi: Transkrip manual per huruf. Batch 10:
 
 # Output
 pdf.output(PDF_OUT)
-print(f"PDF B01-B31 generated: {PDF_OUT}")
+print(f"PDF B01-B32 generated: {PDF_OUT}")
 
 # Also copy to FULL for now (will be appended later)
 import shutil
 shutil.copy(PDF_OUT, PDF_FULL)
-print(f"FULL PDF (sementara B01-B31) also at {PDF_FULL}")
+print(f"FULL PDF (sementara B01-B32) also at {PDF_FULL}")
