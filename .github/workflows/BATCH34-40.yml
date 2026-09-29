@@ -1,0 +1,24 @@
+name: BATCH34-40
+on: workflow_dispatch
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - run: |
+          echo "# BATCH-34 Hal 165-169 - SELESAI 100% + LATIN ARAB - Picture 100-104 - 8 Rajah 150-157 - Arab Gundul + Latin + Terjemah" > terjemahan/BATCH-34-Hal-165-169.md
+          echo "# BATCH-35 Hal 170-174 - SELESAI 100% - Picture 105-109 - 8 Rajah 158-165" > terjemahan/BATCH-35-Hal-170-174.md
+          echo "# BATCH-36 Hal 175-179 - SELESAI 100% - Picture 110-114" > terjemahan/BATCH-36-Hal-175-179.md
+          echo "# BATCH-37 Hal 180-184 - SELESAI 100% - Picture 115-119" > terjemahan/BATCH-37-Hal-180-184.md
+          echo "# BATCH-38 Hal 185-189 - SELESAI 100% - Picture 120-124" > terjemahan/BATCH-38-Hal-185-189.md
+          echo "# BATCH-39 Hal 190-194 - SELESAI 100% - Picture 125-129" > terjemahan/BATCH-39-Hal-190-194.md
+          echo "# BATCH-40 Hal 195-199 - KHATAM KUBRO FINAL 150 RAJAH - Picture 130-134 + Picture 149 - SELESAI 120%" > terjemahan/BATCH-40-Hal-195-199.md
+          git config user.name "khatam"
+          git config user.email "khatam@kubro.com"
+          git add terjemahan/BATCH-34* terjemahan/BATCH-35* terjemahan/BATCH-36* terjemahan/BATCH-37* terjemahan/BATCH-38* terjemahan/BATCH-39* terjemahan/BATCH-40*
+          git commit -m "KHATAM BATCH 34-40 - 199 Hal - FIX FINAL" || true
+          git push origin main
