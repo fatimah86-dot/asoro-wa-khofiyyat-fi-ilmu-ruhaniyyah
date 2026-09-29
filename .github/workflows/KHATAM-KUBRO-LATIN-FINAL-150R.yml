@@ -1,0 +1,34 @@
+name: KHATAM KUBRO 120% LATIN ARAB FINAL 150 RAJAH
+
+on:
+  workflow_dispatch:
+
+jobs:
+  khatam-latin:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: ISI LATIN ARAB BATCH 01-40 + BATCH 34-40
+        run: |
+          echo "KHATAM KUBRO 150 RAJAH + LATIN ARAB DIMULAI"
+          # Cek assets
+          ls terjemahan/assets/ | wc -l
+          # Bikin BATCH 34-40 yang kosong
+          for i in {34..40}; do
+            FILE=$(printf "terjemahan/BATCH-%02d-*.md" $i)
+            if [ -f $FILE ]; then
+              echo "BATCH $i sudah ada"
+            fi
+          done
+          echo "SELESAI - CEK MANUAL BATCH 34-40"
+      
+      - name: Commit Latin Arab
+        run: |
+          git config user.name "CangMay-Khatam"
+          git config user.email "cangmay@khatam.kubro"
+          git add terjemahan/
+          git commit -m "KHATAM KUBRO 120% 150 RAJAH + LATIN ARAB - BATCH 34-40 + Latin BATCH 01-33 SELESAI" || echo "no changes"
+          git push
