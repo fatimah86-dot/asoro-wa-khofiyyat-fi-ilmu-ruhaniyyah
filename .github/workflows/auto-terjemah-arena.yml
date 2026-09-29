@@ -1,99 +1,48 @@
-name: AUTO TERJEMAH ASRAR 109% - ARENA META
+name: AUTO TERJEMAH ASRAR 109%
 
 on:
   workflow_dispatch:
-    inputs:
-      start_batch:
-        description: 'Mulai dari Batch berapa? (contoh: 34)'
-        required: true
-        default: '34'
-      end_batch:
-        description: 'Sampai Batch berapa?'
-        required: true
-        default: '40'
-  push:
-    paths:
-      - 'terjemahan/assets/**'
-      - 'Picture*.jpg'
 
 jobs:
-  auto-terjemah:
+  buat-batch:
     runs-on: ubuntu-latest
     permissions:
       contents: write
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.11'
-
-      - name: Install deps
-        run: pip install openai Pillow pytesseract pdf2image
-
-      - name: AUTO TERJEMAH BATCH
-        env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      - name: Buat Batch Baru
         run: |
-          python << 'PY'
-          import os, glob
-          from pathlib import Path
+          mkdir -p terjemahan
+          for B in 34 35 36 37 38 39 40; do
+            HAL_START=$((160 + (B-33)*5))
+            HAL_END=$((HAL_START+4))
+            FILE="terjemahan/BATCH-${B}-Hal-${HAL_START}-${HAL_END}.md"
+            if [ -f "$FILE" ]; then
+              echo "Skip $FILE sudah ada"
+              continue
+            fi
+            cat > "$FILE" <<EOF
+          # BATCH-${B} Hal ${HAL_START}-${HAL_END}
+          **5 Rajah HQ - Tilasm Lanjutan AUTO 109%**
 
-          start = int("${{ github.event.inputs.start_batch || '34' }}")
-          end = int("${{ github.event.inputs.end_batch || '40' }}")
+          ### Instruksi Arena:
+          - Baca Picture 001-149.jpg
+          - OCR Arab gundul Hal ${HAL_START}-${HAL_END}
+          - Terjemah gaya santri
+          - 5 Rajah per batch
 
-          # PROMPT ARENA KHUSUS KITAB ASRAR - JANGAN DIUBAH!
-          PROMPT_ARENA = """
-          KAMU ADALAH PENERJEMAH KITAB KUNING PESANTREN - KHUSUS ASRAR WA KHOFIYYAT.
+          **Status:** Menunggu isi Arena Agent - Arena tolong isi file ini!
 
-          TUGAS:
-          1. Baca gambar Rajah/Thilasm dari file Picture {pic_start}-{pic_end}.jpg
-          2. OCR tulisan Arab gundul + Rajah kotak
-          3. Terjemahkan ke Indonesia gaya pesantren (bahasa santri, bukan bahasa baku)
-          4. Format WAJIB seperti ini:
+          SELESAI AUTO - Batch ${B}
+          EOF
+            echo "Created $FILE"
+          done
 
-          ### BATCH-{batch:02d} Hal {hal_start:03d}-{hal_end:03d}
-          **X Rajah HQ - Fashal/Tilasm ...**
-
-          #### Hal {hal}
-          **Teks Arab:** (tulis arab asli)
-          **Terjemah:** (terjemah indonesia santri)
-
-          **Rajah {no}:**
-          - Deskripsi: ...
-          - Khasiat: ...
-          - Cara: ...
-
-          5. Jangan skip 1 Rajah pun! Total harus {rajah_count} Rajah
-          6. Jika ada Tilasm 1-20, tulis mantra asli + latin + khasiat
-          7. Akhiri dengan: SELESAI XX% - XX Rajah
-
-          FILE INPUT: terjemahan/assets/ atau Picture*.jpg
-          FILE OUTPUT: terjemahan/BATCH-{batch:02d}-Hal-{hal_start:03d}-{hal_end:03d}.md
-          """
-
-          for batch in range(start, end+1):
-              hal_start = 160 + (batch-33)*5
-              hal_end = hal_start + 4
-              out_file = f"terjemahan/BATCH-{batch:02d}-Hal-{hal_start:03d}-{hal_end:03d}.md"
-              if os.path.exists(out_file):
-                  print(f"SKIP {out_file} sudah ada")
-                  continue
-              print(f"MEMBUAT {out_file} - PROMPT ARENA AKTIF")
-              Path("terjemahan").mkdir(exist_ok=True)
-              with open(out_file, 'w', encoding='utf-8') as f:
-                  f.write(f"# AUTO BATCH {batch} - Menunggu Arena translate\n")
-                  f.write(PROMPT_ARENA.format(batch=batch, hal_start=hal_start, hal_end=hal_end, pic_start=hal_start, pic_end=hal_end, rajah_count=5))
-              print(f"Created {out_file}")
-
-          print("SELESAI AUTO TERJEMAH - Silakan jalankan Arena untuk isi konten")
-          PY
-
-      - name: Commit Batch Baru
+      - name: Commit
         run: |
           git config user.name "CangMay-Auto"
-          git config user.email "humaidihambali86@github.com"
+          git config user.email "fatimah86-dot@github.com"
           git add terjemahan/
-          git diff --staged --quiet || git commit -m "AUTO Batch ${{ github.event.inputs.start_batch || '34' }}-${{ github.event.inputs.end_batch || '40' }} - Arena prompt 109% - 149R+"
+          git diff --staged --quiet || git commit -m "AUTO Batch 34-40 - Fix 109% - Tilasm lanjutan"
           git push
