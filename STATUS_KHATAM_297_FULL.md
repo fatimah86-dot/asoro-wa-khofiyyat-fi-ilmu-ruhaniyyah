@@ -29,6 +29,9 @@ Status ini sengaja **tidak** memakai klaim “BATCH 1–60 COMPLETE”, “150 G
 
 Jalankan `python3 scripts/validate_batch_41_60.py`. Validator ketat memang akan **gagal** sampai teks halaman, sumber yang hilang, serta crop dan metadata yang diminta benar-benar lengkap. Opsi `--structure-only` hanya memeriksa struktur dokumen dan keberadaan scan; opsi itu bukan bukti khatam.
 
-### Publikasi
+### Publikasi dan GitHub Actions
 
-Perubahan kerja ini ditujukan ke branch sesi Arena, bukan force-push ke `main`. Tidak ada klaim bahwa GitHub Actions sudah hijau atau bahwa hasil ini siap dinyatakan lengkap.
+- Commit `08e1e56` (`docs: map batches 41-60 scans and add strict validation`) sudah dipush ke branch sesi `arena/01a0f72a-asoro-wa-khofiyyat-fi-ilmu-ruh`.
+- Branch `main` tetap pada `07ae0a1`; tidak ada force-push ke `main`.
+- Belum ada workflow run untuk branch sesi setelah push. Run `KHATAM 297 FULL` terbaru yang terlihat di GitHub Actions berstatus sukses pada 29 September 2026, tetapi berjalan pada SHA lama `b7cfbaa` di `main`; itu **bukan** validasi commit ini.
+- Dengan demikian, tidak ada klaim bahwa Actions untuk perubahan ini hijau atau bahwa hasil ini siap dinyatakan lengkap.
