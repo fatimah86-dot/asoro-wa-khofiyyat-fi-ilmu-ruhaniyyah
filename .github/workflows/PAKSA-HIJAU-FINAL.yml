@@ -18,4 +18,4 @@ jobs:
           date >> terjemahan/FIX-23-46.md
           git add -A
           git commit -m "FIX 23.46 - PAKSA HIJAU - HAPUS CONFLICT" || true
-          git push origin main --force
+          git push origin main
