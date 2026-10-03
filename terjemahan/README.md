@@ -51,6 +51,7 @@ Terjemahan 100% dari bahasa Arab asli ke bahasa Indonesia, tanpa ringkasan, tanp
 | **33** | 159–164 | [BATCH-33-Hal-160-164.md](BATCH-33-Hal-160-164.md) | ✅ Selesai AUTO (42 MB, 149 Rajah) | 9R: 159+160☆+161×2+162×2+163×2+164 koreksi+baru |
 | **34** | 165–169 | [BATCH-34-Hal-165-169.md](BATCH-34-Hal-165-169.md) | ✅ Selesai — Arab + Latin washal + Terjemah (154 Rajah) | 5R: 167×2 (tilasm21+22) + 168×1 (tilasm23) + 169×2 (tilasm24+25) — Hal165–166 penutup Qasam, 0R |
 | **35** | 170–174 | [BATCH-35-Hal-170-174.md](BATCH-35-Hal-170-174.md) | ✅ Selesai — Arab + Latin washal + Terjemah (161 Rajah) | 7R: 170×3 (varian baris 2+3, tilasm26) + 171×1 (tilasm27) + 172×2 (tilasm28 berbingkai + tilasm29 4 kotak) + 173×1 (tilasm30 wafaq) — Hal174 pembuka Qasam ats-Tsalits, 0R |
+| **36** | 175–179 | [BATCH-36-Hal-175-179.md](BATCH-36-Hal-175-179.md) | ✅ Selesai — Arab + Latin washal + Terjemah (161 Rajah) | 0R — Hal175–176 penutup Qasam ats-Tsalits (az-Zukhruf), Hal176–177 bab baru al-Urjuwanah, Hal178 pembatas al-Fashl ar-Rabi', Hal179 Da'wah al-Jalalah (Kasfaya'il/Zuhal) |
 | 30 | 146–150 | `BATCH-30-Hal-146-150.md` | ⏳ Antri AUTO | — |
 
 > SELESAI 100% 151 hal 129 Rajah — Next: — (Picture 061+062) — auto lanjut tanpa jeda — Total: ±150 halaman scan = ±75 file JPEG double-spread (1.jpg + Picture 001–099 dari repo pertama + Picture 100–149 dari repo lanjutan). Setiap batch = 5 halaman teks (±2-3 file gambar).
