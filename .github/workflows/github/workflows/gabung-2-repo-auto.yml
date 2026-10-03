@@ -46,65 +46,13 @@ jobs:
           echo "List:"
           ls main-repo/Picture*.jpg | sort
 
-      - name: BUAT BATCH 100-149 YANG BELUM ADA
-        run: |
-          cd main-repo
-          mkdir -p terjemahan
-          
-          # Batch 01-33 sudah ada (001-164)
-          # Kita buat Batch 34-40 untuk Picture 100-149 yang detailnya belum diterjemah
-          
-          for B in 34 35 36 37 38 39 40; do
-            HAL_START=$((160 + (B-33)*5))
-            HAL_END=$((HAL_START+4))
-            PIC_START=$((100 + (B-34)*8))
-            PIC_END=$((PIC_START+7))
-            
-            FILE="terjemahan/BATCH-${B}-Hal-${HAL_START}-${HAL_END}.md"
-            
-            cat > "$FILE" <<EOF
-          # BATCH-${B} Hal ${HAL_START}-${HAL_END} - LANJUTAN 100-149
-
-          **Sumber: 2 Repo Gabung - Picture ${PIC_START}-${PIC_END}.jpg + Picture.jpg**
-          **Total Rajah: 150 Rajah HQ (001-149 + Picture.jpg)**
-
-          ## Link Sumber Asli:
-          - Repo 1 (001-099): https://github.com/fatimah86-dot/asoro-wa-khofiyyat-fi-ilmu-ruhaniyyah/tree/a0afa0fefce78efb1a0b9e03a66e978c1ef0c903
-          - Repo 2 (100-149): https://github.com/fatimah86-dot/asror-wa-khofiyyat/tree/a8b761e48d66fa68b1676f9509012e33bf4624f9
-
-          ## Gambar Referensi:
-          ![Picture ${PIC_START}](Picture%20${PIC_START}.jpg)
-          ![Picture ${PIC_END}](Picture%20${PIC_END}.jpg)
-
-          ### Instruksi Arena Agent:
-          1. Baca Picture ${PIC_START}.jpg sampai ${PIC_END}.jpg di root (hasil gabung 2 repo)
-          2. OCR Arab gundul + Rajah kotak Tilasm
-          3. Terjemah gaya pesantren
-          4. Format sama kayak BATCH-01-33
-
-          #### Hal ${HAL_START}
-          **Teks Arab:** [OCR dari Picture ${PIC_START}.jpg]
-          **Terjemah:** ...
-
-          **Rajah ${PIC_START}:**
-          - Bentuk: ...
-          - Khasiat: ...
-          - Cara: ...
-
-          **Status:** AUTO TERJEMAH - Menunggu Arena isi detail Tilasm lanjutan
-
-          SELESAI BATCH-${B} - 150 Rajah KHATAM KUBRO 120%
-          EOF
-            echo "Created $FILE"
-          done
-
       - name: UPDATE README KHATAM KUBRO 150 RAJAH
         run: |
           cd main-repo
           cat > README.md <<'README'
           # 🔥 asoro-wa-khofiyyat-fi-ilmu-ruhaniyyah - KHATAM KUBRO 120% 150 RAJAH 🔥
 
-          > **Alhamdulillah KHATAM KUBRO 120% - 199 Halaman - 150 Rajah HQ - 2 REPO GABUNG!**
+          > **Alhamdulillah KHATAM KUBRO 120% - 164 Halaman - 150 Rajah HQ - 2 REPO GABUNG!**
 
           ## 📚 Sumber 2 Repo (Karena Limit 100 Gambar GitHub):
           - **Repo 1 (Picture 001-099):** https://github.com/fatimah86-dot/asoro-wa-khofiyyat-fi-ilmu-ruhaniyyah/tree/a0afa0fefce78efb1a0b9e03a66e978c1ef0c903
@@ -115,7 +63,6 @@ jobs:
           terjemahan/
             assets/          # 150 Picture HQ gabungan 2 repo
             BATCH-01-33      # 164 Hal 149R KHATAM ASLI 109%
-            BATCH-34-40      # 35 Hal tambahan Tilasm lanjutan - 150R KHATAM KUBRO 120%
           Picture 001-149.jpg + Picture.jpg  # 150 Rajah HQ di root
           ```
 
@@ -125,9 +72,8 @@ jobs:
           | 01-20 | 001-101 | 96R | 67% SELESAI | Repo 1 |
           | 21-30 | 102-151 | 33R | 100% SELESAI | Repo 1+2 |
           | 31-33 | 150-164 | 20R | 109% KHATAM | Repo 2 |
-          | 34-40 | 165-199 | 1R | 120% KHATAM KUBRO | Gabung 2 Repo |
 
-          **Total: 199 Halaman - 150 Rajah HQ - Tilasm 1-20**
+          **Total: 164 Halaman - 150 Rajah HQ - Tilasm 1-20**
 
           © 2026 fatimah86-dot - Kitab Kuning Pesantren
           README
