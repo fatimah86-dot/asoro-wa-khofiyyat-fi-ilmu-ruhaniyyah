@@ -32,59 +32,6 @@ jobs:
           echo "TOTAL GABUNG:"
           ls main-repo/Picture*.jpg | wc -l
 
-      - name: BUAT BATCH 34-40 DENGAN LATIN ARAB
-        run: |
-          cd main-repo
-          mkdir -p terjemahan
-          for B in 34 35 36 37 38 39 40; do
-            HAL_START=$((160 + (B-33)*5))
-            HAL_END=$((HAL_START+4))
-            PIC_START=$((100 + (B-34)*8))
-            PIC_END=$((PIC_START+7))
-            FILE="terjemahan/BATCH-${B}-Hal-${HAL_START}-${HAL_END}.md"
-            cat > "$FILE" <<EOF
-          # BATCH-${B} Hal ${HAL_START}-${HAL_END} - 150 Rajah + LATIN ARAB
-
-          **Sumber: 2 Repo Gabung (001-099 + 100-149)**
-          Repo1: https://github.com/fatimah86-dot/asoro-wa-khofiyyat-fi-ilmu-ruhaniyyah/tree/a0afa0fefce78efb1a0b9e03a66e978c1ef0c903
-          Repo2: https://github.com/fatimah86-dot/asror-wa-khofiyyat/tree/a8b761e48d66fa68b1676f9509012e33bf4624f9
-
-          ## Format Baru: Arab + Latin + Terjemah
-
-          ### Hal ${HAL_START} - Picture ${PIC_START}.jpg
-          **Teks Arab Gundul:**
-          \`\`\`
-          [OCR dari Picture ${PIC_START}.jpg]
-          \`\`\`
-          **Latin Arab:**
-          \`\`\`
-          Bismillahirrahmanirrahim...
-          [Transliterasi latin]
-          \`\`\`
-          **Terjemah Indonesia:**
-          Dengan menyebut nama Allah...
-
-          **Rajah ${PIC_START}:**
-          - Gambar: Picture ${PIC_START}.jpg
-          - Latin Rajah: Ya Budduhu Ya Waduudu...
-          - Khasiat: ...
-          - Cara pakai: ...
-
-          ---
-          **Instruksi Arena Agent:**
-          1. Baca Picture ${PIC_START}-${PIC_END}.jpg
-          2. OCR Arab gundul
-          3. TULIS LATIN ARABNYA JUGA!
-          4. Terjemah pesantren
-          5. 5 Rajah per batch
-
-          **Status:** AUTO + LATIN ARAB - Menunggu Arena isi detail
-
-          SELESAI BATCH-${B} - 150R LATIN ARAB 120%
-          EOF
-            echo "Created $FILE Latin"
-          done
-
       - name: UPDATE README LATIN ARAB
         run: |
           cd main-repo
@@ -108,9 +55,8 @@ jobs:
           | Batch | Hal | Rajah | Fitur |
           |-------|-----|-------|-------|
           | 01-33 | 001-164 | 149R | Arab+Terjemah |
-          | 34-40 | 165-199 | 1R | Arab+Latin+Terjemah |
 
-          Total: 199 Hal - 150 Rajah - Latin Arab
+          Total: 164 Hal - 150 Rajah - Latin Arab
 
           © 2026 fatimah86-dot
           README

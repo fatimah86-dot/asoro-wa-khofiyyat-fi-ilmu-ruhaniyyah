@@ -14,8 +14,8 @@ jobs:
           git config user.email "cangmay@final.com"
           git pull origin main --rebase --autostash || true
           mkdir -p terjemahan
-          echo "# KHATAM 23.46 - STATUS FIX FETCH FIRST - BATCH 34-40 FIXED" > terjemahan/FIX-23-46.md
+          echo "# KHATAM 23.46 - STATUS FIX FETCH FIRST - BATCH 01-33" > terjemahan/FIX-23-46.md
           date >> terjemahan/FIX-23-46.md
           git add -A
           git commit -m "FIX 23.46 - PAKSA HIJAU - HAPUS CONFLICT" || true
-          git push origin main --force
+          git push origin main
