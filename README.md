@@ -17,8 +17,9 @@ Setiap halaman sekarang ada:
 | Batch | Hal | Rajah | Fitur |
 |-------|-----|-------|-------|
 | 01-33 | 001-164 | 149R | Arab+Terjemah |
-| 34-41 | 165-202 | 19R | Arab+Latin+Terjemah |
+| 34-42 | 165-204 | 19R | Arab+Latin+Terjemah |
 
-Total: 202 Hal - 150 Rajah - Latin Arab
+Total: 204 Hal - 150 Rajah - Latin Arab
+BATCH-42: Hal 203-204 (terjemahan/BATCH-42-Hal-203-204.md) - 0 rajah, teks penuh
 
 © 2026 fatimah86-dot
