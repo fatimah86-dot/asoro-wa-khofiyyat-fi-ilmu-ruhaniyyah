@@ -37,20 +37,21 @@ Catatan lain: `terjemahan/assets/Picture.jpg` (tanpa nomor) = **sampul + Muqaddi
 | 48 | 217, 218 | 2 — `rajah-hal-217-…`, `rajah-hal-218-…` | `BATCH-48-Hal-217-218.md` |
 | 49 | 219, 220 | 0 | `BATCH-49-Hal-219-220.md` |
 | 50 | 221, 222 | 2 — `rajah-hal-222-tholasm-kasyf-kaligrafi-…`, `rajah-hal-222-mandal-hijab-lingkaran-arkun-…` | `BATCH-50-Hal-221-222.md` |
+| 51 | 223, 224 | 0 (kedua halaman murni teks — tidak ada rajah, tidak ada crop dibuat) | `BATCH-51-Hal-223-224.md` |
 
-Halaman terbaca lengkap: **207 … 222** (16 halaman berurutan, tanpa lompatan).
-Kumulatif: **222 / 297** (206 halaman dari induk + 16 halaman ini).
+Halaman terbaca lengkap: **207 … 224** (18 halaman berurutan, tanpa lompatan).
+Kumulatif: **224 / 297** (206 halaman dari induk + 18 halaman ini).
 
 ## 3. Sisa pekerjaan
 
-**Sisa: 75 halaman (223–297), yaitu Batch 51 s.d. Batch 88.**
+**Sisa: 73 halaman (225–297), yaitu Batch 52 s.d. Batch 88.**
 
 Rumus batch ↔ halaman (setelah gap fix, sudah diverifikasi pada Batch 48 & 49):
 
 | Batch | Halaman | Batch | Halaman |
 |---|---|---|---|
 | ~~50~~ selesai | ~~221–222~~ | 69 | 259–260 |
-| 51 | 223–224 | 70 | 261–262 |
+| ~~51~~ selesai | ~~223–224~~ | 70 | 261–262 |
 | 52 | 225–226 | 71 | 263–264 |
 | 53 | 227–228 | 72 | 265–266 |
 | 54 | 229–230 | 73 | 267–268 |
@@ -71,11 +72,11 @@ Rumus batch ↔ halaman (setelah gap fix, sudah diverifikasi pada Batch 48 & 49)
 | | | **88** | **297** (1 halaman) |
 
 Rumus: **Batch n (48 ≤ n ≤ 87) = halaman (2n+121, 2n+122)**; **Batch 88 = 297**.
-Sumber gambar: **Picture N (N ≥ 107) → kiri = 2N−1, kanan = 2N−2**; Picture 149 → **297 | 296**. Jadi Batch 50 memakai **Picture 111 kiri (221) + Picture 112 kanan (222)**, dan seterusnya — tiap batch memakai dua berkas Picture berbeda (belahan kiri Picture genap, belahan kanan Picture ganjil berikutnya).
+Sumber gambar: **Picture N (N ≥ 107) → kiri = 2N−1, kanan = 2N−2**; Picture 149 → **297 | 296**. Jadi Batch 51 memakai **Picture 112 kiri (223) + Picture 113 kanan (224)**, dan seterusnya — tiap batch memakai dua berkas Picture berbeda (belahan kiri Picture genap, belahan kanan Picture ganjil berikutnya).
 
 Setiap batch tetap: baca 2 belahan → transkripsi 3 susun (Arab → Latin → Layer 1 + Layer 2) → crop rajah bila ada → commit + push per batch.
 
-**Perkiraan realistis:** transkripsi setia pada kualitas Batch 44–47 memerlukan **1–2 batch per giliran kerja** yang panjang. 81 halaman tidak dapat dihasilkan dalam satu giliran tanpa mengorbankan ketepatan — karena itu pekerjaan dikerjakan per batch dan di-commit per batch.
+**Perkiraan realistis:** transkripsi setia pada kualitas Batch 44–51 memerlukan **1–2 batch per giliran kerja** yang panjang. 81 halaman tidak dapat dihasilkan dalam satu giliran tanpa mengorbankan ketepatan — karena itu pekerjaan dikerjakan per batch dan di-commit per batch.
 
 ## 4. Temuan teknis penting tentang parameter crop
 
