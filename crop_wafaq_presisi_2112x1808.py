@@ -67,7 +67,7 @@ DPI = (300, 300)
 BG_WINDOW = 31
 BLACK_AT = 0.55
 WHITE_AT = 0.88
-WHITE_SNAP = 235        # hanya piksel yang sudah nyaris putih dikunci 255
+WHITE_SNAP = 250        # hanya piksel yang sudah nyaris putih dikunci 255
 
 
 def flatten(img):
