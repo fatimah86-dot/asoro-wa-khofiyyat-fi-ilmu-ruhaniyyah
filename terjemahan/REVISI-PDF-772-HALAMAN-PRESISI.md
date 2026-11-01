@@ -43,3 +43,21 @@ Sumber: gambar tersemat (image XObject) pada PDF indeks halaman 28, BOX `(250,90
 ![Crop presisi PDF halaman 28](rajah/rajah-pdf-028-image-01-presisi-2112x1808.jpg)
 
 Hasil: 2112×1808 px, 300 DPI, LANCZOS 2.28×; putih 86.2% seluruh kanvas (93.4% piksel non-tinta). Tinta dipertahankan tanpa redraw.
+
+---
+
+## Halaman PDF 31–32 (satu kelompok revisi)
+
+Kedua crop memakai seluruh gambar tersemat (image XObject) dari indeks halaman PDF masing-masing, sehingga tidak ada pemotongan tambahan terhadap tabel, tulisan tepi, atau tanda yang terlihat pada XObject. Sumber XObject PDF halaman 31 berukuran 957×963 px; halaman 32 berukuran 987×570 px. Tidak ada tanda yang digambar ulang atau ditambahkan.
+
+### Halaman PDF 31
+
+![Crop presisi PDF halaman 31](rajah/rajah-pdf-031-image-01-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 1.73×; putih 77.5% seluruh kanvas (88.3% piksel non-tinta).
+
+### Halaman PDF 32
+
+![Crop presisi PDF halaman 32](rajah/rajah-pdf-032-image-01-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 2.00×; putih 85.8% seluruh kanvas (93.0% piksel non-tinta).
