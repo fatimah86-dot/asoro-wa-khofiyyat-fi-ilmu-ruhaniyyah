@@ -33,3 +33,13 @@ Sumber: gambar tersemat (image XObject) pada PDF indeks halaman 22, BOX `(0,90,7
 ![Crop presisi PDF halaman 22](rajah/rajah-pdf-022-image-01-presisi-2112x1808.jpg)
 
 Hasil: 2112×1808 px, 300 DPI, LANCZOS 2.82×; putih 95.5% seluruh kanvas (97.9% piksel non-tinta). Tinta dan tanda yang tampak dipertahankan tanpa redraw.
+
+---
+
+## Halaman PDF 28
+
+Sumber: gambar tersemat (image XObject) pada PDF indeks halaman 28, BOX `(250,90,1116,475)` px. Crop menampilkan empat baris tulisan tangan yang terlihat pada objek sumber, tanpa tepi halaman kiri dan teks di luar blok. Tepi kanan baris mengikuti batas XObject sumber; tidak ada bagian yang direkonstruksi. Tidak ada SAKK 111 yang terlihat pada crop ini.
+
+![Crop presisi PDF halaman 28](rajah/rajah-pdf-028-image-01-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 2.28×; putih 86.2% seluruh kanvas (93.4% piksel non-tinta). Tinta dipertahankan tanpa redraw.
