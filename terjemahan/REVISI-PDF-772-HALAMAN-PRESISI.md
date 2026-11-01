@@ -16,6 +16,16 @@ Hasil: 2112×1808 px, 300 DPI, LANCZOS 3.46×. Putih murni 88.2% seluruh kanvas 
 
 ---
 
-## Halaman PDF 16, 22, 28, 31–32, 42, 49, 54
+## Halaman PDF 16
+
+Sumber: `Picture 003.jpg`, BOX `(390,475,690,735)` px. Isi cocok dengan Khatam/Wafaq 3×3 pada halaman cetak 07; label gambar di PDF menyebut halaman 04, tetapi indeks PDF dipakai sebagai acuan. Crop mempertahankan tabel, tiang, label sisi, dan titik ekor.
+
+![Crop presisi PDF halaman 16 — Khatam 3x3](rajah/rajah-hal-007-khatam-7waraq-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 6.42×; putih murni 77.6% seluruh kanvas (86.8% piksel non-tinta), tanpa threshold keras atau redraw.
+
+---
+
+## Halaman PDF 22, 28, 31–32, 42, 49, 54
 
 Akan ditambahkan setelah verifikasi dan crop tiap indeks halaman.
