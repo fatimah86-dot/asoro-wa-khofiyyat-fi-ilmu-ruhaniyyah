@@ -34,13 +34,43 @@ Catatan lain: `terjemahan/assets/Picture.jpg` (tanpa nomor) = **sampul + Muqaddi
 | 46 | 213, 214 | 0 | `BATCH-46-Hal-213-214.md` |
 | 47 | 215, 216 | 2 — `rajah-hal-215-…`, `rajah-hal-216-…` | `BATCH-47-Hal-215-216.md` |
 | **46 GAP FIX** | **210, 211** | 0 — tabel angka ditranskripsi, bukan di-crop (§7.3) | `BATCH-46-Hal-210-211.md` |
+| 48 | 217, 218 | 2 — `rajah-hal-217-…`, `rajah-hal-218-…` | `BATCH-48-Hal-217-218.md` |
+| 49 | 219, 220 | 0 | `BATCH-49-Hal-219-220.md` |
 
-Halaman terbaca lengkap: **207, 208, 209, 210, 211, 212, 213, 214, 215, 216** (10 halaman).
-Kumulatif: **216 / 297** (206 halaman dari induk + 10 halaman ini).
+Halaman terbaca lengkap: **207 … 220** (14 halaman berurutan, tanpa lompatan).
+Kumulatif: **220 / 297** (206 halaman dari induk + 14 halaman ini).
 
 ## 3. Sisa pekerjaan
 
-Batch 48 = Hal. **217** (Picture 109 kiri) + Hal. **218** (Picture 110 kanan), lalu terus sampai **Batch 88 = Hal. 297** (Picture 149 kiri; Picture 149 kanan = Hal. 296). Rumus setelah gap fix: **Picture N (N ≥ 107) → kiri = 2N−1, kanan = 2N−2**; Picture 149 → **297 | 296**. Sisa: **81 halaman (217–297)**.
+**Sisa: 77 halaman (221–297), yaitu Batch 50 s.d. Batch 88.**
+
+Rumus batch ↔ halaman (setelah gap fix, sudah diverifikasi pada Batch 48 & 49):
+
+| Batch | Halaman | Batch | Halaman |
+|---|---|---|---|
+| 50 | 221–222 | 69 | 259–260 |
+| 51 | 223–224 | 70 | 261–262 |
+| 52 | 225–226 | 71 | 263–264 |
+| 53 | 227–228 | 72 | 265–266 |
+| 54 | 229–230 | 73 | 267–268 |
+| 55 | 231–232 | 74 | 269–270 |
+| 56 | 233–234 | 75 | 271–272 |
+| 57 | 235–236 | 76 | 273–274 |
+| 58 | 237–238 | 77 | 275–276 |
+| 59 | 239–240 | 78 | 277–278 |
+| 60 | 241–242 | 79 | 279–280 |
+| 61 | 243–244 | 80 | 281–282 |
+| 62 | 245–246 | 81 | 283–284 |
+| 63 | 247–248 | 82 | 285–286 |
+| 64 | 249–250 | 83 | 287–288 |
+| 65 | 251–252 | 84 | 289–290 |
+| 66 | 253–254 | 85 | 291–292 |
+| 67 | 255–256 | 86 | 293–294 |
+| 68 | 257–258 | 87 | 295–296 |
+| | | **88** | **297** (1 halaman) |
+
+Rumus: **Batch n (48 ≤ n ≤ 87) = halaman (2n+121, 2n+122)**; **Batch 88 = 297**.
+Sumber gambar: **Picture N (N ≥ 107) → kiri = 2N−1, kanan = 2N−2**; Picture 149 → **297 | 296**. Jadi Batch 50 memakai **Picture 111 kiri (221) + Picture 112 kanan (222)**, dan seterusnya — tiap batch memakai dua berkas Picture berbeda (belahan kiri Picture genap, belahan kanan Picture ganjil berikutnya).
 
 Setiap batch tetap: baca 2 belahan → transkripsi 3 susun (Arab → Latin → Layer 1 + Layer 2) → crop rajah bila ada → commit + push per batch.
 
