@@ -61,3 +61,25 @@ Hasil: 2112×1808 px, 300 DPI, LANCZOS 1.73×; putih 77.5% seluruh kanvas (88.3%
 ![Crop presisi PDF halaman 32](rajah/rajah-pdf-032-image-01-presisi-2112x1808.jpg)
 
 Hasil: 2112×1808 px, 300 DPI, LANCZOS 2.00×; putih 85.8% seluruh kanvas (93.0% piksel non-tinta).
+
+---
+
+## Halaman PDF 42
+
+Sumber: `Picture 011.jpg`, scan cetak Halaman 22. Dua bbox dipakai agar bagian-bagian tulisan yang berjauhan tidak bercampur dengan prosa cetak di antaranya.
+
+### Image 01
+
+BOX `(275,340,865,535)` px; tiga baris tulisan tangan dipertahankan.
+
+![Crop presisi PDF halaman 42 — image 01](rajah/rajah-pdf-042-image-01-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 3.34×; putih 93.2% seluruh kanvas (95.7% piksel non-tinta).
+
+### Image 02
+
+BOX `(1280,490,1530,550)` px; satu baris tulisan dan tanda dipertahankan, tanpa prosa cetak di sekelilingnya. Tidak ada SAKK 111 yang terlihat.
+
+![Crop presisi PDF halaman 42 — image 02](rajah/rajah-pdf-042-image-02-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 7.89×; putih 92.7% seluruh kanvas (96.1% piksel non-tinta).
