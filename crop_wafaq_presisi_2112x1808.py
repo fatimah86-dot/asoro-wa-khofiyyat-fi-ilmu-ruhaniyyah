@@ -50,15 +50,46 @@ ke 78% hanya mungkin dengan menaikkan WHITE_AT sampai ~0,977 sehingga kertas
 from PIL import Image, ImageFilter
 import numpy as np
 import os
+import argparse          # FIX 2026-11-01: dipakai main() tetapi belum diimpor
 
 BASE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(BASE, "Picture 105.jpg")
 OUTDIR = os.path.join(BASE, "terjemahan", "rajah")
 OUTNAME = "rajah-hal-207-rajah-bergaris-presisi-2112x1808.jpg"
 
+# --- FIX 2026-11-01: NameError DEFAULT_SRC -----------------------------------
+# Ketiga konstanta DEFAULT_* dulu dipakai oleh PRESETS di bawah padahal belum
+# didefinisikan (modul gagal diimpor: NameError: name 'DEFAULT_SRC' is not
+# defined). Sekarang didefinisikan LEBIH DULU, sebelum PRESETS.
+#   DEFAULT_SRC -> Picture 105.jpg (sumber lama)
+#   DEFAULT_BOX -> None = pakai seluruh gambar (perilaku crop_wafaq() saat box
+#                  None). BOX default "hal206" yang lama TIDAK dapat dipulihkan
+#                  dari riwayat git (berkas sudah masuk repo dalam keadaan
+#                  rusak), jadi preset hal206 kini WAJIB diberi --box eksplisit
+#                  bila akan dibuat ulang; berkas hasil tinjauan lama dibiarkan.
+#   DEFAULT_OUT -> keluaran hal207 (perilaku lama).
+DEFAULT_SRC = SRC
+DEFAULT_BOX = None
+DEFAULT_OUT = os.path.join(OUTDIR, OUTNAME)
+
 # Preset per batch. Kunci: nama preset -> (src, box, out)
 PRESETS = {
-    "hal206": (DEFAULT_SRC, DEFAULT_BOX, DEFAULT_OUT),
+    "hal206": (
+        DEFAULT_SRC,
+        DEFAULT_BOX,                       # wajib --box bila dibuat ulang
+        os.path.join(OUTDIR, "rajah-hal-206-wifaq-murabba-presisi-2112x1808.jpg"),
+    ),
+    # BATCH-46 GAP FIX (Hal 211): tholasm angka telur kedua.
+    # Sumber: Picture_106b_Hal_211_1755x1275.jpg (unggahan pengguna, 1755x1275).
+    # Isi BOX = baris label `Yuktabu al-Baidhotuts-Tsaniyatu Hadzath-Tholsam`
+    # + dua baris angka tholasm (`...Awra al 1818 Ha Jim 8902 40636 Jim` dan
+    # `...Jim Jim 9991888 188 88 1103`). Prosa `wat-Tawkilu ...` di bawahnya
+    # DIKELUARKAN.
+    "hal211": (
+        os.path.join(BASE, "Picture_106b_Hal_211_1755x1275.jpg"),
+        (628, 70, 1162, 159),
+        os.path.join(OUTDIR, "rajah-hal-211-tholasm-angka-telur-kedua-presisi-2112x1808.jpg"),
+    ),
     "hal207": (
         DEFAULT_SRC,
         (184, 86, 747, 347),
@@ -156,6 +187,6 @@ def main():
 
 
 if __name__ == "__main__":
-    print("Crop Rajah Bergaris Presisi 2112x1808 — BATCH-44 Hal 207:")
-    p = crop_rajah()
-    print(f"Selesai — {p}")
+    # FIX 2026-11-01: dulu memanggil crop_rajah() yang tidak pernah didefinisikan
+    # di berkas ini (NameError kedua). Sekarang cukup memanggil main().
+    main()

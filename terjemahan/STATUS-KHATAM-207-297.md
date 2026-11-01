@@ -16,7 +16,7 @@ Polanya **BUKAN** 2 halaman berurutan per Picture. Untuk Hal. 206–217 hasil pe
 | 106b | 210 | **211** | **46 GAP FIX** |
 | 109 | **216** | 217 | **47** / 48 |
 
-> **PEMBARUAN (gap fix):** Hal. **210** dan **211** kini **sudah ada** — sumbernya `Picture_106b-210-211.jpg` (1667×5000 px, 300 DPI, render halaman 210–211 dari `terjemahan/PDF-772-HALAMAN-FINAL.pdf`), dan isinya sudah ditranskripsi di `BATCH-46-Hal-210-211.md`. Peta urutan karena itu utuh: **106 → 208|209 · 106b → 210|211 · 107 → 212|213 · dst.** Angka 295/297 di bawah adalah catatan **sejarah** sebelum gap fix dan sudah tidak berlaku.
+> **PEMBARUAN (gap fix):** Hal. **210** dan **211** kini **sudah ada** — sumbernya `Picture_106b-210-211_1755x1275.jpg` (+ `Picture_106b_Hal_210/211_1755x1275.jpg`, **unggahan pengguna 2026-11-01**, format 1755×1275 seperti Picture lain, berasal dari `FINAL LENGKAP ULTIMATE COVER HAL1-298 (1).pdf` halaman 210–211), dan isinya sudah ditranskripsi di `BATCH-46-Hal-210-211.md`. Peta urutan karena itu utuh: **106 → 208|209 · 106b → 210|211 · 107 → 212|213 · dst.** Angka 295/297 di bawah adalah catatan **sejarah** sebelum gap fix dan sudah tidak berlaku.
 
 **Halaman 210 dan 211 TIDAK ADA dalam berkas scan.** *(catatan sejarah — lihat blok pembaruan di atas)* Bukti: Picture 106 belahan kiri berkaki `209`, Picture 107 belahan kanan berkepala `212`, dan teksnya pun tidak menyambung (209 berakhir `وَبِهِ أَقْسَمْتُ عَلَيْكَ أَيُّهَا السَّيِّدُ`, 212 dibuka `يَا جِبْرَائِيلُ …`). Karena itu:
 - Semua Picture **108 ke atas bergeser +2** terhadap rumus `2N−4 / 2N−3`.
@@ -33,7 +33,7 @@ Catatan lain: `terjemahan/assets/Picture.jpg` (tanpa nomor) = **sampul + Muqaddi
 | 45 | 209, 212 | 0 | `BATCH-45-Hal-209-212.md` |
 | 46 | 213, 214 | 0 | `BATCH-46-Hal-213-214.md` |
 | 47 | 215, 216 | 2 — `rajah-hal-215-…`, `rajah-hal-216-…` | `BATCH-47-Hal-215-216.md` |
-| **46 GAP FIX** | **210, 211** | 0 — tabel angka ditranskripsi, bukan di-crop (§7.3) | `BATCH-46-Hal-210-211.md` |
+| **46 GAP FIX** | **210, 211** | 1 — `rajah-hal-211-tholasm-angka-telur-kedua-presisi-2112x1808.jpg` (putih 94,7 %) | `BATCH-46-Hal-210-211.md` |
 | 48 | 217, 218 | 2 — `rajah-hal-217-…`, `rajah-hal-218-…` | `BATCH-48-Hal-217-218.md` |
 | 49 | 219, 220 | 0 | `BATCH-49-Hal-219-220.md` |
 
