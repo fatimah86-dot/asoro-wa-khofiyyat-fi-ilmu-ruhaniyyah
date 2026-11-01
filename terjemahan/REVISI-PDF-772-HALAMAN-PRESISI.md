@@ -4,6 +4,8 @@
 
 Nomor yang dipakai adalah **indeks halaman di `PDF-772-HALAMAN-FINAL.pdf`**, bukan nomor halaman cetak kitab. Tiap rajah diproses sebagai salinan scan (tanpa redraw) dengan skrip `crop_wafaq_presisi_2112x1808.py`: flat-field `BG_WINDOW=31`, `BLACK_AT=0.55`, `WHITE_AT=0.88`, `WHITE_SNAP=235`, tanpa threshold keras; keluaran 2112×1808 px, 300 DPI, LANCZOS.
 
+> Catatan reproduksibilitas: berkas keluaran ini dibuat dan ditinjau sebelum rebase menggunakan `WHITE_SNAP=235`. Setelah rebase ke cabang induk, nilai helper saat ini adalah `WHITE_SNAP=250`; berkas crop yang sudah ditinjau sengaja tidak dibuat ulang agar titik/tinta samar tetap sesuai hasil pemeriksaan visual.
+
 > PDF halaman 10 memiliki gambar dengan teks keterangan yang menyebut “Halaman 3”, tetapi bentuk rajahnya cocok dengan wafaq di halaman cetak 5 pada `Picture 002.jpg` dan dengan bagian Halaman 05 di BATCH 01. Crop merujuk ke rajah sumber, bukan label gambar yang tidak konsisten.
 
 ## Halaman PDF 10
@@ -105,3 +107,25 @@ BOX `(970,850,1510,1045)` px; tulisan tangan dan baris titik.
 ![Crop presisi PDF halaman 49 — image 02](rajah/rajah-pdf-049-image-02-presisi-2112x1808.jpg)
 
 Hasil: 2112×1808 px, 300 DPI, LANCZOS 3.65×; putih 94.1% seluruh kanvas (96.9% piksel non-tinta).
+
+---
+
+## Halaman PDF 54
+
+Dua crop dari scan sumber beresolusi lebih tinggi `Picture 013.jpg` dipautkan pada bagian halaman cetak 26–27 di BATCH 05 dan BATCH 06. Isi tulisan tangan dan tanda pada kedua kotak dipertahankan tanpa redraw.
+
+### Image 01 — scan cetak Halaman 26
+
+BOX `(960,760,1525,1015)` px; memuat pengantar tulisan tangan dan deretan angka/label yang terlihat.
+
+![Crop presisi PDF halaman 54 — image 01](rajah/rajah-pdf-054-image-01-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 3.49×; putih 91.1% seluruh kanvas (94.7% piksel non-tinta).
+
+### Image 02 — scan cetak Halaman 27
+
+BOX `(300,810,770,1050)` px; memuat dua baris thilasm dan tiga simbol yang tampak, tanpa teks pengantar di atas kotak. Tidak ada SAKK 111 yang terlihat.
+
+![Crop presisi PDF halaman 54 — image 02](rajah/rajah-pdf-054-image-02-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 4.20×; putih 90.1% seluruh kanvas (94.5% piksel non-tinta).
