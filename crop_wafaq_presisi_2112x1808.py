@@ -13,13 +13,26 @@ Preset batch terbaru:
 
 Untuk sumber lain:
 
-  python3 crop_wafaq_presisi_2112x1808.py \\
-      --src scratch/pdf-embedded/p016-i01.jpeg \\
-      --out terjemahan/rajah/rajah-pdf-016-image-01-presisi-2112x1808.jpg
+  Hal207  Rajah Bergaris (hirz/wafaq garis) di atas halaman 207 (belahan kiri
+          Picture 105.jpg): nama para malaikat di sudut (عزرائيل، مازر، طيكل،
+          كمطم، قسورة...), kotak angka, kolom SAKK dengan angka 111 di atas
+          huruf ك, serta bintang Seal of Solomon di bawahnya.
 
-  python3 crop_wafaq_presisi_2112x1808.py --src 'Picture 002.jpg' \\
-      --box 245 230 815 535 \\
-      --out terjemahan/rajah/rajah-pdf-010-image-01-presisi-2112x1808.jpg
+Standar reproduksi (BATCH-44 FINAL):
+  * flat-field: latar kertas diratakan lalu dipetakan ke putih murni 255
+    lewat peta dua titik BLACK_AT..WHITE_AT — TIDAK memakai threshold keras;
+  * WHITE_SNAP mengunci piksel yang sudah hampir putih ke 255 supaya latar
+    bersih, tetapi ambang diisi sehingga titik-titik halus (Sirr An-Nuqthoh:
+    titik tiga pada ح ج خ dan titik di bawah huruf) TIDAK ikut terhapus —
+    huruf gundul buta tetap buta apa adanya, tidak ada titik yang ditambah
+    maupun dibuang oleh skrip ini;
+  * garis tipis bingkai rajah (garis paku/gergaji pada sel dan garis tiang
+    kolom SAKK) dipertahankan, tidak di-thinning;
+  * hasil akhir SELALU tepat 2112x1808 px, 300 DPI, LANCZOS. Rajah hal 207
+    bersifat lebar (aspek ~2.5:1) sedangkan kanvas 1.17:1, sehingga citra
+    di-skala seragam untuk MEMENUHI kanvas penuh (tidak ada padding putih
+    besar seperti fit-kanvas yang menghasilkan 95,5%) agar latar bersih
+    turun ke target 78-80% putih murni;
 
 BOX uses x0 y0 x1 y1 pixel coordinates. If --box is omitted, the complete
 source image is used. Output is always 2112x1808 px, 300 DPI, LANCZOS, with a
@@ -36,16 +49,12 @@ ke 78% hanya mungkin dengan menaikkan WHITE_AT sampai ~0,977 sehingga kertas
 """
 from PIL import Image, ImageFilter
 import numpy as np
-import argparse
 import os
 
 BASE = os.path.dirname(os.path.abspath(__file__))
-DEFAULT_SRC = os.path.join(BASE, "Picture 105.jpg")
-DEFAULT_OUT = os.path.join(
-    BASE, "terjemahan", "rajah",
-    "rajah-hal-206-wifaq-murabba-presisi-2112x1808.jpg",
-)
-DEFAULT_BOX = (988, 636, 1438, 1034)
+SRC = os.path.join(BASE, "Picture 105.jpg")
+OUTDIR = os.path.join(BASE, "terjemahan", "rajah")
+OUTNAME = "rajah-hal-207-rajah-bergaris-presisi-2112x1808.jpg"
 
 # Preset per batch. Kunci: nama preset -> (src, box, out)
 PRESETS = {
@@ -60,6 +69,8 @@ PRESETS = {
 
 W_OUT, H_OUT = 2112, 1808
 DPI = (300, 300)
+
+# Peta nada flat-field (tanpa threshold keras)
 BG_WINDOW = 31
 BLACK_AT = 0.55
 WHITE_AT = 0.88
@@ -69,9 +80,11 @@ WHITE_SNAP = 235        # Batch-44: hanya piksel yang sudah nyaris putih dikunci
 def flatten(img, white_at=WHITE_AT, white_snap=WHITE_SNAP):
     """Ratakan pencahayaan kertas; pertahankan tinta, titik, dan garis tipis."""
     g = np.array(img.convert("L")).astype(np.float32)
+
     bg = img.convert("L").filter(ImageFilter.MaxFilter(BG_WINDOW))
     bg = bg.filter(ImageFilter.GaussianBlur(BG_WINDOW / 2))
     bg = np.maximum(np.array(bg).astype(np.float32), 1.0)
+
     ratio = g / bg
     out = np.clip((ratio - BLACK_AT) / (white_at - BLACK_AT), 0, 1) * 255
     out = out.astype(np.uint8)
@@ -143,4 +156,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    print("Crop Rajah Bergaris Presisi 2112x1808 — BATCH-44 Hal 207:")
+    p = crop_rajah()
+    print(f"Selesai — {p}")
