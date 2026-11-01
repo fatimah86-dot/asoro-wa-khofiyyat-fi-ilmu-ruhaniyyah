@@ -36,19 +36,20 @@ Catatan lain: `terjemahan/assets/Picture.jpg` (tanpa nomor) = **sampul + Muqaddi
 | **46 GAP FIX** | **210, 211** | 1 — `rajah-hal-211-tholasm-angka-telur-kedua-presisi-2112x1808.jpg` (putih 94,7 %) | `BATCH-46-Hal-210-211.md` |
 | 48 | 217, 218 | 2 — `rajah-hal-217-…`, `rajah-hal-218-…` | `BATCH-48-Hal-217-218.md` |
 | 49 | 219, 220 | 0 | `BATCH-49-Hal-219-220.md` |
+| 50 | 221, 222 | 2 — `rajah-hal-222-tholasm-kasyf-kaligrafi-…`, `rajah-hal-222-mandal-hijab-lingkaran-arkun-…` | `BATCH-50-Hal-221-222.md` |
 
-Halaman terbaca lengkap: **207 … 220** (14 halaman berurutan, tanpa lompatan).
-Kumulatif: **220 / 297** (206 halaman dari induk + 14 halaman ini).
+Halaman terbaca lengkap: **207 … 222** (16 halaman berurutan, tanpa lompatan).
+Kumulatif: **222 / 297** (206 halaman dari induk + 16 halaman ini).
 
 ## 3. Sisa pekerjaan
 
-**Sisa: 77 halaman (221–297), yaitu Batch 50 s.d. Batch 88.**
+**Sisa: 75 halaman (223–297), yaitu Batch 51 s.d. Batch 88.**
 
 Rumus batch ↔ halaman (setelah gap fix, sudah diverifikasi pada Batch 48 & 49):
 
 | Batch | Halaman | Batch | Halaman |
 |---|---|---|---|
-| 50 | 221–222 | 69 | 259–260 |
+| ~~50~~ selesai | ~~221–222~~ | 69 | 259–260 |
 | 51 | 223–224 | 70 | 261–262 |
 | 52 | 225–226 | 71 | 263–264 |
 | 53 | 227–228 | 72 | 265–266 |
