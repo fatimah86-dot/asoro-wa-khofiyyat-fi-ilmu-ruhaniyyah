@@ -26,6 +26,10 @@ Hasil: 2112×1808 px, 300 DPI, LANCZOS 6.42×; putih murni 77.6% seluruh kanvas 
 
 ---
 
-## Halaman PDF 22, 28, 31–32, 42, 49, 54
+## Halaman PDF 22
 
-Akan ditambahkan setelah verifikasi dan crop tiap indeks halaman.
+Sumber: gambar tersemat (image XObject) pada PDF indeks halaman 22, BOX `(0,90,700,220)` px. Crop mempertahankan baris tulisan tangan dan tanda di sisi kiri yang tampak pada sumber; tepian halaman dan baris teks sekitar dikeluarkan. Tidak ada SAKK 111 yang terlihat pada crop ini.
+
+![Crop presisi PDF halaman 22](rajah/rajah-pdf-022-image-01-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 2.82×; putih 95.5% seluruh kanvas (97.9% piksel non-tinta). Tinta dan tanda yang tampak dipertahankan tanpa redraw.
