@@ -83,3 +83,25 @@ BOX `(1280,490,1530,550)` px; satu baris tulisan dan tanda dipertahankan, tanpa 
 ![Crop presisi PDF halaman 42 — image 02](rajah/rajah-pdf-042-image-02-presisi-2112x1808.jpg)
 
 Hasil: 2112×1808 px, 300 DPI, LANCZOS 7.89×; putih 92.7% seluruh kanvas (96.1% piksel non-tinta).
+
+---
+
+## Halaman PDF 49
+
+Sumber: `Picture 012.jpg`, scan cetak Halaman 24. Crop dipisah mengikuti dua blok gambar pada halaman cetak; teks dan tanda terlihat dibiarkan seperti pada scan, tanpa redraw.
+
+### Image 01
+
+BOX `(965,460,1535,620)` px; baris tulisan tangan dan sigil.
+
+![Crop presisi PDF halaman 49 — image 01](rajah/rajah-pdf-049-image-01-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 3.46×; putih 95.3% seluruh kanvas (97.5% piksel non-tinta).
+
+### Image 02
+
+BOX `(970,850,1510,1045)` px; tulisan tangan dan baris titik.
+
+![Crop presisi PDF halaman 49 — image 02](rajah/rajah-pdf-049-image-02-presisi-2112x1808.jpg)
+
+Hasil: 2112×1808 px, 300 DPI, LANCZOS 3.65×; putih 94.1% seluruh kanvas (96.9% piksel non-tinta).
