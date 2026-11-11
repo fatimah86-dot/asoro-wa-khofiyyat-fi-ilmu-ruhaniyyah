@@ -2,6 +2,20 @@
 
 > **Alhamdulillah 150 Rajah HQ + Latin Arab - 2 Repo Gabung!**
 
+## 🔑 KUNCI PERMANEN — USTADZ YOAD (Nahwu Sharaf)
+Pengaturan bedah teks Arab gundul **10 LANGKAH WAJIB** + aturan Kitab Hikmah (Muhafazhah)
+ada di ➡️ **`panduan/USTADZ-YOAD-KUNCI-PERMANEN-10-LANGKAH.md`**
+
+| Berkas | Isi |
+|---|---|
+| `AGENTS.md` | Pintu masuk aturan repo |
+| `panduan/USTADZ-YOAD-KUNCI-PERMANEN-10-LANGKAH.md` | File induk aturan |
+| `panduan/10-LANGKAH-CEPAT.md` | Kartu saku |
+| `panduan/template-output.md` | Kerangka output |
+| `panduan/contoh-terap.md` | Benchmark Teks 1 & 2 |
+| `panduan/kamus-istilah-hikmah.md` | Kamus Falak/Hikmah |
+| `tools/cek-10-langkah.py` | Pemeriksa otomatis 10 langkah |
+
 ## Sumber:
 - Repo 1 (001-099): 99 gambar
 - Repo 2 (100-149 + Picture.jpg): 51 gambar
