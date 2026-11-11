@@ -36,7 +36,7 @@
 | [BATCH-04-Hal-016-021.md](BATCH-04-Hal-016-021.md) | 016–021 | 6 | 2 |
 | [BATCH-05-Hal-022-026.md](BATCH-05-Hal-022-026.md) | 022–026 | 5 | 3 |
 | [BATCH-06-Hal-027-031.md](BATCH-06-Hal-027-031.md) | 027–031 | 5 | 2 |
-| [BATCH-07-Hal-032-036.md](BATCH-07-Hal-032-036.md) | 032–036 | 5 | — |
+| [BATCH-07-Hal-032-036.md](BATCH-07-Hal-032-036.md) | 032–035 | 4 | — |
 | [BATCH-08-Hal-037-041.md](BATCH-08-Hal-037-041.md) | 036–041 | 6 | 1 |
 | [BATCH-09-Hal-042-046.md](BATCH-09-Hal-042-046.md) | 042–046 | 5 | — |
 | [BATCH-10-Hal-047-051.md](BATCH-10-Hal-047-051.md) | 047–051 | 5 | 3 |
@@ -48,7 +48,7 @@
 | [BATCH-16-Hal-077-081.md](BATCH-16-Hal-077-081.md) | 077–081 | 5 | 5 |
 | [BATCH-17-Hal-082-086.md](BATCH-17-Hal-082-086.md) | 082–086 | 5 | 5 |
 | [BATCH-18-Hal-087-091.md](BATCH-18-Hal-087-091.md) | 087–091 | 5 | 5 |
-| [BATCH-19-Hal-092-096.md](BATCH-19-Hal-092-096.md) | 092–096 | 5 | 4 |
+| [BATCH-19-Hal-092-096.md](BATCH-19-Hal-092-096.md) | 092–095 | 4 | 3 |
 | [BATCH-20-Hal-097-101.md](BATCH-20-Hal-097-101.md) | 096–101 | 6 | 5 |
 | [BATCH-21-Hal-102-106.md](BATCH-21-Hal-102-106.md) | 102–106 | 5 | 2 |
 | [BATCH-22-Hal-107-111.md](BATCH-22-Hal-107-111.md) | 107–111 | 5 | 4 |
@@ -75,7 +75,7 @@
 
 ---
 
-**Total:** 206 halaman · 42 batch · 107 rajah
+**Total:** 204 halaman · 42 batch · 106 rajah
 
 > ⚠️ **Peringatan etis:** naskah ini berisi azimah/wafaq/thilasm. Disajikan
 > untuk studi naskah & literasi baca kitab gundul — **bukan** anjuran praktik.
