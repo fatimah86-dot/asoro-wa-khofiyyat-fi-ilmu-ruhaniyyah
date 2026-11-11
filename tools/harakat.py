@@ -38,9 +38,43 @@ KOREKSI = {
     "اِبْيَضَّ": "أَبْيَض",
     "فَاُكْتُبْ": "فَاكْتُبْ",
     "فَاُخْرُجْ": "فَاخْرُجْ",
-    "الْا": "الْ",
-    "أَأ": "أَ",
+    # CATATAN: dua aturan lama di sini — "الْا"→"الْ" dan "أَأ"→"أَ" —
+    # MENGHAPUS HURUF, bukan harakat. Akibatnya "الاسم" (nama) menjadi
+    # "السم" (racun) dan "الاستدلال" menjadi "الستدلال". Keduanya dibuang
+    # dan diganti penjaga mutlak: huruf tidak boleh berubah (lihat
+    # `jaga_huruf` di bawah).
 }
+
+# ── penjaga mutlak: harakat tidak boleh menambah/menghapus huruf ──────────────
+# Setiap hasil tashkeel WAJIB memuat urutan huruf yang sama dengan kata aslinya.
+# Bila tidak, hasil mesin DITOLAK (kata dibiarkan gundul) — lebih baik jujur
+# kosong daripada menulis kata yang salah.
+_ARAB = re.compile(r"[\u0621-\u06FF]")
+
+
+def huruf_saja(w: str) -> str:
+    """Buang semua harakat/tatweel → hanya huruf Arab (bentuk asli, tanpa normalisasi)."""
+    w = unicodedata.normalize("NFC", w)
+    return "".join(c for c in w if _ARAB.match(c) and c not in HAR)
+
+
+def bentuk_netral(w: str) -> str:
+    """Bentuk yang boleh berbeda tanpa mengubah kata: hamzah/alif/ya/ta marbutah."""
+    return (huruf_saja(w).replace("أ", "ا").replace("إ", "ا").replace("آ", "ا")
+            .replace("ى", "ي").replace("ئ", "ي").replace("ؤ", "و"))
+
+
+def jaga_huruf(asli: str, berharakat: str) -> str:
+    """Kembalikan `berharakat` hanya bila hurufnya utuh; selain itu tolak (None).
+
+    Beda hamzah (أ/إ/آ → ا) ditoleransi karena itu pilihan ortografi, bukan
+    perubahan kata. Beda jumlah/urutan huruf TIDAK ditoleransi.
+    """
+    if not berharakat:
+        return None
+    if bentuk_netral(asli) != bentuk_netral(berharakat):
+        return None
+    return berharakat
 
 
 def norm(w: str) -> str:
@@ -100,9 +134,18 @@ def bangun():
         if not h:
             gagal += 1
             continue
+        h = bersih_harakat(h)
         for salah, benar in KOREKSI.items():
-            h = h.replace(salah, benar)
-        hasil[norm(w)] = bersih_harakat(h)
+            # koreksi hanya diterapkan bila TIDAK mengubah huruf kata
+            if salah in h:
+                coba = h.replace(salah, benar)
+                if huruf_saja(coba) == huruf_saja(h):
+                    h = coba
+        h = jaga_huruf(w, h)          # tolak hasil mesin yang merusak huruf
+        if not h:
+            gagal += 1
+            continue
+        hasil[norm(w)] = h
         if i % 500 == 0:
             print(f"  … {i}/{len(unik)}", flush=True)
 

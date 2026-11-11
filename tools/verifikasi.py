@@ -192,6 +192,76 @@ def cek_placeholder():
         print("  ✅ tidak ada placeholder teks tersisa")
 
 
+# ─────────────────────────────────────────────── E. halaman ganda
+def cek_duplikat():
+    """Satu nomor halaman HARUS hanya punya satu blok isi.
+
+    Dulu tidak diperiksa, sehingga hal.36 dan hal.96 sempat muncul dua kali
+    (satu blok placeholder + satu blok isi asli) tanpa terdeteksi.
+    """
+    print("\nE. HALAMAN GANDA — satu nomor hanya satu blok isi")
+    peta = {}
+    for f in sorted(glob.glob(os.path.join(BARU, "BATCH-*.md"))):
+        teks = open(f, encoding="utf-8").read()
+        for m in re.finditer(r"^##+\s*(?:📄\s*)?(?:HAL\.|Halaman)\s*(\d{1,3})\b", teks, re.M):
+            peta.setdefault(int(m.group(1)), []).append(os.path.basename(f))
+    ganda = {n: v for n, v in peta.items() if len(v) > 1}
+    hilang = [n for n in range(1, 205) if n not in peta]
+    print(f"  Halaman unik     : {len(peta)}")
+    print(f"  Halaman hilang   : {len(hilang)}" + (f" → {hilang[:10]}" if hilang else ""))
+    print(f"  Halaman ganda    : {len(ganda)}")
+    for n, v in sorted(ganda.items()):
+        print(f"    ❌ hal.{n} muncul {len(v)}×: {v}")
+        catat(f"halaman {n} ganda ({len(v)}×) di {v}")
+    if hilang:
+        catat(f"halaman hilang: {hilang}")
+    if not ganda and not hilang:
+        print("  ✅ 204 halaman, tidak ada yang ganda/hilang")
+
+
+# ─────────────────────────────────────────────── F. kesetiaan huruf
+def cek_kesetiaan():
+    """Lapis 🎧 HARUS memuat huruf yang sama dengan lapis 🅰️.
+
+    Harakat hanya menambah tanda baca, TIDAK boleh menambah/menghapus huruf.
+    Dulu aturan "الْا"→"الْ" dan entri kamus berartikel membuat
+    الاسم (nama) menjadi السم (racun) — lolos karena tidak diperiksa.
+    Beda hamzah (أ/إ/آ→ا) dan ى→ي dianggap setara (pilihan ortografi).
+    """
+    print("\nF. KESETIAAN HURUF — harakat tidak mengubah huruf")
+    def huruf(w):
+        w = unicodedata.normalize("NFC", w)
+        w = "".join(c for c in w if 0x0621 <= ord(c) <= 0x06FF and c not in HAR_SET)
+        return (w.replace("أ", "ا").replace("إ", "ا").replace("آ", "ا")
+                 .replace("ى", "ي").replace("ئ", "ي").replace("ؤ", "و"))
+    cacat = Counter()
+    contoh = {}
+    total_kata = 0
+    for f in sorted(glob.glob(os.path.join(BARU, "BATCH-*.md"))):
+        teks = open(f, encoding="utf-8").read()
+        G = re.findall(r"\*\*🅰️ TEKS ARAB\*\*.*?```\n(.*?)```", teks, re.S)
+        H = re.findall(r"\*\*🎧 ARAB BERHARAKAT\*\*.*?```\n(.*?)```", teks, re.S)
+        for a, b in zip(G, H):
+            # bandingkan sebagai deret huruf (spasi/tanda baca diabaikan)
+            g = "".join(huruf(x) for x in re.findall(rf"[{ARAB}]+", without(a)))
+            h2 = "".join(huruf(x) for x in re.findall(rf"[{ARAB}]+", without(b)))
+            total_kata += len(re.findall(rf"[{ARAB}]+", without(a)))
+            if g != h2:
+                cacat[os.path.basename(f)] += 1
+                contoh.setdefault(os.path.basename(f), (a[:60], b[:60]))
+    print(f"  Kata Arab diperiksa : {total_kata}")
+    if cacat:
+        for n, c in cacat.most_common(10):
+            print(f"    ❌ {n}: {c} blok beda huruf")
+            catat(f"kesetiaan huruf: {n} ({c} blok)")
+    else:
+        print("  ✅ semua blok setia — harakat tidak menambah/menghapus huruf")
+
+
+def without(s):
+    return re.sub(rf"[{HAR}]", "", unicodedata.normalize("NFC", s))
+
+
 if __name__ == "__main__":
     print("=" * 78)
     print("VERIFIKASI HASIL BUILD — FORMAT 3 TINGKAT")
@@ -200,6 +270,8 @@ if __name__ == "__main__":
     cek_harakat()
     cek_kebersihan()
     cek_placeholder()
+    cek_duplikat()
+    cek_kesetiaan()
 
     print("\n" + "=" * 78)
     if gagal:

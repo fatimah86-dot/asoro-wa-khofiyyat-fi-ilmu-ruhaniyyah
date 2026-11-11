@@ -249,5 +249,39 @@
    ],
    "indo": "**MAS-ALAH KESEBELAS**\n\n**Bab Mahabbah**\n\n**Ditulis pada pecahan tembikar (syaqafah)**, lalu **dibakar dalam api** sambil **engkau berazimah atasnya 20 kali**.\n\n*(Rajah: \"dan inilah yang engkau tulis pada pecahan tembikar\" beserta deret huruf terputus — dijaga apa adanya.)*\n\n**Dan inilah azimah-nya, engkau ucapkan:**\n\n**\"Syamūsyīsy. Ṭambuwīsy. Farīsy. 'Ubaybid. Yahyā — si fulanah menuju cinta si fulan, demi hak nama-nama ini atas kalian. Al-Waḥā 2×, al-'Ajal 2×, as-Sā'ah 2×.\"**\n\n**Dan bakhurnya: lubān, jawi, dan ketumbar kering.**\n\n**MAS-ALAH KEDUA BELAS**\n\n**Mahabbah dan Tahyij yang sahih**\n\n**Berkata Syaikh al-Imam al-Faqih 'Abdullah Ahmad as-Sūsī:** *\"Telah empat puluh tahun aku mencarinya, lalu aku menemukannya di negeri Granada pada seorang raja dari para raja. Maka aku memberinya seratus dinar, dan aku menukilkannya pada lembaran kertas.\"*\n\n**Berkata Syaikh:** *\"Ambillah sedikit dari rambut kepala, sedikit dari rambut bagian bawah, sedikit dari rambut bagian tengah, dan kuku-kuku kedua tangan serta kedua kaki — bakarlah ia sendirian, jadikan darinya tinta (midād), dan tulislah dengannya thilasm-thilasm ini; berikan minumannya kepada siapa yang engkau kehendaki. Dan wajib engkau membakar bakhur dengan lada hitam, dan engkau ucapkan saat membakar bakhurmu: **'Akhadtu qalbaka yā fulān yabna fulānah bi-maḥabbati fulānah binti fulānah, ḥattā lā ta'kul wa lā tasyrab wa lā tajlis wa lā tanām ḥattā tarā wajha fulānah binti fulānah'** (Aku telah mengambil hatimu, wahai fulan bin fulanah, dengan cinta kepada fulanah binti fulanah, sehingga engkau tidak makan, tidak minum, tidak duduk, dan tidak tidur sampai engkau melihat wajah fulanah binti fulanah).\"*"
   }
+ },
+ "_rekap_audit": {
+  "tanggal": "2026-11-11",
+  "halaman_unik": 204,
+  "halaman_hilang": 0,
+  "halaman_ganda": 0,
+  "halaman_dari_scan": 25,
+  "pola_harakat_dobel": {
+   "ِْ": 0,
+   "ََ": 0,
+   "ٍٍ": 0,
+   "ُُ": 0,
+   "ًً": 0,
+   "ْْ": 0,
+   "َِ": 0,
+   "ُِ": 0
+  },
+  "tasydid_sebelum_vokal": 6640,
+  "tasydid_setelah_vokal_salah": 0,
+  "huruf_presentasi": 0,
+  "simbol_katib": 0,
+  "karakter_kontrol": 0,
+  "placeholder_teks": 0,
+  "tag_teks_asli_dijaga": 106,
+  "gambar_rajah": 178,
+  "kesetiaan_huruf": {
+   "kata_diperiksa": 33354,
+   "blok_beda_huruf": 0
+  },
+  "angka_muhafazhah": {
+   "total_token_angka": 1690,
+   "blok_angka_berubah": 0
+  },
+  "catatan": "Angka wafaq/thilasm 100% utuh. Beda hamzah (أ/إ/آ→ا) dan ى→ي adalah pilihan ortografi, bukan perubahan lafadz."
  }
 }

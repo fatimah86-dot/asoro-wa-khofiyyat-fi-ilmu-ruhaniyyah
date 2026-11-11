@@ -79,8 +79,6 @@ def muat():
     for k, v in json.load(open(F_KAMUS, encoding="utf-8"))["kata"].items():
         har, arti = v[0], v[1]
         kamus[norm(k)] = (har, arti)
-        if norm(k).startswith("ال") and len(norm(k)) > 3:
-            kamus.setdefault(norm(k)[2:], (har, arti))
     oto = {}
     if os.path.exists(F_OTO):
         for k, v in json.load(open(F_OTO, encoding="utf-8"))["kata"].items():
@@ -107,21 +105,40 @@ def tunda_irab(h: str) -> str:
     return h
 
 
+def _huruf_saja(w: str) -> str:
+    w = unicodedata.normalize("NFC", w)
+    return "".join(c for c in w if "\u0621" <= c <= "\u06FF" and c not in HAR)
+
+
+def _netral(w: str) -> str:
+    return (_huruf_saja(w).replace("أ", "ا").replace("إ", "ا").replace("آ", "ا")
+            .replace("ى", "ي").replace("ئ", "ي").replace("ؤ", "و"))
+
+
+def huruf_utuh(asli: str, hasil) -> bool:
+    """Harakat tidak boleh menambah/menghapus huruf (beda hamzah ditoleransi)."""
+    return bool(hasil) and _netral(asli) == _netral(hasil)
+
+
 def harakat_kata(w: str, izin_mesin=True):
     """-> (berharakat, sumber) ; sumber: 'kamus' | 'mesin' | None"""
     n = norm(w)
     if not n:
         return None, None
     if n in KAMUS:
-        return KAMUS[n][0], "kamus"
+        h = KAMUS[n][0]
+        if huruf_utuh(w, h):            # tolak entri yang merusak huruf kata
+            return h, "kamus"
+    if izin_mesin and n in OTO:
+        h = tunda_irab(OTO[n])
+        if huruf_utuh(w, h):
+            return h, "mesin"
     for p, ph in PARTIKEL:
         if w.startswith(p) and len(n) > 2:
             sisa = w[1:]
             h, s = harakat_kata(sisa, izin_mesin)
-            if h:
+            if h and huruf_utuh(w, ph + h):
                 return ph + h, s
-    if izin_mesin and n in OTO:
-        return tunda_irab(OTO[n]), "mesin"
     return None, None
 
 

@@ -91,3 +91,69 @@ Jalankan sendiri: `python3 tools/verifikasi.py`
 | `data/harakat-otomatis.json` | Harakat mesin + koreksi |
 
 > ⚠️ **Peringatan etis:** naskah ini berisi azimah/wafaq/thilasm. Versi ini disajikan untuk **studi naskah & literasi baca kitab gundul** — bukan anjuran praktik. Tidak ada bukti ilmiah efek supranatural. Jangan gunakan untuk merugikan orang lain.
+
+---
+
+## 🔍 REKAP AUDIT AKHIR — 11 November 2026
+
+Audit dilakukan **langsung dari isi PR #16** (bukan dari laporan lama), lalu cacatnya diperbaiki di branch yang sama. **Tidak ada transkripsi baru** yang dibuat — seluruh audit memakai berkas yang sudah ada.
+
+### Hasil 4 lapis
+
+| Lapis | Diperiksa | Hasil |
+|---|---|---|
+| **A. Kelengkapan** | Halaman 1–204 termasuk 11, 12, 13, 140, 141 | **204/204 unik, 0 hilang, 0 ganda** ✅ |
+| **B. Harakat** | 9 pola dobel (`ِْ` `ََ` `ٍٍ` `ُُ` `ًً` `ْْ` `َِ` `ُِ` `َّ`) | **8 pola = 0**; `َّ` = 6.640 → **urutan kanonik, bukan dobel** ✅ |
+| **C. Kebersihan** | Huruf presentasi U+FE70–FEFF, simbol katib `Ǆ ǁ ǂ ƾ`, karakter kontrol | **0 / 0 / 0** ✅ |
+| **D. Placeholder** | `[ ... lihat scan ... ]`, "akan dilengkapi" | **0** ✅ |
+
+### Soal `َّ` (tasydid + fathah) — 6.640 kemunculan
+
+Ini **bukan** harakat dobel. Dalam Unicode, tasydid (U+0651) **wajib** mendahului harakat (fathah U+064E) — ini urutan kanonik. Yang dicari adalah urutan terbaliknya (`fathah` lalu `tasydid`):
+
+- urutan kanonik `َّ` : **6.640**
+- urutan terbalik `َّ` (salah) : **0**
+
+Contoh: `الرَّحْمٰن` — benar. Maka pemeriksa hanya menandai **tasydid-setelah-vokal**, bukan tasydid-sebelum-vokal.
+
+### Cacat yang ditemukan audit dan sudah diperbaiki
+
+| # | Cacat | Dampak | Perbaikan |
+|---|---|---|---|
+| 1 | **Halaman 36 ganda** — BATCH-07 memuat blok placeholder "akan dilengkapi setelah Picture 018" | 2 blok untuk 1 halaman | Blok placeholder dihapus → "## Catatan Halaman 036" |
+| 2 | **Halaman 96 ganda** — BATCH-19 keliru melabeli isi hal.97 sebagai hal.96 | 2 blok untuk 1 halaman | Duplikat dihapus; BATCH-20 jadi satu-satunya blok hal.96 bertanda `[SCAN TIDAK JELAS - HALAMAN 96]` |
+| 3 | **Rule `"الْا"→"الْ"` dan `"أَأ"→"أَ"` menghapus HURUF** | `الاسم` (nama) → `السم` (**racun**); `الاستدلال` → `الستدلال` | Kedua rule dibuang, diganti penjaga `jaga_huruf()` |
+| 4 | **Entri kamus berartikel bocor ke kata tanpa artikel** (`setdefault(norm(k)[2:])`) | `حكيم` → `الْحَكِيم` (padahal tanpa ال) | Mekanisme `setdefault` dihapus |
+| 5 | **23 entri data harakat merusak huruf** (mis. `الاستدلال` → `الْسْتِدْلَاَلُ`) | 1.150 kata salah tulis di lapis 🎧 | Entri dibersihkan, data dibangun ulang: **8.921 entri, 0 merusak** |
+| 6 | **`tools/verifikasi.py` tidak mendeteksi halaman ganda** | hal.36 & 96 lolos | Ditambah pemeriksa **E. Halaman Ganda** |
+| 7 | **`tools/verifikasi.py` tidak memeriksa kesetiaan huruf** | cacat #3–#5 lolos | Ditambah pemeriksa **F. Kesetiaan Huruf** |
+
+### Muhafazhah (المحافظة على القديم الصالح) — terverifikasi utuh
+
+| Objek | Status |
+|---|---|
+| Asma' Suryani `بصلكمشلهنيد` `بخششطوخ` `كلمموشيا` `هملهليو` `شمخلوش` `اقطيازش` | **6/6 utuh** ✅ |
+| Angka wafaq/thilasm (1.690 token angka, termasuk `١١٢ ١١٢ ١١٣ ١١٣ ٣٠٠`, `٧٦٥٨٤٩`, `٦١٩`) | **0 berubah** — urutan angka lapis 🅰️ = lapis 🎧 ✅ |
+| Tag `[TEKS ASLI DIJAGA - TIDAK DITERJEMAH KARENA THILASM/WAFAQ]` | **106** ✅ |
+| Gambar rajah/wafaq asli (tidak digambar ulang, crop background putih) | **178 gambar, 0 tautan rusak** ✅ |
+
+### Batch yang diperiksa khusus
+
+| Batch | Status |
+|---|---|
+| **BATCH-03** (hal. 11–15) | Utuh 32 KB — hal.11 tidak menimpa hal.12–16 ✅ |
+| **BATCH-12** (hal. 57–61) | Utuh 29 KB — tidak kehilangan isi karena pagar kode ✅ |
+| **Hal. 136–139** (tashrif 1–12) | 1 blok masing-masing, tidak tertimpa ✅ |
+| **Hal. 150/151** (thilasm) | 1 blok masing-masing; nomor thilasm sudah الثالث/الرابع ✅ |
+| **Hal. 158–159** (qasam syarif) | 1 blok masing-masing, tidak kosong ✅ |
+| **BATCH-28** (hal. 136–141) | 6 halaman, termasuk 140 & 141 ✅ |
+
+### Perintah verifikasi
+
+```bash
+python3 tools/harakat.py            # bangun basis harakat (dengan penjaga huruf)
+python3 tools/build-ulang.py        # rakit ulang 42 batch versi 3 tingkat
+python3 tools/verifikasi.py         # 6 lapis pemeriksaan
+```
+
+Keluaran terakhir: `✅ SEMUA PEMERIKSAAN LULUS` — 204 halaman, 0 ganda, 0 hilang, harakat dobel 0, kesetiaan huruf 33.354 kata / 0 blok menyimpang.
